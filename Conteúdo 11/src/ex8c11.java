@@ -10,7 +10,7 @@ public class ex8c11 {
         System.out.println("Digite o total de horas trabalhadas nos projeto: ");
         horasTotal = keyb.nextInt();
 
-        // Estrutura de Repeti��o
+        // Estrutura de Repetição
 
         while (!nome.equalsIgnoreCase("Encerrar")) {
 
