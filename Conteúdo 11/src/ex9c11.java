@@ -6,8 +6,8 @@ public class ex9c11 {
 
     public static void main(String[] args) {
         int ano, setor, quantGer = 0, quantAdm = 0, quantPes = 0, quantObr = 0, quantAdmDez = 0,
-                menorAno = 0, menorRg = 0, maiorAno = 0, contador = 0, rg, maiorRg = 0;
-        String nome = "", msg = "Registro Funcional", maiorSetor, maisVelho = "", maisNovo = "";
+                menorRg = 0, contador = 0, rg, maiorRg = 0;
+        String nome = "", msg = "Registro Funcional", maiorSetor, maisAnt = "", maisNovo = "";
         while (!nome.equalsIgnoreCase("FIM")) {
             nome = JOptionPane.showInputDialog(null,
                     "Digite o nome do funcionário: ('FIM') para encerrar",
@@ -21,31 +21,23 @@ public class ex9c11 {
                     msg, JOptionPane.QUESTION_MESSAGE));
             ano = registro / 10000;
             setor = (registro / 1000) % 10;
-            rg = registro % 1000;
-            if (ano > 14 || ano < 10) {
+            rg = registro - (setor * 1000);
+            if (ano > 14 || ano < 10 || setor > 4 || setor < 1) {
                 JOptionPane.showMessageDialog(null, "REGISTRO INVÁLIDO",
                         msg, JOptionPane.QUESTION_MESSAGE);
                 continue;
             }
             if (contador == 1) {
-                maiorAno = menorAno = ano;
-                maiorRg = menorRg = rg;
-            } else {
-                if (menorAno >= ano) {
-                    menorAno = ano;
-                    if (menorRg > rg) {
-                        maisNovo = nome;
-                        menorRg = rg;
-                    }
-                    if (ano >= maiorAno) {
-                        maiorAno = ano;
-                        maisVelho = nome;
-                        if (rg > maiorRg) {
-                            maisVelho = nome;
-                            maiorRg = rg;
-                        }
-                    }
-                }
+                menorRg = rg;
+                maiorRg = rg;
+            }
+            if (rg >= maiorRg) {
+                maiorRg = rg;
+                maisNovo = nome;
+            }
+            if (rg <= menorRg) {
+                menorRg = rg;
+                maisAnt = nome;
             }
             switch (setor) {
                 case 1:
@@ -85,7 +77,7 @@ public class ex9c11 {
         JOptionPane.showMessageDialog(null, "O Maior setor foi: " + maiorSetor,
                 msg, JOptionPane.INFORMATION_MESSAGE);
         JOptionPane.showMessageDialog(null, "O último(a) funcionário(a) foi: " + maisNovo
-                + "\ne o funcionário(a) mais velho(a) foi: " + maisVelho, msg, JOptionPane.INFORMATION_MESSAGE);
+                + "\ne o funcionário(a) mais velho(a) foi: " + maisAnt, msg, JOptionPane.INFORMATION_MESSAGE);
     }
 
 }
