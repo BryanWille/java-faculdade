@@ -15,7 +15,7 @@ public class ex9c11 {
             }
             contador++;
             int registro = Integer.parseInt(JOptionPane.showInputDialog(null,
-                    "Digite o registro de: " + nome + " :",
+                    "Digite o registro de " + nome + ", :",
                     msg, JOptionPane.QUESTION_MESSAGE));
             ano = registro / 10000;
             setor = (registro / 1000) % 10;
@@ -30,18 +30,19 @@ public class ex9c11 {
                 menorAno = ano;
                 maiorRegistro = reg;
                 menorRegistro = reg;
-            } else if (ano >= maiorAno) {
-                maiorAno = ano;
-                if (reg > maiorRegistro) {
-                    maiorRegistro = reg;
-                    maisVelho = nome;
-                }
-            } else if (menorAno >= ano) {
-                System.out.println("Teste!");
+            }
+            if (menorAno >= ano) {
                 menorAno = ano;
                 if (menorRegistro > reg) {
                     menorRegistro = reg;
                     maisNovo = nome;
+                }
+            }
+            if (ano >= maiorAno) {
+                maiorAno = ano;
+                if (reg > maiorRegistro) {
+                    maiorRegistro = reg;
+                    maisVelho = nome;
                 }
             }
             switch (setor) {
