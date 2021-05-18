@@ -5,7 +5,7 @@ public class ex9c11 {
     public static void main(String[] args) {
         int ano, setor, quantGer = 0, quantAdm = 0, quantPes = 0, quantObr = 0, quantAdmDez = 0,
                 reg, maiorRegistro = 0, menorRegistro = 0, menorAno = 0, maiorAno = 0, contador = 0;
-        String nome = "", msg = "Registro Funcional", maiorSetor = "", maisVelho = "", maisNovo = "";
+        String nome = "", msg = "Registro Funcional", maiorSetor, maisVelho = "", maisNovo = "";
         while (!nome.equalsIgnoreCase("FIM")) {
             nome = JOptionPane.showInputDialog(null,
                     "Digite o nome do funcionário: ('FIM' para encerrar",
@@ -14,7 +14,7 @@ public class ex9c11 {
                 break;
             }
             contador++;
-            int registro = Integer.valueOf(JOptionPane.showInputDialog(null,
+            int registro = Integer.parseInt(JOptionPane.showInputDialog(null,
                     "Digite o registro de: " + nome + " :",
                     msg, JOptionPane.QUESTION_MESSAGE));
             ano = registro / 10000;
