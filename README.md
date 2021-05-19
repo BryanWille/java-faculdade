@@ -9,9 +9,9 @@ Aqui estão armazenados os **exercicios** do primeiro semestre de AED1 da faculd
 - [x] **Conteúdo 6**
 - [x] **Conteúdo 7**
 - [x] **Conteúdo 8**
-- [x] **Conteudo 9**
-- [x] **Conteudo 10**
-- [ ] Conteudo 11
+- [x] **Conteúdo 9**
+- [x] **Conteúdo 10**
+- [x] **Conteúdo 11**
 - [ ] Conteudo 12
 - [ ] Conteudo 13
 - [ ] Conteudo 14
