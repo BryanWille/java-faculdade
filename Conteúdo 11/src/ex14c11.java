@@ -1,7 +1,7 @@
 public class ex14c11 {
     public static void main(String[] args) {
         double pi = 0, cont = 1, contador = 0;
-        while (3.1417 > pi) {
+        while (cont != 0) {
             contador++;
             System.out.println(contador);
             if (contador % 2 == 0) {
