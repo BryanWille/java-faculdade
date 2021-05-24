@@ -13,18 +13,23 @@ public class ex5c11 {
                 break;
             }
             cont++;
-            System.out.println("\nQual a mensalidade do aluno, " + nome + " ?");
-            mensalidade = keyb.nextDouble();
-            mensalTot += mensalidade;
-            System.out.printf("\nO aluno %s paga %5.2f de mensalidade!", nome, mensalidade);
             System.out.println("\n[1]Ingles \n[2]Francês \n[3]Espanhol \nQual o código da língua que o aluno cursa? ");
             codigo = keyb.nextInt();
             keyb.nextLine();
             switch (codigo) {
                 case 1:
+                    mensalidade = 100;
                     quantIngles += 1;
                     break;
+                case 2:
+                    mensalidade = 150;
+                    break;
+                case 3:
+                    mensalidade = 120;
+                    break;
             }
+            System.out.printf("\nO aluno %s paga %5.2f de mensalidade!", nome, mensalidade);
+            mensalTot += mensalidade;
         }
         mensalMedia = mensalTot / cont;
         System.out.println("\nCom uma quantidade de: " + quantIngles + " de alunos no curso de inglês!");
