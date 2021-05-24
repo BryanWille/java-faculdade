@@ -12,5 +12,6 @@ public class ex6c12 {
             System.out.print(array[contador] + " ");
         }
         System.out.println("fim");
+        keyb.close();
     }
 }

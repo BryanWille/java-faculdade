@@ -28,7 +28,6 @@ public class ex6c11 {
                     desligada++;
                     break;
             }
-
         }
         total = contador - desligada;
         porcQuat = canalQuatro * 100 / total;

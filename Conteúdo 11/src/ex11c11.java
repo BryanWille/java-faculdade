@@ -15,5 +15,6 @@ public class ex11c11 {
             }
             System.out.println("");
         }
+        keyb.close();
     }
 }

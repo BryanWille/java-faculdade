@@ -13,5 +13,6 @@ public class ex8c12 {
             soma[contador] = array[contador] + array[contador+10];
             System.out.print(soma[contador] + " ");
         }
+        keyb.close();
     }
 }

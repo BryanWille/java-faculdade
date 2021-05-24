@@ -15,5 +15,6 @@ public class ex13c11 {
         }
         serie = 71 + Math.pow(serie, 1 / 3.0);
         System.out.println("O valor da série foi de: " +serie);
+        keyb.close();
     }
 }

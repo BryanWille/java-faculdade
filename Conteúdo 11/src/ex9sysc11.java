@@ -64,5 +64,6 @@ public class ex9sysc11 {
                 "na Administração: %d", quantAdmDez);
         System.out.printf("\nO Maior setor foi: %s", maiorSetor);
         System.out.printf("\nO Funcionário mais antigo: %s \nO Funcionário mais novo: %s", maisAnt, maisNovo);
+        arc.close();
     }
 }

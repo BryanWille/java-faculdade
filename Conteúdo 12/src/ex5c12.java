@@ -16,5 +16,6 @@ public class ex5c12 {
             }
         }
         System.out.println("\nO maior número foi: " + numMaior);
+        keyb.close();
     }
 }

@@ -21,5 +21,6 @@ public class ex11c12 {
             }
         }
         System.out.printf("\nO(a) Aluno(a) com a maior nota foi %s, com a nota %f3.2", maiorNome, maiorNota);
+        keyb.close();
     }
 }

@@ -17,5 +17,6 @@ public class ex1c12 {
         }
         System.out.println("Números divisivéis por 7 e 5: " + numero);
         System.out.println("Fim");
+        keyb.close();
     }
 }

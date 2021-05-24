@@ -16,5 +16,6 @@ public class ex3c12 {
             contador++;
         }
         System.out.println("\nfim");
+        keyb.close();
     }
 }
