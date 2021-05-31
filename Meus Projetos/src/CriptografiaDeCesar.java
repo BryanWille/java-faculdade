@@ -37,8 +37,8 @@ public class CriptografiaDeCesar {
                         msg, JOptionPane.INFORMATION_MESSAGE);
                 break;
             }
-            crypt = crypt.replace("", " ");  // Adicionado os espaços para não dar erro na troca de letras!
-            String mensagem[] = crypt.split(" "); //Aqui estamos fazendo a Array da mensagem!
+            crypt = crypt.replace("", " ");  // Adicionado os espaços para não dar erro na troca de letras
+            String mensagem[] = crypt.split(" "); //Aqui estamos fazendo a Array da mensagem
             opcao = JOptionPane.showOptionDialog(null, "O que você quer fazer " +
                             "com essa mensagem? ", msg, JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE,
                     null, botoes, botoes[0]);
@@ -47,15 +47,15 @@ public class CriptografiaDeCesar {
 
             switch (opcao) {
 
-                //Se for 0 é a opção "Criptografar"!
+                //Se for 0 é a opção "Criptografar"
 
                 case 0:
-                    //Temos dois for, o primeiro vai nos dar todas as posições da array da mensagem a ser criptografada!
+                    //Temos dois for, o primeiro vai nos dar todas as posições da array da mensagem a ser criptografada
                     for (int contador = 0; mensagem.length > contador; contador++) {
-                        //O segundo for, vai dar as posições da matriz do alfabeto!
+                        //O segundo for, vai dar as posições da matriz do alfabeto
                         for (int cont = 0; alpha.length > cont; cont++) {
                             //Quando achar a palavra no alfabeto igual a do usuário, então ele vai passar
-                            //a palavra na cifra de César equivalente, e fechar com o break!
+                            //a palavra na cifra de César equivalente, e fechar com o break
                             if (mensagem[contador].equalsIgnoreCase(alpha[cont][0])) {
                                 mensagem[contador] = alpha[cont][1];
                                 break;
@@ -64,7 +64,7 @@ public class CriptografiaDeCesar {
                     }
                     break;
 
-                // Se for 1 é a opção "Descriptografar"!
+                // Se for 1 é a opção "Descriptografar"
 
                 case 1:
                     //Os for de descriptografia tem a mesma função de criptografia, o que muda é o if dentro do for
@@ -92,6 +92,5 @@ public class CriptografiaDeCesar {
         alfabeto.close();
 
         //Fim, obrigado por ler!
-
     }
 }

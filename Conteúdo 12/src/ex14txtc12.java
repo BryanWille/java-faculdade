@@ -1,7 +1,8 @@
-
+import java.util.Collections;
 import java.util.Scanner;
+import java.util.Arrays;
 
-public class ex14c12 {
+public class ex14txtc12 {
     public static void main(String[] args) {
         String cidade[] = new String[10], estado[] = new String[10], bolhaCid, bolhaEst;
         int populacao[] = new int[10], contador = 0, bolhaPop;

@@ -2,39 +2,26 @@ import java.util.*;
 
 public class ex14v20c12 {
     public static void main(String[] args) {
-        String city[][] = new String[10][3], bolha;
-        int cont = 0, pop[] = new int[city.length];
-        /* Scanner keyb = new Scanner(System.in);
-        for (cont = 0; cont < city.length; cont++) {
-            System.out.println("Digite o nome da cidade: ");
-            city[cont][0] = keyb.nextLine();
-            System.out.println("Digite de que estado a cidade " + city[cont][0] + ", é:");
-            city[cont][1] = keyb.nextLine();
-            System.out.println("Digite a população da cidade " + city[cont][0] + ": ");
-            city[cont][2] = keyb.nextLine();
-        } */
+        String city[][] = new String[10][3], bolha[][] = new String[1][3];
+        int contador = 0;
         Scanner keyb = new Scanner(ex14v20c12.class.getResourceAsStream("cidades.txt"));
         while (keyb.hasNextLine()) {
-            city[cont][0] = keyb.nextLine();
-            city[cont][1] = keyb.nextLine();
-            city[cont][2] = keyb.nextLine();
-            cont++;
+            city[contador][0] = keyb.nextLine();
+            city[contador][1] = keyb.nextLine();
+            city[contador][2] = keyb.nextLine();
+            contador++;
         }
-        System.out.println(Integer.parseInt(city[0][2]));
-        for (cont = 0; 10 > cont; cont++) {
-            for (int contador = 0; 10 > contador; contador++) {
-                pop[contador] = Integer.parseInt(city[cont][2]);
-                pop[contador+1] = Integer.parseInt(city[cont + 1][2]);
-                if (pop[contador] > pop[contador+1]) {
-                    bolha = city[cont][2];
-                    city[cont][2] = city[cont + 1][2];
-                    city[cont + 1][2] = bolha;
+        for (int cont = 0; cont < city.length - 1; cont++) {
+            if (Integer.parseInt(city[contador][2]) > Integer.parseInt(city[contador + 1][2])) {
+                for (int aux = 0; aux < 3; aux++) {
+                    bolha[0][aux] = city[contador + 1][aux];
+                    city[contador + 1][aux] = city[contador][aux];
+                    city[contador][aux] = bolha[0][aux];
                 }
             }
         }
-        for (cont = 9; cont >= 0; cont--) {
-            System.out.println(cont + 1 + ". " + city[cont][0] + " - " + city[cont][1]
-                    + ". População: " + city[cont][2]);
+        for (int cont = city.length - 1; cont >= 0; cont--) {
+            System.out.println(city[cont][0] + " - " + city[cont][1] + " = " + city[cont][2]);
         }
         keyb.close();
     }
