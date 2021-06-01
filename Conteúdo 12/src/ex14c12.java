@@ -12,7 +12,7 @@ public class ex14c12 {
             populacao[contador] = Integer.parseInt(keyb.nextLine());
             contador++;
         }
-        for (int aux = 0; aux < populacao.length - 1; aux++) {
+        for (int aux = 0; aux < populacao.length; aux++) {
             for (contador = 0; contador < populacao.length - 1; contador++) {
                 if (populacao[contador] > populacao[contador + 1]) {
                     bolhaPop = populacao[contador + 1];
