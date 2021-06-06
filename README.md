@@ -12,7 +12,7 @@ Aqui estão armazenados os **exercicios** do primeiro semestre de AED1 da faculd
 - [x] **Conteúdo 9**
 - [x] **Conteúdo 10**
 - [x] **Conteúdo 11**
-- [ ] Conteudo 12
+- [x] Conteudo 12
 - [ ] Conteudo 13
 - [ ] Conteudo 14
 - ![unnamed](https://user-images.githubusercontent.com/84272231/118401078-a060f800-b63a-11eb-992a-2595694d0990.png)
