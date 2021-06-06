@@ -19,4 +19,5 @@ public class ProcuraArraysNomes {
             System.out.println("Nome encontrado na posição " + (pos + 1));
         teclado.close();
     }
+
 }

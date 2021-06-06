@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.util.Arrays;
 
-public class ex25c12 {
+public class    ex25c12 {
     public static void main(String[] args) {
         String[] time = new String[20];
         int[] posicao = new int[20];
@@ -39,6 +39,7 @@ public class ex25c12 {
         }
         System.out.println("Qual time você deseja procurar? ");
         timePesq = keyb.nextLine();
+        System.out.println(timePesq);
         int pos = Arrays.binarySearch(time, timePesq);
         System.out.println(pos);
         if (pos < 0) {
