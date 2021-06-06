@@ -1,8 +1,8 @@
 import javax.swing.JOptionPane;
+import java.util.Arrays;
 
 public class ex19c12 {
     public static void main(String[] args) {
-        boolean testeLog = false;
         String[] bilhete = new String[100];
         String msg = "Bilhete premidado!", premiado;
         JOptionPane.showMessageDialog(null, "Vamos ler todos os seus 100 bilhetes!",
@@ -13,16 +13,14 @@ public class ex19c12 {
         }
         premiado = JOptionPane.showInputDialog(null, "Digite o bilhete sorteado:",
                 msg, JOptionPane.QUESTION_MESSAGE);
-        for (String s : bilhete) {
-            if (s.equalsIgnoreCase(premiado)) {
-                JOptionPane.showMessageDialog(null, "Parabéns, você teve o bilhete premiado!" +
-                        " que é: " + premiado, msg, JOptionPane.INFORMATION_MESSAGE);
-                testeLog = true;
-            }
-        }
-        if (!testeLog) {
+        int posicao = Arrays.binarySearch(bilhete, premiado);
+        if (posicao < 0) {
             JOptionPane.showMessageDialog(null, "Infelizmente você não " +
                     "acertou nenhum bilhete :(", msg, JOptionPane.INFORMATION_MESSAGE);
+        } else {
+            JOptionPane.showMessageDialog(null, "Parabéns, você teve o bilhete premiado!" +
+                    " que é: " + premiado, msg, JOptionPane.INFORMATION_MESSAGE);
         }
     }
+
 }
