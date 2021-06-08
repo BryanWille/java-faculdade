@@ -20,7 +20,8 @@ public class ex3c13 {
     }
 
         //Forma deselegante.
-   /* static int decomif() {
+
+   static int decomif() {
         int numero;
         if (posicao == 1)
             numero = (valor / 1) % 10;
@@ -42,5 +43,5 @@ public class ex3c13 {
             numero = (valor / 1000000000) % 10;
         }
         return numero;
-    } */
+    }
 }
