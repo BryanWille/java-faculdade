@@ -49,7 +49,7 @@ public class ex25c12 {
             }
         }
         if (!encontrado) {
-            System.out.println("Time não encontrao");
+            System.out.println("Time não encontrado");
         }
         keyb.close();
     }
