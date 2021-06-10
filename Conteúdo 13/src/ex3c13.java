@@ -1,8 +1,8 @@
 import javax.swing.JOptionPane;
 
 public class ex3c13 {
-    static int valor, posicao;
     public static void main(String[] args) {
+        int valor, posicao;
         String msg = "Decompositor de inteiro!";
         JOptionPane.showMessageDialog(null, "Vamos decompor um número!",
                 msg, JOptionPane.INFORMATION_MESSAGE);
@@ -10,10 +10,10 @@ public class ex3c13 {
                 "inteiro para decompor (entre 0 e 999KK): ", msg, JOptionPane.QUESTION_MESSAGE));
         posicao = Integer.parseInt(JOptionPane.showInputDialog(null, "Digite o digito que quer: " +
                 "(esquerda pra direita): ", msg, JOptionPane.QUESTION_MESSAGE));
-        JOptionPane.showMessageDialog(null, decom(), msg, JOptionPane.INFORMATION_MESSAGE);
+        JOptionPane.showMessageDialog(null, decom(valor, posicao), msg, JOptionPane.INFORMATION_MESSAGE);
     }
 
-    static int decom() {
+    static int decom(int valor, int posicao) {
         int numero;
         numero = (valor / (int) Math.pow(10, (posicao-1))) % 10;
         return numero;
@@ -21,7 +21,7 @@ public class ex3c13 {
 
         //Forma deselegante.
 
-   static int decomif() {
+   static int decomif(int valor, int posicao) {
         int numero;
         if (posicao == 1)
             numero = (valor / 1) % 10;
