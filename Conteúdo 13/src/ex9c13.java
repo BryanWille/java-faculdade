@@ -16,7 +16,7 @@ public class ex9c13 {
     }
     public static String capitalize(String frases){
         int index;                  //Criação do index
-        frases += " ";              //Frase ganha espaço no final, abaixo a explicação
+        frases += " ";              //Frase ganha espaço no final
         String maisIgual = "";      //Vou dividir a frase em palavras e capitalizar elas
         for (int cont = 0; cont < frases.length()-2; cont++) { //Contador vai até antes do espaço adicionado
             index = frases.indexOf(" "); //Indexamos o espaço atual
@@ -29,6 +29,9 @@ public class ex9c13 {
                 maisIgual += frases.substring(index+2, frases.indexOf(" ")).toLowerCase(); //agora adicionamos o resto da palavra. onde começa no index+2 e termina no prox index.
             }
         }
+        Aula Algoritmo e estrutura de Dados
+
+
         return maisIgual;
     }
 }
