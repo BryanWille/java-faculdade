@@ -2,7 +2,6 @@ import java.util.Scanner;
 
 public class ex9c13 {
     public static void main(String[] args) {
-        int index;
         String frases;
         Scanner keyb = new Scanner(System.in);
         do {
