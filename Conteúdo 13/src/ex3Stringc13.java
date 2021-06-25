@@ -1,5 +1,4 @@
 import java.util.Scanner;
-import java.util.*;
 
 public class ex3Stringc13 {
     public static void main(String[] args) {
@@ -20,9 +19,8 @@ public class ex3Stringc13 {
         keyb.close();
     }
     public static String getPosicao (String numero, int posicao){
-        String num;
         posicao = numero.length() - (posicao-1);
-        num = numero.substring(posicao-1, posicao);
-        return num;
+        numero = numero.substring(posicao-1, posicao);
+        return numero;
     }
 }
