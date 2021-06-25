@@ -1,3 +1,5 @@
+package melhoresExerc;
+
 public class caracteres {
     public static void caract() {
         int c, contDez = 0;

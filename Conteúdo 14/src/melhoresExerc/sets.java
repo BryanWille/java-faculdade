@@ -1,3 +1,5 @@
+package melhoresExerc;
+
 import java.util.Scanner;
 
 public class sets {
@@ -5,14 +7,14 @@ public class sets {
         String time1, time2;
         int ponto1, ponto2, pontuacao1, pontuacao2;
         Scanner keyb = new Scanner(System.in);
-        System.out.println("Calculador de pontos de tênis");
-        System.out.print("\nQual é o nome do primeiro time? ");
+        System.out.println("Calculador de pontos de tÃªnis");
+        System.out.print("\nQual Ã© o nome do primeiro time? ");
         time1 = keyb.nextLine();
-        System.out.print("\nQual é o nome do segundo time? ");
+        System.out.print("\nQual Ã© o nome do segundo time? ");
         time2 = keyb.nextLine();
-        System.out.print("\nQuantos sets o time " + time1 + " fez? ");
+        System.out.print("\nQuantos melhoresExerc.sets o time " + time1 + " fez? ");
         ponto1 = keyb.nextInt();
-        System.out.print("\nQuantos sets o time " + time2 + " fez? ");
+        System.out.print("\nQuantos melhoresExerc.sets o time " + time2 + " fez? ");
         ponto2 = keyb.nextInt();
         if (ponto1 - ponto2 == 2 || ponto1 - ponto2 == 0) {
             pontuacao1 = 3;

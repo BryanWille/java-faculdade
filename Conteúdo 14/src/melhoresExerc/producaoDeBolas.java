@@ -1,10 +1,12 @@
+package melhoresExerc;
+
 import javax.swing.*;
 
 public class producaoDeBolas {
     public static void estocagem() {
         double caixa, galpao, custoTotal;
         String msg = "Bolas para copa do mundo!";
-        int cont = JOptionPane.showConfirmDialog(null, "Você quer saber o preço de estocagem de bolas para a próxima copa do mundo?", msg, JOptionPane.YES_NO_OPTION);
+        int cont = JOptionPane.showConfirmDialog(null, "VocÃª quer saber o preÃ§o de estocagem de bolas para a prÃ³xima copa do mundo?", msg, JOptionPane.YES_NO_OPTION);
         if (cont == 1) {
             System.exit(0);
         }
@@ -13,8 +15,8 @@ public class producaoDeBolas {
         int bolaDefeito = Integer.parseInt(JOptionPane.showInputDialog(null, "Dessas bolas quantos tiveram defeitos?",
                 msg, JOptionPane.QUESTION_MESSAGE));
         double precoPapelao = Double.parseDouble(JOptionPane.showInputDialog(null,
-                "Qual o preço únitario da caixa da papelão?", msg, JOptionPane.QUESTION_MESSAGE));
-        double aluguel = Double.parseDouble(JOptionPane.showInputDialog(null, "Quantos reais é o aluguel do galpão?", msg,
+                "Qual o preÃ§o Ãºnitario da caixa da papelÃ£o?", msg, JOptionPane.QUESTION_MESSAGE));
+        double aluguel = Double.parseDouble(JOptionPane.showInputDialog(null, "Quantos reais Ã© o aluguel do galpÃ£o?", msg,
                 JOptionPane.QUESTION_MESSAGE));
         int meses = Integer.parseInt(JOptionPane.showInputDialog(null, "Faltam quantos meses para a copa?", msg,
                 JOptionPane.QUESTION_MESSAGE));
@@ -27,7 +29,7 @@ public class producaoDeBolas {
             galpao = (galpao - galpao % 1) + 1;
         }
         custoTotal = (galpao * (aluguel * meses)) + (caixa * precoPapelao);
-        JOptionPane.showMessageDialog(null, "O Custo Total com a armazenagem é de: R$" + custoTotal, msg,
+        JOptionPane.showMessageDialog(null, "O Custo Total com a armazenagem Ã© de: R$" + custoTotal, msg,
                 JOptionPane.INFORMATION_MESSAGE);
     }
 

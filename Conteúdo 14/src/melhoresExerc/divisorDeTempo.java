@@ -1,3 +1,5 @@
+package melhoresExerc;
+
 import javax.swing.*;
 
 public class divisorDeTempo {

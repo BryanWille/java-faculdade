@@ -5,7 +5,7 @@ public class ex8c13 {
         String nome;
         Scanner keyb = new Scanner(System.in);
         do {
-            System.out.println("Digite o nome (fim para encerrar): ");
+            System.out.println("\nDigite o nome (fim para encerrar): ");
             nome = keyb.nextLine();
             if (!nome.equalsIgnoreCase("fim")) {
                 String[] sobrenome = nome.toUpperCase().split(" ");

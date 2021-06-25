@@ -1,3 +1,5 @@
+import melhoresExerc.*;
+
 import java.util.Scanner;
 
 public class ex1c14 {
@@ -12,30 +14,17 @@ public class ex1c14 {
                         "\n[6]Fechar");
                 System.out.print(">>>");
                 opcao = keyb.nextInt();
-                if (opcao > 6 || opcao < 0)
+                if (opcao > 6 && opcao < 0)
                     System.out.println("Comando inválido!");
-            } while (opcao > 6 || opcao < 0);
+            } while (opcao > 6 && opcao < 0);
             switch (opcao) {
-                case 1:
-                    divisorDeTempo.conversor();
-                    break;
-                case 2:
-                    sets.jogo();
-                    break;
-                case 3:
-                    producaoDeBolas.estocagem();
-                    break;
-                case 4:
-                    caracteres.caract();
-                    break;
-                case 5:
-                    ordenarNumeros.ordenar();
-                    break;
-                case 6:
-                    System.out.println("OK :("); break;
-                default:
-                    System.out.println("Opção Inválida!");
-                    break;
+                case 1: divisorDeTempo.conversor(); break;
+                case 2: sets.jogo(); break;
+                case 3: producaoDeBolas.estocagem(); break;
+                case 4: caracteres.caract(); break;
+                case 5: ordenarNumeros.ordenar(); break;
+                case 6: System.out.println("OK :("); break;
+                default: System.out.println("Opção Inválida!"); break;
             }
         }
         System.out.println("Fim!");
