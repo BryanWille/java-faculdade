@@ -26,5 +26,6 @@ public class ex2c14 {
             }
         }while(opcao != 5);
         System.out.println("Fim!");
+        keyb.close();
     }
 }
