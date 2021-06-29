@@ -8,18 +8,19 @@ public class E01438A {
 		int idade, quantPessoas = 0, primeiraMulher = 0;
 		double salMedHom, salTotHom = 0, quantHom = 0, menorPesoMul = 0, quantSalMin = 0;
 		String nome = "", msg = "Pesquisa Praça 7", nomeMagMul = "";
-		JOptionPane.showMessageDialog(null, "Obrigado por participar da pesquisa de PBH sobre a população da Praça 7!");
+		JOptionPane.showMessageDialog(null, "Obrigado por participar da pesquisa de PBH sobre a população da Praça 7!",
+				msg, JOptionPane.INFORMATION_MESSAGE);
 		do {
-			nome = JOptionPane.showInputDialog(null, "Digite o seu nome: (fim para encerrer)", msg,
+			nome = JOptionPane.showInputDialog(null, "Digite o seu nome: (fim para encerrar)", msg,
 					JOptionPane.QUESTION_MESSAGE);
 			if (!nome.equalsIgnoreCase("FIM")) {
 				quantPessoas += 1;
-				idade = Integer.parseInt(JOptionPane.showInputDialog(null, "Digite a idade de " + nome + " :", msg,
+				idade = Integer.parseInt(JOptionPane.showInputDialog(null, "Digite a idade de " + nome + ":", msg,
 						JOptionPane.QUESTION_MESSAGE));
-				int sexo = JOptionPane.showOptionDialog(null, "Qual o sexo de " + nome + " :", msg,
+				int sexo = JOptionPane.showOptionDialog(null, "Qual o sexo de " + nome + ":", msg,
 						JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, opcoes, opcoes[0]);
 				double salario = Double.parseDouble(JOptionPane.showInputDialog(null,
-						"Digite o sálario de " + nome + " :", msg, JOptionPane.QUESTION_MESSAGE));
+						"Digite o sálario de " + nome + ":", msg, JOptionPane.QUESTION_MESSAGE));
 				double peso = Double.parseDouble(JOptionPane.showInputDialog(null,
 						"Digite o peso de " + nome + " em (kg):", msg, JOptionPane.QUESTION_MESSAGE));
 				switch (sexo) {
