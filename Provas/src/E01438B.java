@@ -13,9 +13,8 @@ public class E01438B {
             livros[auxi][1] = keyb.nextLine();
             auxi += 1;
         }
-        System.out.println("Tetse");
-        for (int cont = 0; cont < livros.length - 1; cont++) {
-            for (int aux = 0; aux < livros.length - 1; cont++) {
+        for (int cont = 0; cont < livros.length; cont++) {
+            for (int aux = 0; aux < livros.length - 1; aux++) {
                 if (Integer.parseInt(livros[aux][1]) > Integer.parseInt(livros[aux + 1][1])) {
                     bolha[0][0] = livros[aux][0];
                     bolha[0][1] = livros[aux][1];
@@ -28,7 +27,7 @@ public class E01438B {
         }
         for (int cont = 0; cont < livros.length; cont++) {
             if (Integer.parseInt(livros[cont][1]) > 1001 && 1100 > Integer.parseInt(livros[cont][1])) {
-                System.out.printf("\nLivro: %s Código: %s", livros[cont][0], livros[cont][1]);
+                System.out.printf("\nLivro: %s \nCódigo: %s \n", livros[cont][0], livros[cont][1]);
             }
         }
         keyb.close();
