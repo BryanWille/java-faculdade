@@ -1,0 +1,34 @@
+Python
+4000
+Java -
+1040
+Minecraft -
+1032
+Among us -
+1098
+Lua
+1993
+C++
+2343
+Javascript -
+1033
+Oito
+2933
+Nove
+2392
+Are we smart enough to know how smart animals are? -
+1069
+
+String[] livroCopy = new String[livro.length];
+        for (int cont = 0; cont < livro.length; cont++) {
+            livroCopy[cont] = livro[cont];
+        }
+        Arrays.sort(livro);
+        for (int aux = 0; aux < livro.length; aux++) {
+            for (int cont = 0; cont < livroCopy.length; cont++) {
+                //System.out.println(livro[aux] +" x " +livroCopy[cont]);
+                if (livro[aux].equals(livroCopy[cont]) && codigo[cont] > 1001 && 1100 > codigo[cont]) {
+                    System.out.printf("\nLivro: %s \nCódigo: %s \n", livroCopy[cont], codigo[cont]);
+                }
+            }
+        }

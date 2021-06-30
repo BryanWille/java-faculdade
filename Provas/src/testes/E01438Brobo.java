@@ -6,8 +6,8 @@ import java.util.Scanner;
 public class E01438Brobo {
     public static void main(String[] args) {
         int auxi = 0;
-        String[][] livros = new String[10][2], bolha = new String[1][2];
-        Scanner keyb = new Scanner(Objects.requireNonNull(E01438Brobo.class.getResourceAsStream("testes/livros.txt")));
+        String[][] livros = new String[26][2], bolha = new String[1][2];
+        Scanner keyb = new Scanner(E01438Brobo.class.getResourceAsStream("debug2.txt"));
         while (keyb.hasNextLine()){
             livros[auxi][0] = keyb.nextLine();
             livros[auxi][1] = keyb.nextLine();

@@ -5,10 +5,10 @@ import java.util.Arrays;
 
 public class E01438B_2 {
     public static void main(String[] args) {
-        String[] nome = new String[10];
+        String[] nome = new String[26];
         int[] codigo = new int[nome.length];
         int conta = 0;
-        Scanner keyb = new Scanner(E01438B_2.class.getResourceAsStream("debug.txt"));
+        Scanner keyb = new Scanner(E01438B_2.class.getResourceAsStream("debug2.txt"));
         while (keyb.hasNextLine()) {
             nome[conta] = keyb.nextLine();
             codigo[conta] = Integer.parseInt(keyb.nextLine());
@@ -19,12 +19,11 @@ public class E01438B_2 {
             livro[cont] = nome[cont];
         }
         Arrays.sort(nome);
-        for (int cont = 0; cont < nome.length; cont++) {
-            // System.out.println(livro[cont] + " x " + nome[cont] + " cod: " +codigo[cont]);
-            for (int aux = 0; aux < nome.length; aux++) {
-                if (livro[cont].equals(nome[aux]) && (codigo[aux] > 1001 && 1100 > codigo[aux])) {
-                    System.out.printf("\nLivro: %s \nCódigo: %d \n", nome[aux], codigo[aux]);
-                    break;
+        for (int aux = 0; aux < nome.length; aux++) {
+            for (int cont = 0; cont < livro.length; cont++) {
+                //System.out.println(nome[aux] +" x " +livro[cont]);
+                if (nome[aux].equals(livro[cont]) && codigo[cont] > 1001 && 1100 > codigo[cont]) {
+                    System.out.printf("\nLivro: %s \nCódigo: %s \n", livro[cont], codigo[cont]);
                 }
             }
         }
