@@ -5,8 +5,6 @@ import java.util.Scanner;
 
 import javax.swing.JOptionPane;
 
-import jdk.nashorn.internal.scripts.JO;
-
 public class E01438Brobo {
     public static void main(String[] args) {
         int auxi = 0;
