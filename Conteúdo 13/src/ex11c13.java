@@ -13,5 +13,6 @@ public class ex11c13 {
             }
         } while (!nome.equalsIgnoreCase("fim"));
         System.out.println("Programa encerrado!");
+        keyb.close();
     }
 }

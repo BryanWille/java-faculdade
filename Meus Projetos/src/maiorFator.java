@@ -5,6 +5,7 @@ public class maiorFator {
             for (int contador = 0; numero > contador; contador++) {
                 if (numero % contador == 0) {
                     verificar ++;
+                    System.out.println(verificar);
                 }
             }
         }

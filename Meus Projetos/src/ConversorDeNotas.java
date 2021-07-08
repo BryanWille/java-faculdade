@@ -32,5 +32,6 @@ public class ConversorDeNotas {
                 }
             }
         } while (!musica.equalsIgnoreCase("fim"));
+        keyb.close();
     }
 }

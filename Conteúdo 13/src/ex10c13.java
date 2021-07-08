@@ -22,5 +22,6 @@ public class ex10c13 {
                 }
             }
         } while (!frase.equalsIgnoreCase("fim"));
+        keyb.close();
     }
 }

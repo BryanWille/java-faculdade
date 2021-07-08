@@ -4,7 +4,7 @@ public class ex25c12 {
     public static void main(String[] args) {
         String[] time = new String[20];
         int[] posicao = new int[20];
-        int bolhaInt, conta = 0;
+        int bolhaInt;
         String bolhaStr, status = "", pesquisa;
         boolean encontrado = false;
         Scanner keyb = new Scanner(System.in);

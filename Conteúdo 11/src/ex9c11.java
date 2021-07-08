@@ -1,9 +1,6 @@
 import javax.swing.JOptionPane;
 
 public class ex9c11 {
-
-    private String maisNovo;
-
     public static void main(String[] args) {
         int ano, setor, quantGer = 0, quantAdm = 0, quantPes = 0, quantObr = 0, quantAdmDez = 0,
                 menorRg = 0, contador = 0, rg, maiorRg = 0;

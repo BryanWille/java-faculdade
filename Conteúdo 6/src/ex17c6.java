@@ -24,5 +24,7 @@ public class ex17c6 {
         p8 = keyb.nextLine();
         System.out.println("Você só aceitaria trabalhar em escritórios da empresa \n dentro da grande BH? ");
         p9 = keyb.nextLine();
+        System.out.println(p1 + p2 + p3 + p4 + p5 +p6 +p7 +p8 +p9);
+        keyb.close();
     }
 }

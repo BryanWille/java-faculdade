@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class ex6c12 {
     public static void main(String[] args) {
-        String array[] = new String[12], mes;
+        String array[] = new String[12];
         Scanner keyb = new Scanner(System.in);
         for (int contador = 0; array.length > contador; contador++) {
             System.out.println("Digite o mês: ");

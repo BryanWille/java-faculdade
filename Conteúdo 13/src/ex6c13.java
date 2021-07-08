@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class ex6c13 {
     public static void main(String[] args) {
-        int index, quant = 0;
+        int quant = 0;
         String sobrenome, nome;
         Scanner keyb = new Scanner(System.in);
         System.out.println("Digite o sobrenome: ");
