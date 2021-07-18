@@ -19,11 +19,16 @@ public class palavraMargem {
             }
             cont ++;
         }while(!opcao.equals("0"));
+        System.out.println("Programa Encerrado!");
+        keyb.close();
     }
     public static String formatacao(String frase){
         int tamanho = frase.length();
-        String formatacao;
+        String formatacao = "";
         frase = "  " + frase + "  ";
-        formatacao = frase.repeat(tamanho);
+        for (int cont = 1; cont <= (tamanho+2); cont++ ){
+                formatacao += '~';
+        }
+        return formatacao +'\n' +frase +'\n' +formatacao;
     }
 }
