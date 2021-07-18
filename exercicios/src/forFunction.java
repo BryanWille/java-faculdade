@@ -25,7 +25,7 @@ public class forFunction {
     }
     public static String contador(int inicio, int fim, int passo){
         String passos = "";
-        if(inicio > fim){
+        if(inicio < fim){
             passo = passo * -1;
         }
         for(int cont = inicio; cont <= fim; cont += passo){
