@@ -25,10 +25,11 @@ public class forFunction {
     }
     public static String contador(int inicio, int fim, int passo){
         String passos = "";
-        if(inicio < fim){
-            for(int cont = inicio; cont <= fim; cont -= passo){
-                passos += String.valueOf(cont) +" >> ";
-            } 
+        if(inicio > fim){
+            do{
+                passos += String.valueOf(inicio) +" >> ";
+                inicio -= passo;
+            } while (inicio >= fim);
         } else {
         for(int cont = inicio; cont <= fim; cont += passo){
             passos += String.valueOf(cont) +" >> ";
