@@ -26,10 +26,13 @@ public class forFunction {
     public static String contador(int inicio, int fim, int passo){
         String passos = "";
         if(inicio < fim){
-            passo = passo * -1;
-        }
+            for(int cont = inicio; cont <= fim; cont -= passo){
+                passos += String.valueOf(cont) +" >> ";
+            } 
+        } else {
         for(int cont = inicio; cont <= fim; cont += passo){
             passos += String.valueOf(cont) +" >> ";
+            }
         }
         return passos + "Fim";
     }

@@ -1,5 +1,4 @@
 import java.util.Scanner;
-import java.io.*;
 
 public class palavraMargem {
     public static void main(String[] args) {
