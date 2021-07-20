@@ -1,19 +1,13 @@
-public class Company {
-    private String nome;
-
-    public Integer calcularImposto(){
-
+public class Person {
+    public static void main(String[] args){
+        Test bryan = new Test();
+        System.out.println();
+        bryan.nome = "Bryan";
+        bryan.idade = 18;
+        System.out.println(bryan.nome + bryan.idade);
     }
-
-    public Integer calcularISS(){
-
-    }
-
-    public Integer calacularICMS(){
-
-    }
-
-    public Integer calcularPis(){
-
-    }
+}
+class Test{
+    String nome;
+    int idade;
 }
