@@ -1,4 +1,4 @@
-package aula02;
+package aula03;
 
 public class Assistir {
     String titulo;
