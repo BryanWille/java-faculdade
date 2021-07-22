@@ -83,10 +83,13 @@ public class CriptografiaDeCesar {
 
             //Saída de Dados
 
+            String frase = "";
+
             for (int contador = 0; mensagem.length > contador; contador++) {
-                System.out.print(mensagem[contador] + " ");
+                frase += mensagem[contador] + " ";
             }
-            System.out.println("\n");
+            JOptionPane.showMessageDialog(null, "Sua frase ficou: \n" +frase, msg,
+                    JOptionPane.INFORMATION_MESSAGE);
         } while (crypt.equalsIgnoreCase("/fechar"));
         cesar.close();
         alfabeto.close();
