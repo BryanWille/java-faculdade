@@ -68,7 +68,7 @@ public class Banco {
 
     public void fecharConta(){
         System.out.println("Fechando sua conta!");
-        if(this.saldo == 0 && this.status){
+        if(this.status && this.saldo == 0){
             System.out.println("Conta fechada!");
             this.status = false;
         } else if (this.saldo != 0){
@@ -82,7 +82,7 @@ public class Banco {
     public void depositar(double d){
         if(this.status){
             System.out.printf("\nDepósito de R$%f feito com sucesso", d);
-            this.saldo += d;
+            this.setSaldo(getSaldo() + d);
         } else {
             System.out.println("Você não tem uma conta portanto não pode depositar!");
         }

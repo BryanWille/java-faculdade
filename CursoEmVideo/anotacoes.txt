@@ -23,3 +23,8 @@ public Caneta(){ Tem que ter o mesmo nome que a classe
 Então toda vez que iniciarmos uma caneta terá 100% de carga.
 
 c1.constructor(100)
+
+
+Na hora de mudar valores dentro da classe, sempre usar os setters e getters em vez de mudar diretamente os atributos
+
+métodos Setters e Getters começam com is quando são boolean!
