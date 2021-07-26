@@ -2,20 +2,23 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Conteúdo 10/Conteúdo 10.iml" filepath="$PROJECT_DIR$/Conteúdo 10/Conteúdo 10.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Conteúdo 11/Conteúdo 11.iml" filepath="$PROJECT_DIR$/Conteúdo 11/Conteúdo 11.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Conteúdo 12/Conteúdo 12.iml" filepath="$PROJECT_DIR$/Conteúdo 12/Conteúdo 12.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Conteúdo 13/Conteúdo 13.iml" filepath="$PROJECT_DIR$/Conteúdo 13/Conteúdo 13.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Conteúdo 14/Conteúdo 14.iml" filepath="$PROJECT_DIR$/Conteúdo 14/Conteúdo 14.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Conteúdo 4/Conteúdo 4.iml" filepath="$PROJECT_DIR$/Conteúdo 4/Conteúdo 4.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Conteúdo 5/Conteúdo 5.iml" filepath="$PROJECT_DIR$/Conteúdo 5/Conteúdo 5.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Conteúdo 6/Conteúdo 6.iml" filepath="$PROJECT_DIR$/Conteúdo 6/Conteúdo 6.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Conteúdo 7/Conteúdo 7.iml" filepath="$PROJECT_DIR$/Conteúdo 7/Conteúdo 7.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Conteúdo 8/Conteúdo 8.iml" filepath="$PROJECT_DIR$/Conteúdo 8/Conteúdo 8.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Conteúdo 9/Conteúdo 9.iml" filepath="$PROJECT_DIR$/Conteúdo 9/Conteúdo 9.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Meus Projetos/Meus Projetos.iml" filepath="$PROJECT_DIR$/Meus Projetos/Meus Projetos.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AED1/AED1.iml" filepath="$PROJECT_DIR$/AED1/AED1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BOOTCAMP POO/BOOTCAMP POO.iml" filepath="$PROJECT_DIR$/BOOTCAMP POO/BOOTCAMP POO.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AED1/Conteúdo 10/Conteúdo 10.iml" filepath="$PROJECT_DIR$/AED1/Conteúdo 10/Conteúdo 10.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AED1/Conteúdo 11/Conteúdo 11.iml" filepath="$PROJECT_DIR$/AED1/Conteúdo 11/Conteúdo 11.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AED1/Conteúdo 12/Conteúdo 12.iml" filepath="$PROJECT_DIR$/AED1/Conteúdo 12/Conteúdo 12.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AED1/Conteúdo 13/Conteúdo 13.iml" filepath="$PROJECT_DIR$/AED1/Conteúdo 13/Conteúdo 13.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AED1/Conteúdo 14/Conteúdo 14.iml" filepath="$PROJECT_DIR$/AED1/Conteúdo 14/Conteúdo 14.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AED1/Conteúdo 4/Conteúdo 4.iml" filepath="$PROJECT_DIR$/AED1/Conteúdo 4/Conteúdo 4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AED1/Conteúdo 5/Conteúdo 5.iml" filepath="$PROJECT_DIR$/AED1/Conteúdo 5/Conteúdo 5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AED1/Conteúdo 6/Conteúdo 6.iml" filepath="$PROJECT_DIR$/AED1/Conteúdo 6/Conteúdo 6.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AED1/Conteúdo 7/Conteúdo 7.iml" filepath="$PROJECT_DIR$/AED1/Conteúdo 7/Conteúdo 7.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AED1/Conteúdo 8/Conteúdo 8.iml" filepath="$PROJECT_DIR$/AED1/Conteúdo 8/Conteúdo 8.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AED1/Conteúdo 9/Conteúdo 9.iml" filepath="$PROJECT_DIR$/AED1/Conteúdo 9/Conteúdo 9.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CursoEmVideo/CursoEmVideo.iml" filepath="$PROJECT_DIR$/CursoEmVideo/CursoEmVideo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MEUS PROJETOS/Meus Projetos.iml" filepath="$PROJECT_DIR$/MEUS PROJETOS/Meus Projetos.iml" />
       <module fileurl="file://$PROJECT_DIR$/Provas/Provas.iml" filepath="$PROJECT_DIR$/Provas/Provas.iml" />
-      <module fileurl="file://$PROJECT_DIR$/exercicios/exercicios.iml" filepath="$PROJECT_DIR$/exercicios/exercicios.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AED1/exercicios/exercicios.iml" filepath="$PROJECT_DIR$/AED1/exercicios/exercicios.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/java-faculdade.iml" filepath="$PROJECT_DIR$/.idea/java-faculdade.iml" />
     </modules>
   </component>
