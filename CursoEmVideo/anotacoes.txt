@@ -1,0 +1,25 @@
+                    Setters, Getters e Constructor
+
+Setters: setam um objeto por fora, sem termos que colocar diretamente, ou seja nos dá muito mais segurança ex
+em vez de:
+
+Caneta c1 = new Caneta();
+
+c1.tampa = 0.5
+c1.setTampa(0.5);
+
+Assim podemos setar, criar algo com mais segurança sem o usuário ter acesso direto, a mesma coisa server para os getters
+
+Getters: retornam o valor de algo:
+
+c1.getTampado = true;
+
+Constructor: constroi um padrão, em vez de colocarmos que toda vez a caneta vem com 100% da tinta, já podemos fazer isso dentro de um construtor.
+
+public Caneta(){ Tem que ter o mesmo nome que a classe
+    Caneta.carga = 100;
+}
+
+Então toda vez que iniciarmos uma caneta terá 100% de carga.
+
+c1.constructor(100)
