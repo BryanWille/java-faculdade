@@ -12,7 +12,7 @@ public class GarrafaEmge implements Garrafa {
     }
 
     public void colocarLiquido(String l){
-        if(this.getTampada()){
+        if(!this.getTampada()){
             if(this.getLiquido().equalsIgnoreCase("vazio")){
                 System.out.println("Colocando " +l);
                 this.setLiquido(l);
