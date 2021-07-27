@@ -11,20 +11,42 @@ public class GarrafaEmge implements Garrafa {
         setLiquido("vazio");
     }
 
-    public void colocarLiquido(String l){
+    public void retirarLiquido(String l, int quant){
         if(!this.getTampada()){
-            if(this.getLiquido().equalsIgnoreCase("vazio")){
-                System.out.println("Colocando " +l);
-                this.setLiquido(l);
+            if(l.equalsIgnoreCase(getLiquido())){
+                if(getPreenchimento() - quant < 0){
+                    System.out.println("Sua garrafa vai ficar 'devendo' vamos parar em 0%");
+                    setPreenchimento(0);
+                } else {
+                    setPreenchimento(getPreenchimento() - quant);
+                }
             } else {
-                System.out.println("Sua garrafá tem um liquído você primeiro tem que esvazia-lá!");
+                System.out.println("O líquido que você quer tirar é :" +l +" e o liquido que está na garrafa é: "
+                                   +this.getLiquido() +" troque antes de tirar!");
             }
         } else {
             System.out.println("A garrafa está tampada! destampe-a");
         }
     }
 
-    //"your condition"? "step if true":"step if condition fails"
+    public void colocarLiquido(String l, int quant){
+        if(!this.getTampada()){
+            if(l.equalsIgnoreCase(getLiquido())){
+                if(getPreenchimento() + quant > 100){
+                    System.out.println("Sua garrafa vai transbordar, parando em 100%");
+                    setPreenchimento(100);
+                } else {
+                    setPreenchimento(getPreenchimento() + quant);
+                }
+            } else {
+                System.out.println("O líquido que você quer colocar é :" +l +" e o liquido que está na garrafa é: "
+                +this.getLiquido() +" troque antes de colocar mais!");
+            }
+        } else {
+            System.out.println("A garrafa está tampada! destampe-a");
+        }
+    }
+
 
     public void status(){
         System.out.println("-------------------------------");
