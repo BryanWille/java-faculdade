@@ -1,4 +1,4 @@
-package exercicio;
+package aula05;
 
 public class Banco {
     public String numConta;

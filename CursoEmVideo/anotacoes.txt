@@ -23,3 +23,32 @@ public Caneta(){ Tem que ter o mesmo nome que a classe
 Então toda vez que iniciarmos uma caneta terá 100% de carga.
 
 c1.constructor(100)
+
+
+                    Encapsulamento
+
+Encapsulamento é como criar um padrão para algo, por exemplo todo controle remoto tem como diminuir e aumentar volume, então podemos criar um padrão
+que sempre cria esses controles. diferente do metódo construtor (metódo construtor toda vez que se instância o objeto ele coloca por padrão o que se está dentro)
+
+Declaração:
+
+public interface NomeDaInterface{
+    public abstract metodo();
+
+}
+
+note que como é uma interface ou seja o que vai construir temos que declarar como interface não como class.
+Os atributos tem que ser definidos do tipo público e abstratos os metódos tem que ter os seus parenteses e depois o semicolon.
+
+Na Classe:
+
+class NomeDaClasse implements NomeDaInterface{
+
+    @Override
+    public void metodo(){
+
+    }
+}
+
+Na hora de implementar colocamos o @Override em cima do objeto e depois o declaramos (IDE Geralmente fazem isso por si só)
+@Override significa que vamos sobrescrever em cima do metódo abstrato.
