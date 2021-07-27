@@ -5,11 +5,15 @@ public class GarrafaEmge implements Garrafa {
     private int preenchimento;
     private String liquido;
 
+    //Construtor
+
     public GarrafaEmge(){
         setPreenchimento(0);
         setTampada(true);
         setLiquido("vazio");
     }
+
+    //Métodos Especiais
 
     public void tampar(int t){
         switch (t){
@@ -25,6 +29,7 @@ public class GarrafaEmge implements Garrafa {
                 System.out.println("Opção invalida!");
         }
     }
+
     public void retirarLiquido(String l, int quant){
         if(!this.getTampada()){
             if(l.equalsIgnoreCase(getLiquido())){
@@ -102,6 +107,8 @@ public class GarrafaEmge implements Garrafa {
         System.out.println("-------------------------------");
     }
 
+    //Setters e Getters
+
     public boolean getTampada(){
         return this.tampada;
     }
@@ -122,6 +129,8 @@ public class GarrafaEmge implements Garrafa {
     public void setLiquido(String l){
         this.liquido = l;
     }
+
+    //Encapsulamento / Interface
 
     @Override
     public void esvaziar(){
