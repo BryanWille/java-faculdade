@@ -10,13 +10,15 @@ public class MinhaGarrafa {
         int index, quant, indexSwitch;
         String liquido = null;
         do {
-            System.out.println("[1]Status da Garrafa" +
-                               "\n[2]Tampar/Destampar" +
-                               "\n[3]Escolher líquido" +
-                               "\n[4]Colocar" +
-                               "\n[5]Tirar" +
-                               "\n[6]Esvaziar" +
-                               "\n[7]Encher");
+            indexSwitch = 0;
+            System.out.println("[0]Encerrar" +
+                    "\n[1]Status da Garrafa" +
+                    "\n[2]Tampar/Destampar" +
+                    "\n[3]Escolher líquido" +
+                    "\n[4]Colocar" +
+                    "\n[5]Tirar" +
+                    "\n[6]Esvaziar" +
+                    "\n[7]Encher");
             System.out.print(">>>");
             index = keyb.nextInt();
             switch (index) {
@@ -24,33 +26,18 @@ public class MinhaGarrafa {
                     System.out.println("Ok :( Fechando!");
                     break;
                 case 1:
-                    bryan.status();
+                    bryan.statusMenu();
                     break;
                 case 2:
-                    bryan.setTampada(true);
+                    System.out.println("Quer [1] tampar ou [2] destampar? ");
+                    indexSwitch = keyb.nextInt();
+                    bryan.tampar(indexSwitch);
                     break;
                 case 3:
                     System.out.println("\n[1]Guaraná \n[2]Coca-Cola \n[3]Água \n[4]Café");
                     System.out.print(">>> ");
                     indexSwitch = keyb.nextInt();
-                    switch (indexSwitch){
-                        case 1:
-                            bryan.guarana();
-                            liquido = "Guaraná";
-                            break;
-                        case 2:
-                            bryan.coca();
-                            liquido = "Coca-Cola";
-                            break;
-                        case 3:
-                            bryan.agua();
-                            liquido = "Água";
-                            break;
-                        case 4:
-                            bryan.cafe();
-                            liquido = "Café";
-                            break;
-                    }
+                    liquido = bryan.selecionarLiquido(indexSwitch);
                     break;
                 case 4:
                     if(liquido == null) {

@@ -11,6 +11,20 @@ public class GarrafaEmge implements Garrafa {
         setLiquido("vazio");
     }
 
+    public void tampar(int t){
+        switch (t){
+            case 1:
+                this.setTampada(true);
+                System.out.println("Garrafa Tampada!");
+                break;
+            case 2:
+                this.setTampada(false);
+                System.out.println("Garrafa Destampada");
+                break;
+            case 3:
+                System.out.println("Opção invalida!");
+        }
+    }
     public void retirarLiquido(String l, int quant){
         if(!this.getTampada()){
             if(l.equalsIgnoreCase(getLiquido())){
@@ -47,8 +61,40 @@ public class GarrafaEmge implements Garrafa {
         }
     }
 
+    public String selecionarLiquido(int t){
+        String liquido;
+        if(getTampada()){
+            System.out.println("Garrafa tampada, Destempe-a");
+            return "vazio";
+        } else {
+            if(getLiquido().equals("vazio")){
+                switch (t){
+                    case 1:
+                        liquido = "Guaraná";
+                        break;
+                    case 2:
+                        liquido = "Coca-Cola";
+                        break;
+                    case 3:
+                        liquido = "Água";
+                        break;
+                    case 4:
+                        liquido = "Café";
+                        break;
+                    default:
+                        liquido = "vazio";
+                        break;
+                }
+                this.setLiquido(liquido);
+                return liquido;
+            } else {
+                System.out.println("Sua garrafa já tem um liquido esvazie-a antes!");
+                return "vazio";
+            }
+        }
+    }
 
-    public void status(){
+    public void statusMenu(){
         System.out.println("-------------------------------");
         System.out.println("Sua garafa está tampada: " +(this.getTampada() ? "sim" : "não"));
         System.out.println("Quantos porcento de preenchimento da garrafa: " +this.getPreenchimento() +"%");
@@ -75,26 +121,6 @@ public class GarrafaEmge implements Garrafa {
     }
     public void setLiquido(String l){
         this.liquido = l;
-    }
-
-    @Override
-    public void guarana(){
-        this.colocarLiquido("Guaraná");
-    }
-
-    @Override
-    public void coca(){
-        this.colocarLiquido("Coca-Cola");
-    }
-
-    @Override
-    public void agua(){
-        this.colocarLiquido("Água");
-    }
-
-    @Override
-    public void cafe(){
-        this.colocarLiquido("Café");
     }
 
     @Override
