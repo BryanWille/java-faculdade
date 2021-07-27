@@ -27,7 +27,7 @@ c1.constructor(100)
 
                     Encapsulamento
 
-Encapsulamento é como criar um padrão para algo, por exemplo todo controle remoto tem como diminuir e aumentar volume, então podemos criar um padrão
+Encapsulamento é como criar um padrão para algo, por exemplo todos controle remoto tem como diminuir e aumentar volume, então podemos criar um padrão
 que sempre cria esses controles. diferente do metódo construtor (metódo construtor toda vez que se instância o objeto ele coloca por padrão o que se está dentro)
 
 Declaração:
@@ -52,3 +52,5 @@ class NomeDaClasse implements NomeDaInterface{
 
 Na hora de implementar colocamos o @Override em cima do objeto e depois o declaramos (IDE Geralmente fazem isso por si só)
 @Override significa que vamos sobrescrever em cima do metódo abstrato.
+
+Quandos usamos interface podemos colocar os metodos get e set como private, já que vamos usar os metódos do encapsulamento
