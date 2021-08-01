@@ -13,5 +13,6 @@
 	<classpathentry kind="src" path="Conteúdo 8/src"/>
 	<classpathentry kind="src" path="Conteúdo 9/src"/>
 	<classpathentry kind="src" path="Meus Projetos/src"/>
+	<classpathentry kind="src" path="CursoEmVideo/src/aula08"/>
 	<classpathentry kind="output" path="out/production/Conteúdo 11"/>
 </classpath>
