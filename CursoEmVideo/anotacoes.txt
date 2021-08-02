@@ -70,4 +70,4 @@ Objeto coisa = new Objeto();
 
 Objeto algumaCoisa = coisa;
 
-sendo que temos que especificar qual o objeto, se for uma Faca então falamos que algumaCoisa é um objeto do tipo faca!
+Sendo que temos que especificar qual o objeto, se for uma Faca então falamos que algumaCoisa é um objeto do tipo faca!

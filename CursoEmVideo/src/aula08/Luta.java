@@ -34,7 +34,7 @@ public class Luta {
                     break;
             }
         } else {
-            System.out.println("Luta não foi aprovada!");
+            System.out.println("Essa luta não foi aprovada!");
         }
     }
 
