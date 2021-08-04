@@ -71,3 +71,17 @@ Objeto coisa = new Objeto();
 Objeto algumaCoisa = coisa;
 
 Sendo que temos que especificar qual o objeto, se for uma Faca então falamos que algumaCoisa é um objeto do tipo faca!
+
+Superclasse = Classe mãe ou seja tem uma classe que deixa a herdança os atributos e metodos
+Sub-classe = Classe filha ou seja herda atributos e metódos de uma classe mãe
+Ancestral = Superclasse de uma Superclasse,
+Descendente = Sub-classe de uma Sub-classe (a classe descendente herda tudo da classe ancestral)
+Classe raiz = primeira classe de todoa herança
+Classe folha = última classe, a que não tem filhos, ou sjea não tem subclasses
+Generalização = Superclasse é uma generalização de subclasse
+Especialização = Subclasse é uma especialização de superclasse
+Tipos de Herança = final abstract
+Classe Abstrata = não pode ser instanciada, somente as suas subclasses
+Méotodo Abstrato = não pode ser alterado durante as gerações de subclasses
+Classe Final = não pode ser alterada duranta as gerações filhas
+Método final = não pode ser alterada duranta as gerações filhas
