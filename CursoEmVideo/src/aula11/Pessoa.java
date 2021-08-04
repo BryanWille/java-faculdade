@@ -1,14 +1,14 @@
 package aula11;
 
 public abstract class Pessoa {
-    //Classe Abstrata não podemos instancar ela, somente suas sub-classes
+    //Classe Abstrata não podemos instanciar ela, somente as suas subclasses
     private String nome, sexo;
     private int idade;
 
 
     public final void fazerAniver(){
         this.idade ++;
-        System.out.println(this.getNome() +", parabenś pelos seus " +this.getIdade());
+        System.out.println(this.getNome() +", parabens pelos seus " +this.getIdade());
     }
 
 
