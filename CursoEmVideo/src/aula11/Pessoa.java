@@ -35,10 +35,10 @@ public abstract class Pessoa {
 
     @Override
     public String toString() {
-        return "Pessoa{" +
+        return "Pessoa{"  +
                 "nome='" + nome + '\'' +
-                ", sexo='" + sexo + '\'' +
-                ", idade=" + idade +
+                " , sexo='" + sexo + '\'' +
+                " , idade=" + idade +
                 '}';
     }
 }
