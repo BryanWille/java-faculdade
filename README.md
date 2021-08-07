@@ -2,7 +2,7 @@
 
 ### Olá me chamo Bryan, estou no primeiro semestre de Ciências da Computação (2021/1)
 ***
-Aqui estão armazenados os **exercicios** do primeiro semestre de AED1 da faculdade *EMGE* resolvido por mim, durante o primeiro semestre! 
+Aqui estão armazenados os **exercicios** do primeiro semestre de AED da faculdade *EMGE* resolvido por mim, durante o primeiro semestre! 
 
 - [x] **Conteúdo 4**
 - [x] **Conteúdo 5**
