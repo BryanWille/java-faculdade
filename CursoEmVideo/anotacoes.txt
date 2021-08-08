@@ -85,3 +85,16 @@ Classe Abstrata = não pode ser instanciada, somente as suas subclasses
 Méotodo Abstrato = não pode ser alterado durante as gerações de subclasses
 Classe Final = não pode ser alterada duranta as gerações filhas
 Método final = não pode ser alterada duranta as gerações filhas
+
+                        Super
+
+syntax:
+
+public class Peixe extends Animal{
+    public Peixe(String nome, String cor, String ambiente, float comprimento, float velocidadeMedia, int numeroPatas) {
+        super(nome, cor, ambiente, comprimento, velocidadeMedia, numeroPatas);
+    }
+}
+
+Neste caso o super dentro do construtor de Peixe, vai fazer o seguinte, vai pegar os atributos em peixe, e colocar esses atributos na classe mãe!
+ou seja a gente ta falando que no construtor de peixe basicamente a gente tem o construtor de animal, que vai ser feito com o super!
