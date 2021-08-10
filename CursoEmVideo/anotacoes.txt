@@ -98,3 +98,35 @@ public class Peixe extends Animal{
 
 Neste caso o super dentro do construtor de Peixe, vai fazer o seguinte, vai pegar os atributos em peixe, e colocar esses atributos na classe mãe!
 ou seja a gente ta falando que no construtor de peixe basicamente a gente tem o construtor de animal, que vai ser feito com o super!
+
+
+
+                        Polimorfismo
+
+é basicamente mudar de acordo com a sitaução da classe, exitem varios mas os dois principais são, Sobrepoisção e Sobrecarga
+
+No de sobreposição, podemos sobrepor um método de uma superclasse de acordo com a necessidade da sobreclasse, então podemos usar por exemplo, todos cachorros fazem Au Au, mas
+mas pode ser que uma especie faz só Au!, então sobrepomos o método de Au Au para so Au.
+ex
+
+classe mae{
+    public void latir(){
+        System.out.println("Au AU");
+    }
+}
+
+classe filha {
+
+    @Override
+    public void latir(){
+        System.out.println("Au ");
+    }
+}
+
+Precisamos colocar @Override para indicar que estamos sobrepondo o metódo!
+Lembrando que o metódo deve ter a mesma assinatura mas em classe diferentes, no modo de sobrecarga não podemos sobrescrever um método trocando a quantidade e o tipo de paramêtros.
+só podemos usar os memsos de quando o método foi criado, e em classes diferentes
+
+
+Agora no outro jeito de polimorfismo é o que chamamos de Sobrecarga, nesse caso podemos criar o mesmo método em uma classe, mas temos que obrigatoriamente, usar paramêtros diferentes,
+para especificar o que determinada rotina vai fazer!
