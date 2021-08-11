@@ -130,3 +130,8 @@ só podemos usar os memsos de quando o método foi criado, e em classes diferent
 
 Agora no outro jeito de polimorfismo é o que chamamos de Sobrecarga, nesse caso podemos criar o mesmo método em uma classe, mas temos que obrigatoriamente, usar paramêtros diferentes,
 para especificar o que determinada rotina vai fazer!
+
+
+super.método retorna o meodo da classe super, ou classe mãe, se precisar usar eles, junto com a sobrescrição
+
+super significa comumente super classe, ou seja falar com a classe mãe.
