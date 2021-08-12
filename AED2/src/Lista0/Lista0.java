@@ -9,7 +9,7 @@ public class Lista0 {
         do {
             System.out.println("\nQual exercício você quer selecionar?");
             System.out.print("\n[0]Sair \n[1]Valor Absoluto \n[2]Conversor de Temperaturas " +
-                    "\n[3]Conversor de Medidas \n[4]Laços \n>>> ");
+                    "\n[3]Conversor de Medidas \n[4]Laços \n[5]Quadrado Perfeito \n>>> ");
             opcao = keyb.nextInt();
             switch (opcao) {
                 case 0:
@@ -26,6 +26,9 @@ public class Lista0 {
                     break;
                 case 4:
                     lacos();
+                    break;
+                case 5:
+                    quadradoPerfeito();
                     break;
             }
         } while (opcao != 0);
@@ -67,7 +70,7 @@ public class Lista0 {
 
     public static void conversorMedidas(){
         String medida = "";
-        float cmMic = 10000, polCm = 2.54f, pePol = 12, jarPe = 3, milJar = 1760, milnJar = 2025.37f;
+        float polCm = 2.54f, pePol = 12, jarPe = 3, milJar = 1760;
         float conversao, converter;
         keyb = new Scanner(System.in);
         System.out.println("Vamos transformar medidas em metros!");
@@ -119,6 +122,21 @@ public class Lista0 {
     }
 
     public static void quadradoPerfeito(){
+        boolean quadrado = false;
+        int somador = 0;
+        keyb = new Scanner(System.in);
+        System.out.println("Vamos descobrir se seu número é um quadrado perfeito!");
+        System.out.println("Digite seu número: ");
+        int numero = keyb.nextInt();
+        for(int cont = 1; numero > somador; cont+=2){
+            somador += cont;
+            quadrado = (numero == somador);
+            System.out.print(cont +" > " +somador +"  ");
+        }
+        System.out.println("\n" +(quadrado ? "Seu número é um quadrado perfeito" : "seu número não é um quadrado perfeito"));
+    }
+
+    public static void furacoes(){
 
     }
 }
