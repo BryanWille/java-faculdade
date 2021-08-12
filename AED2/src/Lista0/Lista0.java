@@ -9,7 +9,8 @@ public class Lista0 {
         do {
             System.out.println("\nQual exercício você quer selecionar?");
             System.out.print("\n[0]Sair \n[1]Valor Absoluto \n[2]Conversor de Temperaturas " +
-                    "\n[3]Conversor de Medidas \n[4]Laços \n[5]Quadrado Perfeito \n>>> ");
+                    "\n[3]Conversor de Medidas \n[4]Laços \n[5]Quadrado Perfeito " +
+                    "\n[6]Furacões \n[7]Potência de Dois \n>>> ");
             opcao = keyb.nextInt();
             switch (opcao) {
                 case 0:
@@ -29,6 +30,12 @@ public class Lista0 {
                     break;
                 case 5:
                     quadradoPerfeito();
+                    break;
+                case 6:
+                    furacoes();
+                    break;
+                case 7:
+                    potenciaDois();
                     break;
             }
         } while (opcao != 0);
@@ -137,6 +144,53 @@ public class Lista0 {
     }
 
     public static void furacoes(){
+        String status = "";
+        keyb = new Scanner(System.in);
+        System.out.println("Vamos verificar a escala do atual furacão");
+        System.out.println("Digite a velocidade do furacão em km/h");
+        float velocidade = keyb.nextFloat();
+        if (velocidade <= 118 && velocidade >= 62){
+            status = "Tempestade tropical";
+        } else if (velocidade < 153){
+            status = "Furacão categoria 1";
+        } else if (velocidade <= 177){
+            status = "Furacão categoria 2";
+        } else if (velocidade <= 209){
+            status = "Furacao categoria 3";
+        } else if (velocidade <= 249){
+            status = "Furacão categoria 4";
+        } else if (velocidade > 249) {
+            status = "Furacao categoria 5";
+        } else {
+            System.out.println("Velocidade muito baixa!");
+        }
 
+        System.out.println("A Categoria do seu furacão é: " +status);
     }
+
+    public static void potenciaDois() {
+        int numero, potencia = 0, maxDigito;
+        boolean testeLogico = false;
+        keyb = new Scanner(System.in);
+        System.out.println("Vamos verificar se seu número é uma potência de dois!");
+        System.out.println("Digite o seu número: ");
+        numero = keyb.nextInt();
+        if (numero % 2 != 0 && numero != 1) {
+            System.out.println("Seu número não pode ser uma potência de dois, pois é diferente de um e ímpar");
+        } else if(numero == 1){
+            testeLogico = true;
+        } else {
+            maxDigito = (int) Math.pow(numero, 1/2f);
+            for(int cont = 1; cont <= maxDigito; cont++){
+                if(Math.pow(2, cont) == numero){
+                    testeLogico = true;
+                    potencia = cont;
+                    break;
+                }
+            }
+        }
+        System.out.println(testeLogico ? ("Seu número é uma potência de dois e é: " +potencia) :
+                "infelizmente seu número não é uma potência de dois");
+    }
+
 }
