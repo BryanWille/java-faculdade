@@ -1,0 +1,39 @@
+                                        Compiladores
+
+Compilador, é um programa que transforma o código fonte (uma linguagem de alto nível, ou seja uma linguagem que tem uma
+linguagem compreensivel em uma gramatica, como por exemplo em inglês) para uma linguagem objeto que é uma linguagem com
+códigos assembly, que apartir então do link editor um código executavel em si
+
+Para o código objeto passa-sse por cinco etapas:
+
+Análise léxica: le o arquivo (o código-fonte) ‘byte’ o byte, caracteres a caracteres, lendo tudo e formando tokens, de
+acordo com palavras, e palavras reservadas;
+Análise sintática: lê grupo ou blocos de estruturas de comandos, como, por exemplo um if, else if, else, switch, for, do
+ while, while.
+Análise Semântica: regras da linguagem, como defninição de variáveis, métodos.
+Otimização: Melhorar o tempo de execução, organizar as instruções.
+Código final; gera o código alvo ou código de montagem.
+
+
+                                        Intepretadores
+
+Código fonte ou seja .java (ou qualquer outra intepretada), quando compilada é convertida em uma linguagem
+intermedíariaq que sera lida por uma maquina virtual no caso JVM do java
+
+Interpretador (JVM: Java Virtual Mahine) traduz o bytecode para a linguagem maquinaa (código binário)
+
+Código intermediároi (bytecodes ou .class) é compilado dinamicamente pelo interpretador, gerando o código de máquina.
+
+Empacotamento, é o agrupamento do código compilado em um arquivo .java (Java ARchive), .war (Web ARchive), ou .ear
+(Enterprise ARchive)
+
+Linguagens interpretáveis: Java, C#, Python, R, etc.
+
+
+
+                                        Programção Orientada a Objetos
+
+Em uma classe variavéis, são atributos
+Métodos são propriedades, e possuem comportamentos
+Paramêtros e um método são argumentos.
+Comportamentos são as coisas que acontecem no metódo.
