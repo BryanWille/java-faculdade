@@ -38,9 +38,7 @@ public class Lista0 {
                     potenciaDois();
                     break;
                 case 8:
-                    System.out.println("Digite um número inteiro: ");
-                    int numInt = keyb.nextInt();
-                    System.out.println((numeroPrimo(numInt) == 1 ? "Seu número é primo! " : "Seu número não é primo!"));
+                    numeroPrimo();
             }
         } while (opcao != 0);
     }
@@ -199,9 +197,7 @@ public class Lista0 {
 
     public static int numeroPrimo(int numero) {
         int primo = 0, numPrim = 0;
-        if (numero == 2) {
-            primo = 1;
-        } else if (numero % 2 == 0 || numero <= 1) {
+        if (numero % 2 == 0 || numero <= 1) {
             return primo;
         } else {
             for (int cont = 1; cont <= numero; cont += 2) {
@@ -268,8 +264,8 @@ public class Lista0 {
             }
         }
 
-        for(int cont = 0; cont < numPares.length; cont++){
-            System.out.println(numPares[cont][0] +" + " +numPares[cont][1] +" = " +numPares[cont][2]);
+        for (int[] numPare : numPares) {
+            System.out.println(numPare[0] + " + " + numPare[1] + " = " + numPare[2]);
         }
     }
 }

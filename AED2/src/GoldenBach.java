@@ -3,7 +3,7 @@ public class GoldenBach {
         //numeroPrimo();
     }
 
-    public static int numeroPrimo(int numero) {
+   /* public static int numeroPrimo(int numero) {
         int primo = 0, numPrim = 0;
         if (numero == 2) {
             primo = 1;
@@ -22,7 +22,7 @@ public class GoldenBach {
         return primo;
     }
 
-    /* public static void numeroPrimo(){
+     public static void numeroPrimo(){
         int[] numPrimo = new int[1200]; //Vai armazenar quais valores entre 0 e 1200 são primos, sendo a posição o valor, e atributo se é primo ou não
         boolean[] check = new boolean[1201]; //Vai checar se a soma dos primos já foi assinada
         int[][] numPares = new int[251][3]; //Vai armazanar na primeira fila, um primo, na segunda outro primo, na terceira a soma desses primos.
