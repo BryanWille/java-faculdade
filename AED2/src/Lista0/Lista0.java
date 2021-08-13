@@ -10,7 +10,7 @@ public class Lista0 {
             System.out.println("\nQual exercício você quer selecionar?");
             System.out.print("\n[0]Sair \n[1]Valor Absoluto \n[2]Conversor de Temperaturas " +
                     "\n[3]Conversor de Medidas \n[4]Laços \n[5]Quadrado Perfeito " +
-                    "\n[6]Furacões \n[7]Potência de Dois \n>>> ");
+                    "\n[6]Furacões \n[7]Potência de Dois \n[8]Número Primo \n>>> ");
             opcao = keyb.nextInt();
             switch (opcao) {
                 case 0:
@@ -37,6 +37,10 @@ public class Lista0 {
                 case 7:
                     potenciaDois();
                     break;
+                case 8:
+                    System.out.println("Digite um número inteiro: ");
+                    int numInt = keyb.nextInt();
+                    System.out.println((numeroPrimo(numInt) == 1 ? "Seu número é primo! " : "Seu número não é primo!"));
             }
         } while (opcao != 0);
     }
@@ -193,4 +197,34 @@ public class Lista0 {
                 "infelizmente seu número não é uma potência de dois");
     }
 
+    public static int numeroPrimo(int numero) {
+        int primo = 0, numPrim = 0;
+        if (numero == 2) {
+            primo = 1;
+        } else if (numero % 2 == 0 || numero <= 1) {
+            return primo;
+        } else {
+            for (int cont = 1; cont <= numero; cont += 2) {
+                if (numero % cont == 0) {
+                    numPrim++;
+                }
+            }
+            if (numPrim == 2) {
+                primo = 1;
+            }
+        }
+        return primo;
+    }
+
+    public static void numeroPrimo(){
+        int[] numerosPares = new int[498];
+        int posicao = 0;
+        for (int cont = 700; 1200 >= cont; cont+= 2){
+            numerosPares[posicao] = cont;
+            posicao ++;
+        }
+        for(int numeros : numerosPares){
+            System.out.println(numeros);
+        }
+    }
 }
