@@ -42,7 +42,8 @@ public class Lista0 {
                     numeroPrimo();
                     break;
                 case 9:
-                    frequenciaDigito();
+                    //frequenciaDigito();
+                    permutacao();
                     break;
             }
         } while (opcao != 0);
@@ -285,6 +286,50 @@ public class Lista0 {
         System.out.println("O Seu número " +d +" na sequência " +n +" aparece " +somador +"x vezes!");
     }
 
-
+    public static void permutacao(){
+        int quantDigito, primeiroNumero, segundoNumero;
+        keyb = new Scanner(System.in);
+        System.out.println("Vamos verificar se um número a é permutação de outro número b!");
+        System.out.println("Digite o primeiro número: ");
+        primeiroNumero = keyb.nextInt();
+        System.out.println("Digite o segundo número: ");
+        segundoNumero = keyb.nextInt();
+        quantDigito = String.valueOf(primeiroNumero).length();
+        if(quantDigito != String.valueOf(segundoNumero).length()){
+            System.out.println("O Segundo número tem que ter a mesma quantidade de digítos que o Primeiro!");
+        } else {
+            int[][] verificador = new int[quantDigito][2];
+            for(int cont = 0; cont < verificador.length; cont++){
+                verificador[cont][0] = (primeiroNumero / (int) Math.pow(10, (cont))) % 10;
+                verificador[cont][1] = (segundoNumero / (int) Math.pow(10, (cont))) % 10;
+            }
+            int tempUm, tempDois;
+            for(int cont = 0; cont < verificador.length; cont++){
+                for(int aux = 0; aux < verificador.length -1; aux++){
+                    if(verificador[aux][0] > verificador[aux+1][0]){
+                        tempUm = verificador[aux][0];
+                        verificador[aux][0] = verificador[aux+1][0];
+                        verificador[aux+1][0] = tempUm;
+                    }
+                    if(verificador[aux][1] > verificador[aux+1][1]){
+                        tempDois = verificador[aux][1];
+                        verificador[aux][1] = verificador[aux+1][1];
+                        verificador[aux+1][1] = tempDois;
+                    }
+                }
+            }
+            boolean teste = true;
+            for(int[] num : verificador){
+                if(num[0] != num[1]){
+                    teste = false;
+                }
+            }
+            if(teste){
+                System.out.println("O Número " +primeiroNumero +" é uma permutação de " +segundoNumero);
+            } else {
+                System.out.println("Esses números não são permutações de si mesmo!");
+            }
+        }
+    }
 
 }
