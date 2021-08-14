@@ -11,7 +11,7 @@ public class Lista0 {
             System.out.print("\n[0]Sair \n[1]Valor Absoluto \n[2]Conversor de Temperaturas " +
                     "\n[3]Conversor de Medidas \n[4]Laços \n[5]Quadrado Perfeito " +
                     "\n[6]Furacões \n[7]Potência de Dois \n[8]Número Primo " +
-                    "\n[9]Frequência de Dígitos\n>>> ");
+                    "\n[9]Frequência de Dígitos \n[10]Operador Lógico. \n>>> ");
             opcao = keyb.nextInt();
             switch (opcao) {
                 case 0:
@@ -42,8 +42,14 @@ public class Lista0 {
                     numeroPrimo();
                     break;
                 case 9:
-                    //frequenciaDigito();
+                    frequenciaDigito();
                     permutacao();
+                    break;
+                case 10:
+                    operadorLogico();
+                    break;
+                default:
+                    System.out.println("Selecione uma opção válida!");
                     break;
             }
         } while (opcao != 0);
@@ -335,4 +341,44 @@ public class Lista0 {
         }
     }
 
+    public static void operadorLogico(){
+        String operador = "";
+        int resultado = 0;
+        keyb = new Scanner(System.in);
+        System.out.println("Vamos colocar operadores lógicos como: ");
+        System.out.println("Digite o valor lógico de A (1 = Sim, 0 = Nâo): ");
+        int primeiro = keyb.nextInt();
+        System.out.println("Digite o valor lógico de B (1 = Sim, 0 = Nâo): ");
+        int segundo = keyb.nextInt();
+        keyb.nextLine();
+        System.out.println("[A]AND \n[O]OR \n[X]XOR \n[N]NAND");
+        String opcao = keyb.nextLine();
+        switch (opcao){
+            case "A": case "a":
+                operador = "AND";
+                if (segundo == 1 && primeiro == 1){
+                    resultado = 1;
+                }
+                break;
+            case "O": case "o":
+                operador = "OR";
+                if(segundo == 1 || primeiro == 1){
+                    resultado = 1;
+                }
+                break;
+            case "X": case "x":
+                operador = "XOR";
+                if(!((segundo == 1 && primeiro == 1) || (segundo == 0 && primeiro == 0))){
+                    resultado = 1;
+                }
+                break;
+            case "N": case "n":
+                operador = "AND";
+                if (!(segundo == 1 && primeiro == 1)) {
+                    resultado = 1;
+                }
+                    break;
+        }
+        System.out.println(primeiro +" " + operador +" " + segundo +" = " +resultado);
+    }
 }
