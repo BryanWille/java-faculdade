@@ -224,9 +224,11 @@ public class Lista0 {
         int[][] numPares = new int[251][3]; //Vai armazanar na primeira fila, um primo, na segunda outro primo, na terceira a soma desses primos.
         int somador = 0, somaPrimo;
         numPrimo[2] = 1;
+
         for(int cont = 1; cont < numPrimo.length; cont+= 2){
             numPrimo[cont] = numeroPrimo(cont); //Atribuição dos valores primos
         }
+
         for(int cont = 0; cont < numPrimo.length; cont++){
             if(numPrimo[cont] == 1){ // Remove todas os números não primos
                 for(int aux = 0; aux < numPrimo.length; aux++){
@@ -322,6 +324,7 @@ public class Lista0 {
             for(int[] num : verificador){
                 if(num[0] != num[1]){
                     teste = false;
+                    break;
                 }
             }
             if(teste){
