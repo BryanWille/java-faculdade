@@ -1,9 +1,10 @@
 package Lista0;
+
 import java.util.Scanner;
 
-public class Lista0 {
+public class Lista0Switch {
     private static Scanner keyb;
-    public static void main(String[] args){
+    /*public static void main(String[] args){
         int opcao;
         keyb = new Scanner(System.in);
         do {
@@ -17,52 +18,68 @@ public class Lista0 {
                     System.out.println("Ok Fechando! :(");
                     break;
                 case 1:
-                    valorAbsoluto();
+                    System.out.println("Digite o seu número: ");
+                    float num = keyb.nextFloat();
+                    valorAbsoluto(num);
                     break;
                 case 2:
-                    conversorTemperatura();
+                    System.out.println("O que você quer converte?");
+                    System.out.println("\n[1]Celsius -> Fahrenheit \n[2]Fahrenheit -> Celsius");
+                    System.out.print(">>> ");
+                    int opt = keyb.nextInt();
+                    System.out.println("Digite a temperatura: ");
+                    float temperatura = keyb.nextFloat();
+                    conversorTemperatura(opt, temperatura);
                     break;
                 case 3:
-                    conversorMedidas();
+                    System.out.println("Vamos transformar medidas em metros!");
+                    System.out.print("[1]Milhas \n[2]Jardas \n[3]Pés \n[4]Polegadas \n>>> ");
+                    int opc = keyb.nextInt();
+                    System.out.println("Qual a distância: ");
+                    float converter = keyb.nextFloat();
+                    conversorMedidas(opc, converter);
                     break;
                 case 4:
-                    lacos();
+                    System.out.println("Quantas repetições você quer? ");
+                    int repet = keyb.nextInt();
+                    lacos(repet);
                     break;
                 case 5:
-                    quadradoPerfeito();
+                    System.out.println("Vamos descobrir se seu número é um quadrado perfeito!");
+                    System.out.println("Digite seu número: ");
+                    int nume = keyb.nextInt();
+                    quadradoPerfeito(nume);
                     break;
                 case 6:
-                    furacoes();
+                    System.out.println("Vamos verificar a escala do atual furacão");
+                    System.out.println("Digite a velocidade do furacão em km/h");
+                    float velocidade = keyb.nextFloat();
+                    furacoes(velocidade);
                     break;
                 case 7:
-                    potenciaDois();
+                    System.out.println("Vamos verificar se seu número é uma potência de dois!");
+                    System.out.println("Digite o seu número: ");
+                    int numero = keyb.nextInt();
+                    potenciaDois(numero);
                     break;
                 case 8:
                     numeroPrimo();
+                    break;
+                case 9:
             }
         } while (opcao != 0);
     }
 
-    public static void valorAbsoluto(){
-        keyb = new Scanner(System.in);
-        System.out.println("Digite o seu número: ");
-        float num = keyb.nextFloat();
+    public static void valorAbsoluto(float num){
         if(num < 0){
             num *= -1;
         }
         System.out.println("Seu número fica: " +num);
     }
 
-    public static void conversorTemperatura(){
-        keyb = new Scanner(System.in);
-        float temperatura, conversao = 0;
+    public static void conversorTemperatura(int opcao, float temperatura){
+        float conversao = 0;
         String medida = "";
-        System.out.println("O que você quer converte?");
-        System.out.println("\n[1]Celsius -> Fahrenheit \n[2]Fahrenheit -> Celsius");
-        System.out.print(">>> ");
-        int opcao = keyb.nextInt();
-        System.out.println("Digite a temperatura: ");
-        temperatura = keyb.nextFloat();
         switch(opcao){
             case 1:
                 medida = "C° F°";
@@ -74,19 +91,13 @@ public class Lista0 {
                 break;
         }
         System.out.println(temperatura +medida.substring(0, 2) +" fica: "
-                    +Math.floor(conversao) +medida.substring(4));
+                +Math.floor(conversao) +medida.substring(4));
     }
 
-    public static void conversorMedidas(){
+    public static void conversorMedidas(int opcao, float converter){
         String medida = "";
         float polCm = 2.54f, pePol = 12, jarPe = 3, milJar = 1760;
-        float conversao, converter;
-        keyb = new Scanner(System.in);
-        System.out.println("Vamos transformar medidas em metros!");
-        System.out.print("[1]Milhas \n[2]Jardas \n[3]Pés \n[4]Polegadas \n>>> ");
-        int opcao = keyb.nextInt();
-        System.out.println("Qual a medida: ");
-        converter = keyb.nextFloat();
+        float conversao;
         conversao = converter;
         switch (opcao){
             case 1:
@@ -109,10 +120,7 @@ public class Lista0 {
         System.out.println(converter +" " +medida +" para metros é igual a: " +conversao);
     }
 
-    public static void lacos(){
-        keyb = new Scanner(System.in);
-        System.out.println("Quantas repetições você quer? ");
-        int repet = keyb.nextInt();
+    public static void lacos(int repet){
         System.out.println("\n For: ");
         for(int cont = repet; cont >= 0; cont--){
             System.out.print("*");
@@ -130,13 +138,9 @@ public class Lista0 {
         } while (repet >= 0);
     }
 
-    public static void quadradoPerfeito(){
+    public static void quadradoPerfeito(int numero){
         boolean quadrado = false;
         int somador = 0;
-        keyb = new Scanner(System.in);
-        System.out.println("Vamos descobrir se seu número é um quadrado perfeito!");
-        System.out.println("Digite seu número: ");
-        int numero = keyb.nextInt();
         for(int cont = 1; numero > somador; cont+=2){
             somador += cont;
             quadrado = (numero == somador);
@@ -145,12 +149,8 @@ public class Lista0 {
         System.out.println("\n" +(quadrado ? "Seu número é um quadrado perfeito" : "seu número não é um quadrado perfeito"));
     }
 
-    public static void furacoes(){
+    public static void furacoes(float velocidade){
         String status = "";
-        keyb = new Scanner(System.in);
-        System.out.println("Vamos verificar a escala do atual furacão");
-        System.out.println("Digite a velocidade do furacão em km/h");
-        float velocidade = keyb.nextFloat();
         if (velocidade <= 118 && velocidade >= 62){
             status = "Tempestade tropical";
         } else if (velocidade < 153){
@@ -170,13 +170,10 @@ public class Lista0 {
         System.out.println("A Categoria do seu furacão é: " +status);
     }
 
-    public static void potenciaDois() {
+    public static void potenciaDois(int numero) {
         int potencia = 0, maxDigito;
         boolean testeLogico = false;
         keyb = new Scanner(System.in);
-        System.out.println("Vamos verificar se seu número é uma potência de dois!");
-        System.out.println("Digite o seu número: ");
-        int numero = keyb.nextInt();
         if (numero % 2 != 0 && numero != 1) {
             System.out.println("Seu número não pode ser uma potência de dois, pois é diferente de um e ímpar");
         } else if(numero == 1){
@@ -264,5 +261,6 @@ public class Lista0 {
     }
 
     public static void frequenciaDigito(int n, int d){
-    }
+
+    }*/
 }
