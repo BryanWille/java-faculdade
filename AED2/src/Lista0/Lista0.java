@@ -10,7 +10,8 @@ public class Lista0 {
             System.out.println("\nQual exercício você quer selecionar?");
             System.out.print("\n[0]Sair \n[1]Valor Absoluto \n[2]Conversor de Temperaturas " +
                     "\n[3]Conversor de Medidas \n[4]Laços \n[5]Quadrado Perfeito " +
-                    "\n[6]Furacões \n[7]Potência de Dois \n[8]Número Primo \n>>> ");
+                    "\n[6]Furacões \n[7]Potência de Dois \n[8]Número Primo " +
+                    "\n[9]Frequência de Dígitos\n>>> ");
             opcao = keyb.nextInt();
             switch (opcao) {
                 case 0:
@@ -39,6 +40,10 @@ public class Lista0 {
                     break;
                 case 8:
                     numeroPrimo();
+                    break;
+                case 9:
+                    frequenciaDigito();
+                    break;
             }
         } while (opcao != 0);
     }
@@ -263,6 +268,23 @@ public class Lista0 {
         }
     }
 
-    public static void frequenciaDigito(int n, int d){
+    public static void frequenciaDigito(){
+        int somador = 0, numero, quantDig;
+        keyb = new Scanner(System.in);
+        System.out.println("Digite o número: ");
+        int n = keyb.nextInt();
+        System.out.println("Digite o dígito que quer pesquisar (entre 1 e 9): ");
+        int d = keyb.nextInt();
+        quantDig = String.valueOf(n).length();
+        for(int cont = quantDig; cont > 0; cont--){
+            numero = (n / (int) Math.pow(10, (cont-1))) % 10;
+            if(numero == d){
+                somador++;
+            }
+        }
+        System.out.println("O Seu número " +d +" na sequência " +n +" aparece " +somador +"x vezes!");
     }
+
+
+
 }
