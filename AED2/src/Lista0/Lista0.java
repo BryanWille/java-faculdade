@@ -116,6 +116,7 @@ public class Lista0 {
             case 4:
                 medida = "polegadas";
                 conversao *= polCm;
+                break;
         }
         conversao /= 100;
         System.out.println(converter +" " +medida +" para metros é igual a: " +conversao);
