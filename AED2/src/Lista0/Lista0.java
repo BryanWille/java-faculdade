@@ -209,17 +209,17 @@ public class Lista0 {
     }
 
     public static int numeroPrimo(int numero) {
-        int primo = 0, numPrim = 0;
-        if (numero % 2 == 0 || numero <= 1) {
-            return primo;
+        int primo = 1;
+        if (numero == 2) {
+            primo = 1;
+        } else if (numero % 2 == 0 || numero <= 1) {
+            primo = 0;
         } else {
-            for (int cont = 1; cont <= numero; cont += 2) {
+            for (int cont = 3; cont < numero; cont += 2) {
                 if (numero % cont == 0) {
-                    numPrim++;
+                    primo = 0;
+                    break;
                 }
-            }
-            if (numPrim == 2) {
-                primo = 1;
             }
         }
         return primo;
