@@ -14,7 +14,7 @@ public class potencia {
     }
 
     public static int potenciaRecursiva(int numero, int potencia){
-        if(potencia <= 1){
+        if(potencia < 1){
             return 1;
         } else {
             return numero * potenciaRecursiva(numero, potencia - 1);
