@@ -8,23 +8,130 @@ Caneta c1 = new Caneta();
 c1.tampa = 0.5
 c1.setTampa(0.5);
 
-Assim podemos setar, criar algo com mais segurança sem o usuário ter acesso direto, a mesma coisa server para os getters
+Assim podemos setar, criar algo com mais segurança sem o usuário ter acesso direto, a mesma (coisa) servidor para os getters
 
 Getters: retornam o valor de algo:
 
 c1.getTampado = true;
 
-Constructor: constroi um padrão, em vez de colocarmos que toda vez a caneta vem com 100% da tinta, já podemos fazer isso dentro de um construtor.
+Constructor: construi um padrão, em vez de colocarmos que toda a vez a caneta vem com 100% da tinta, já podemos fazer isso dentro de um construtor.
 
 public Caneta(){ Tem que ter o mesmo nome que a classe
     Caneta.carga = 100;
 }
 
-Então toda vez que iniciarmos uma caneta terá 100% de carga.
+Então toda a vez que iniciarmos uma caneta terá 100% de carga.
 
 c1.constructor(100)
 
 
-Na hora de mudar valores dentro da classe, sempre usar os setters e getters em vez de mudar diretamente os atributos
+                    Encapsulamento
 
-métodos Setters e Getters começam com is quando são boolean!
+Encapsulamento é como criar um padrão para algo, por exemplo todos controle remoto tem como diminuir e aumentar volume, então podemos criar um padrão
+que sempre cria esses controles. diferente do metódo construtor (metódo construtor toda vez que se instância o objeto ele coloca por padrão o que se está dentro)
+
+Declaração:
+
+public interface NomeDaInterface{
+    public abstract metodo();
+
+}
+
+note que como é uma interface ou seja o que vai construir temos que declarar como interface não como class.
+Os atributos tem que ser definidos do tipo público e abstratos os metódos tem que ter os seus parenteses e depois o semicolon.
+
+Na Classe:
+
+class NomeDaClasse implements NomeDaInterface{
+
+    @Override
+    public void metodo(){
+
+    }
+}
+
+Na hora de implementar colocamos o @Override em cima do objeto e depois o declaramos (IDE Geralmente fazem isso por si só)
+@Override significa que vamos sobrescrever em cima do metódo abstrato.
+
+Quandos usamos ‘interface’ podemos colocar os metodos get e ‘set’ como private, já que vamos usar os metódos do encapsulamento
+
+
+Objeto random
+import java.util.Random;
+
+Random aleatorio = new Random();
+int vencedor = aleatorio.nextInt(3);
+
+vai sortear um número entre 0 e 3, sempre começando em 0 e parando no número que paramos!
+
+Objetos são como variaveis, então podemos alocar objetos em variaveis do tipo objeto ex
+
+Objeto coisa = new Objeto();
+
+Objeto algumaCoisa = coisa;
+
+Sendo que temos que especificar qual o objeto, se for uma Faca então falamos que algumaCoisa é um objeto do tipo faca!
+
+Superclasse = Classe mãe ou seja tem uma classe que deixa a herdança os atributos e metodos
+Sub-classe = Classe filha ou seja herda atributos e metódos de uma classe mãe
+Ancestral = Superclasse de uma Superclasse,
+Descendente = Sub-classe de uma Sub-classe (a classe descendente herda tudo da classe ancestral)
+Classe raiz = primeira classe de todoa herança
+Classe folha = última classe, a que não tem filhos, ou sjea não tem subclasses
+Generalização = Superclasse é uma generalização de subclasse
+Especialização = Subclasse é uma especialização de superclasse
+Tipos de Herança = final abstract
+Classe Abstrata = não pode ser instanciada, somente as suas subclasses
+Méotodo Abstrato = não pode ser alterado durante as gerações de subclasses
+Classe Final = não pode ser alterada duranta as gerações filhas
+Método final = não pode ser alterada duranta as gerações filhas
+
+                        Super
+
+syntax:
+
+public class Peixe extends Animal{
+    public Peixe(String nome, String cor, String ambiente, float comprimento, float velocidadeMedia, int numeroPatas) {
+        super(nome, cor, ambiente, comprimento, velocidadeMedia, numeroPatas);
+    }
+}
+
+Neste caso o super dentro do construtor de Peixe, vai fazer o seguinte, vai pegar os atributos em peixe, e colocar esses atributos na classe mãe!
+ou seja a gente ta falando que no construtor de peixe basicamente a gente tem o construtor de animal, que vai ser feito com o super!
+
+
+
+                        Polimorfismo
+
+é basicamente mudar de acordo com a sitaução da classe, exitem varios mas os dois principais são, Sobrepoisção e Sobrecarga
+
+No de sobreposição, podemos sobrepor um método de uma superclasse de acordo com a necessidade da sobreclasse, então podemos usar por exemplo, todos cachorros fazem Au Au, mas
+mas pode ser que uma especie faz só Au!, então sobrepomos o método de Au Au para so Au.
+ex
+
+classe mae{
+    public void latir(){
+        System.out.println("Au AU");
+    }
+}
+
+classe filha {
+
+    @Override
+    public void latir(){
+        System.out.println("Au ");
+    }
+}
+
+Precisamos colocar @Override para indicar que estamos sobrepondo o metódo!
+Lembrando que o metódo deve ter a mesma assinatura mas em classe diferentes, no modo de sobrecarga não podemos sobrescrever um método trocando a quantidade e o tipo de paramêtros.
+só podemos usar os memsos de quando o método foi criado, e em classes diferentes
+
+
+Agora no outro jeito de polimorfismo é o que chamamos de Sobrecarga, nesse caso podemos criar o mesmo método em uma classe, mas temos que obrigatoriamente, usar paramêtros diferentes,
+para especificar o que determinada rotina vai fazer!
+
+
+super.método retorna o meodo da classe super, ou classe mãe, se precisar usar eles, junto com a sobrescrição
+
+super significa comumente super classe, ou seja falar com a classe mãe.
