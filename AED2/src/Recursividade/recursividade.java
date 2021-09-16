@@ -4,9 +4,14 @@ import java.util.Scanner;
 public class recursividade {
     private static Scanner keyb;
     public static void main(String[] args){
-        keyb = new Scanner(System.in);
-        System.out.println("Digite o seu número fatorial: ");
-        int fatorial = keyb.nextByte();
+        System.out.println(fibonacciRecursivo(5));
+    }
 
+    public static int fibonacciRecursivo(int termo){
+        if (termo <= 1){
+            return 1;
+        } else {
+            return fibonacciRecursivo(termo - 1) + fibonacciRecursivo(termo - 2);
+        }
     }
 }
