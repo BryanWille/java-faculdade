@@ -13,8 +13,10 @@ public class Ordenacao_main {
 		int[] Bubble = ord.bubbleSort(numeros);
 		int[] Insertion = ord.insertionSort(numeros);
 		int[] Quick = ord.quickSort(numeros, 0, numeros.length-1);
+		int[] Merge = ord.mergeSort(numeros, 0, numeros.length-1);
 		System.out.println("Bubble:    " +ord.exibirVetor(Bubble));
 		System.out.println("Insertion: " +ord.exibirVetor(Insertion));
-		System.out.println("QuickSort: " +ord.exibirVetor(Quick));
+		System.out.println("Quick:     " +ord.exibirVetor(Quick));
+		System.out.println("Merge:     " +ord.exibirVetor(Merge));
 	}
 }
