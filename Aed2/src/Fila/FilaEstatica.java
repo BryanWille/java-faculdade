@@ -1,17 +1,17 @@
 package Fila;
 
-public class PilhaEstatica {
+public class FilaEstatica {
     private int inicio;
     private int fim;
     private int contador;
     private int capacidade;
     private Object[] itemArray;
 
-    public PilhaEstatica() {
+    public FilaEstatica() {
         this(100);
     }
 
-    public PilhaEstatica(int maxCapacidade) {
+    public FilaEstatica(int maxCapacidade) {
         inicio = 0;
         fim = 0;
         contador = 0;
