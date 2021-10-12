@@ -10,6 +10,8 @@ public class PrimeiraInterface {
         //Janela j = new Janela();
 
         JanelaBotoes jb = new JanelaBotoes();
+        jb.criaJanela();
+
 
     }
 }
