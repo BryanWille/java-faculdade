@@ -1,16 +1,22 @@
 package Fila;
-class Celula{
+
+class Celula {
     Object item;
     Celula anterior;
 
-    public Celula(){
+    public Celula() {
         item = null;
         anterior = null;
     }
 
-    public Celula(Object valorItem){
+    public Celula(Object valorItem) {
         item = valorItem;
         anterior = null;
+    }
+
+    public Celula(Object valorItem, Celula celulaSeguinte) {
+        item = valorItem;
+        anterior = celulaSeguinte;
     }
 }
 
@@ -20,21 +26,21 @@ public class FilaDinamica {
     private Celula fim;
     private int contador;
 
-    public FilaDinamica(){
+    public FilaDinamica() {
         this.inicio = null;
         this.fim = null;
         this.contador = 0;
     }
 
-    public boolean vazia(){
+    public boolean vazia() {
         return (contador == 0);
     }
 
-    public int tamanho(){
+    public int tamanho() {
         return (contador);
     }
 
-    public void enfileira(Object novoItem){
+    public void enfileirar(Object novoItem) {
         Celula novaCelula = new Celula(novoItem);
         if (inicio == null) {
             inicio = novaCelula;
@@ -45,7 +51,7 @@ public class FilaDinamica {
         contador++;
     }
 
-    public Object desenfileirar(){
+    public Object desenfileirar() {
         Object x = null;
         if (vazia()) {
             System.out.println("Erro: Fila Vazia!");
@@ -58,6 +64,40 @@ public class FilaDinamica {
             contador--;
         }
         return x;
+    }
+
+    public Object consultarInicio() {
+        Object x = null;
+        if (vazia()) {
+            System.out.println("Erro: Fila Vazia!");
+        } else {
+            x = inicio.item;
+        }
+        return x;
+    }
+
+    public Object consultarFim() {
+        Object x = null;
+        if (vazia()) {
+            System.out.println("Erro: Fila Vazia!");
+        } else {
+            x = fim.item;
+        }
+        return x;
+    }
+
+    public String toString(){
+        String filaCompleta = "";
+        if(vazia()){
+            filaCompleta = null;
+        } else {
+            for(int i = 0; i < contador; i++){
+                Object tempObject = desenfileirar();
+                filaCompleta = filaCompleta + "\n" + tempObject;
+                enfileirar(tempObject);
+            }
+        }
+        return (filaCompleta);
     }
 
 }
