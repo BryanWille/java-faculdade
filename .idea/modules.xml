@@ -22,6 +22,7 @@
       <module fileurl="file://$PROJECT_DIR$/Provas/Provas.iml" filepath="$PROJECT_DIR$/Provas/Provas.iml" />
       <module fileurl="file://$PROJECT_DIR$/Aed1/exercicios/exercicios.iml" filepath="$PROJECT_DIR$/Aed1/exercicios/exercicios.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/java-faculdade.iml" filepath="$PROJECT_DIR$/.idea/java-faculdade.iml" />
+      <module fileurl="file://$PROJECT_DIR$/trybe/trybe.iml" filepath="$PROJECT_DIR$/trybe/trybe.iml" />
     </modules>
   </component>
 </project>
