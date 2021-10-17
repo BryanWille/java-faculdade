@@ -32,6 +32,17 @@ public class FilaDinamica {
         this.contador = 0;
     }
 
+    public void limparFila(){
+        if(vazia()){
+            System.out.println("Fila já está vazia");
+        } else {
+            while (!vazia()) {
+                this.desenfileirar();
+            }
+            System.out.println("Fila Esvaziada com sucesso");
+        }
+    }
+
     public boolean vazia() {
         return (contador == 0);
     }

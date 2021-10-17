@@ -37,6 +37,17 @@ public class PilhaDinamica {
         return(contador);
     }
 
+    public void limparPilha(){
+        if(vazia()){
+            System.out.println("Pilha já está vazia!");
+        } else {
+            while(!vazia()) {
+                this.desempilhar();
+            }
+            System.out.println("Pilha vazia!");
+        }
+    }
+
     public void empilhar(Object novoItem){
         Celula novaCelula = new Celula (novoItem);
         novaCelula.anterior = topo;

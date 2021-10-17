@@ -25,7 +25,7 @@ public class PilhaEstatica {
         return (this.contador);
     }
 
-    public int capacidade() {
+    public int capacidadePilha() {
         return (this.capacidade);
     }
 
@@ -35,6 +35,18 @@ public class PilhaEstatica {
         } else {
             this.itemArray[this.topo ++] = novoItem;
             this.contador ++;
+        }
+    }
+
+    public void limparPilha(){
+        if(vazia()){
+            System.out.println("Pilha já está vazia!");
+        } else {
+            while(!this.vazia()) {
+                this.desempilhar();
+                System.out.println(this.contador);
+            }
+            System.out.println("Pilha vazia!");
         }
     }
 

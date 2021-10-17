@@ -37,6 +37,26 @@ public class FilaEstatica {
         }
     }
 
+    public Object buscar(Object buscar) {
+        boolean encontrado = false;
+        FilaEstatica clone = new FilaEstatica(this.capacidade);
+        if (this.vazia()) {
+            System.out.println("Erro: Fila Vazia!");
+        } else {
+            while (!vazia()) {
+                clone.enfileirar(this.desenfileirar());
+                Object comparar = clone.consultarFim();
+                if (buscar == comparar) {
+                    encontrado = true;
+                }
+            }
+        }
+        while(!clone.vazia()){
+            this.enfileirar(clone.desenfileirar());
+        }
+        return ("O objeto '" +buscar +"' " +(encontrado ? "foi" : "não foi" )  +" encontrado na fila!");
+    }
+
     public Object desenfileirar() {
         Object x = null;
         if (vazia()) {
@@ -47,6 +67,17 @@ public class FilaEstatica {
             contador--;
         }
         return x;
+    }
+
+    public void limparFila(){
+        if(vazia()){
+            System.out.println("Fila já está vazia");
+        } else {
+            while (!vazia()) {
+                this.desenfileirar();
+            }
+            System.out.println("Fila Esvaziada com sucesso");
+        }
     }
 
     public Object consultarInicio() {
@@ -85,10 +116,6 @@ public class FilaEstatica {
             }
         }
         return (filaCompleta);
-    }
-
-    public void aumentarCapacidade(int novaCapacidade){
-
     }
 }
 
