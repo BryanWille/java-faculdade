@@ -55,8 +55,8 @@ public class PilhaEstatica {
         if (this.vazia()) {
             System.out.println("Erro: pilha vazia!");
         } else {
-            x = this.itemArray[this.topo --];
-            this.contador --;
+            x = this.itemArray[--this.topo];
+            this.contador--;
         }
         return(x);
     }

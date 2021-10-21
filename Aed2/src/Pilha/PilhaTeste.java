@@ -25,7 +25,7 @@ public class PilhaTeste {
         System.out.println(teste);
 
         System.out.println(pe.toString());
-        // pe.limparPilha();
+        pe.limparPilha();
         System.out.println(pe.toString());
     }
 
