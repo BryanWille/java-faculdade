@@ -29,6 +29,20 @@ public class PilhaEstatica {
         return (this.capacidade);
     }
 
+    public PilhaEstatica clonarPilha(){
+        PilhaEstatica clone = new PilhaEstatica(this.capacidade);
+        PilhaEstatica desclonar = new PilhaEstatica(this.capacidade);
+        while(!this.vazia()){
+            desclonar.empilhar(this.desempilhar());
+        }
+        while(!desclonar.vazia()){
+            Object objeto = desclonar.desempilhar();
+            this.empilhar(objeto);
+            clone.empilhar(objeto);
+        }
+        return clone;
+    }
+
     public void empilhar (Object novoItem) {
         if (this.topo == this.capacidade) {
             System.out.println("Erro: Capacidade da Pilha foi excedidade!");
@@ -44,7 +58,6 @@ public class PilhaEstatica {
         } else {
             while(!this.vazia()) {
                 this.desempilhar();
-                System.out.println(this.contador);
             }
             System.out.println("Pilha vazia!");
         }

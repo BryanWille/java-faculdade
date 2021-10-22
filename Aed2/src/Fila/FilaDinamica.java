@@ -62,6 +62,21 @@ public class FilaDinamica {
         contador++;
     }
 
+    public void enfileirarComPrioridade(Object novoObjeto){
+        FilaDinamica clone = new FilaDinamica();
+        if(this.vazia()) {
+            System.out.println("ERRO: Fila Vazia!");
+        } else {
+            clone.enfileirar(novoObjeto);
+            while (!this.vazia()) {
+                clone.enfileirar(this.desenfileirar());
+            }
+            while (!clone.vazia()) {
+                this.enfileirar(clone.desenfileirar());
+            }
+        }
+    }
+
     public Object desenfileirar() {
         Object x = null;
         if (vazia()) {
