@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/AIML/AIML.iml" filepath="$PROJECT_DIR$/AIML/AIML.iml" />
       <module fileurl="file://$PROJECT_DIR$/Aed1/Aed1.iml" filepath="$PROJECT_DIR$/Aed1/Aed1.iml" />
       <module fileurl="file://$PROJECT_DIR$/Aed2/Aed2.iml" filepath="$PROJECT_DIR$/Aed2/Aed2.iml" />
       <module fileurl="file://$PROJECT_DIR$/Bootcamp Poo/BOOTCAMP POO.iml" filepath="$PROJECT_DIR$/Bootcamp Poo/BOOTCAMP POO.iml" />
