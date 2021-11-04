@@ -28,7 +28,7 @@ public class ListaDinamica {
 
     public ListaDinamica(){
         inicio = fim = null;
-        contador =0;
+        contador = 0;
     }
 
     public boolean vazia(){
@@ -84,6 +84,14 @@ public class ListaDinamica {
     }
 
     public void inserir(Object novoItem){
+        inserir(novoItem, this.contador+1);
+    }
 
+    public void inserirInicio(Object novoItem){
+        inserir(novoItem, 1);
+    }
+
+    public void inserirFim(Object novoItem){
+        inserir(novoItem, this.contador+1);
     }
 }

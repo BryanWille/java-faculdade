@@ -1,7 +1,7 @@
 public class testeNode {
     private static Node nodulo;
     public static void main(String[] args){
-        n1 = new Node(3);
+        nodulo = new Node(3);
 
     }
 }

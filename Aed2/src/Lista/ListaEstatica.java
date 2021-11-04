@@ -47,29 +47,24 @@ public class ListaEstatica {
     public void inserir(Object novoItem, int posicao) {
         if (contador == capacidade) {
             System.out.println("Erro: Capacidade da Lista foi excedida!");
+        } else if (posicao == contador + 1) {
+            itemArray[fim] = novoItem;
+            fim = (fim + 1) % capacidade;
+            contador++;
+        } else if (posicao == 0) {
+            mover(inicio, fim, 1);
+            itemArray[0] = novoItem;
+            inicio = 0;
+            contador++;
+        } else if (!chaveValida(posicao)) {
+            System.out.println("Erro: Indice inválido!");
         } else {
-            if (posicao == contador + 1) {
-                itemArray[fim] = novoItem;
-                fim = (fim + 1) % capacidade;
-                contador++;
-            } else {
-                if (posicao == 0) {
-                    mover(inicio, fim, 1);
-                    itemArray[0] = novoItem;
-                    inicio = 0;
-                    contador++;
-                } else {
-                    if (!chaveValida(posicao)) {
-                        System.out.println("Erro: Indice inválido!");
-                    } else {
-                        mover(posicao - 1, fim, 1);
-                        itemArray[posicao - 1] = novoItem;
-                        contador++;
-                    }
-                }
-            }
+            mover(posicao - 1, fim, 1);
+            itemArray[posicao - 1] = novoItem;
+            contador++;
         }
     }
+
 
     private void mover(int begin, int end, int shift) {
         int i, j;
@@ -135,50 +130,44 @@ public class ListaEstatica {
     }
 
     public Object retirar(int posicao) {
-        Object x = null;
+        Object x;
         int i, j;
         if (vazia()) {
             x = "'Erro: Lista vazia!'";
-        } else {
-            if (posicao == inicio) {
-                x = itemArray[inicio];
-                inicio = (inicio + 1) % capacidade;
-                contador--;
+        } else if (posicao == inicio) {
+            x = itemArray[inicio];
+            inicio = (inicio + 1) % capacidade;
+            contador--;
+        } else if (posicao == fim) {
+            if (fim != 0) {
+                x = itemArray[fim - 1];
+                fim = (fim + capacidade - 1) % capacidade;
             } else {
-                if (posicao == fim) {
-                    if (fim != 0) {
-                        x = itemArray[fim - 1];
-                        fim = (fim + capacidade - 1) % capacidade;
-                    } else {
-                        fim = (fim + capacidade - 1) % capacidade;
-                        x = itemArray[fim];
-                    }
-                    contador--;
-                } else {
-                    if(!chaveValida(posicao)){
-                        x = "'Erro: Indice invalido!'";
-                    } else {
-                        i = inicio;
-                        for(j = 1; j < posicao; j++){
-                            i = (i + 1) % capacidade;
-                        }
-                        x = itemArray[i];
-                        mover(posicao+1, fim, -1);
-                        contador--;
-                    }
-                }
+                fim = (fim + capacidade - 1) % capacidade;
+                x = itemArray[fim];
             }
+            contador--;
+        } else if (!chaveValida(posicao)) {
+            x = "'Erro: Indice invalido!'";
+        } else {
+            i = inicio;
+            for (j = 1; j < posicao; j++) {
+                i = (i + 1) % capacidade;
+            }
+            x = itemArray[i];
+            mover(posicao + 1, fim, -1);
+            contador--;
         }
         return (x);
     }
 
-    public String toString(){
+    public String toString() {
         String listaCompleta = "";
-        if(vazia()){
+        if (vazia()) {
             listaCompleta = null;
         } else {
             int i = inicio;
-            for(int j = 1; j <= contador; j++ ){
+            for (int j = 1; j <= contador; j++) {
                 listaCompleta = listaCompleta + "\n" + itemArray[i];
                 i = (i + 1) % capacidade;
             }
