@@ -2,27 +2,27 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/AIML/AIML.iml" filepath="$PROJECT_DIR$/AIML/AIML.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Aed1/Aed1.iml" filepath="$PROJECT_DIR$/Aed1/Aed1.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Aed2/Aed2.iml" filepath="$PROJECT_DIR$/Aed2/Aed2.iml" />
-      <module fileurl="file://$PROJECT_DIR$/BootcampPoo/BootCampPoo.iml" filepath="$PROJECT_DIR$/BootcampPoo/BootCampPoo.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Aed1/Conteúdo 10/Conteúdo 10.iml" filepath="$PROJECT_DIR$/Aed1/Conteúdo 10/Conteúdo 10.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Aed1/Conteúdo 11/Conteúdo 11.iml" filepath="$PROJECT_DIR$/Aed1/Conteúdo 11/Conteúdo 11.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Aed1/Conteúdo 12/Conteúdo 12.iml" filepath="$PROJECT_DIR$/Aed1/Conteúdo 12/Conteúdo 12.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Aed1/Conteúdo 13/Conteúdo 13.iml" filepath="$PROJECT_DIR$/Aed1/Conteúdo 13/Conteúdo 13.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Aed1/Conteúdo 14/Conteúdo 14.iml" filepath="$PROJECT_DIR$/Aed1/Conteúdo 14/Conteúdo 14.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Aed1/Conteúdo 4/Conteúdo 4.iml" filepath="$PROJECT_DIR$/Aed1/Conteúdo 4/Conteúdo 4.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Aed1/Conteúdo 5/Conteúdo 5.iml" filepath="$PROJECT_DIR$/Aed1/Conteúdo 5/Conteúdo 5.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Aed1/Conteúdo 6/Conteúdo 6.iml" filepath="$PROJECT_DIR$/Aed1/Conteúdo 6/Conteúdo 6.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Aed1/Conteúdo 7/Conteúdo 7.iml" filepath="$PROJECT_DIR$/Aed1/Conteúdo 7/Conteúdo 7.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Aed1/Conteúdo 8/Conteúdo 8.iml" filepath="$PROJECT_DIR$/Aed1/Conteúdo 8/Conteúdo 8.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Aed1/Conteúdo 9/Conteúdo 9.iml" filepath="$PROJECT_DIR$/Aed1/Conteúdo 9/Conteúdo 9.iml" />
-      <module fileurl="file://$PROJECT_DIR$/CursoEmVideo/CursoEmVideo.iml" filepath="$PROJECT_DIR$/CursoEmVideo/CursoEmVideo.iml" />
-      <module fileurl="file://$PROJECT_DIR$/GUI/GUI.iml" filepath="$PROJECT_DIR$/GUI/GUI.iml" />
-      <module fileurl="file://$PROJECT_DIR$/MeusProjetos/MeusProjetos.iml" filepath="$PROJECT_DIR$/MeusProjetos/MeusProjetos.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Provas/Provas.iml" filepath="$PROJECT_DIR$/Provas/Provas.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Aed1/exercicios/exercicios.iml" filepath="$PROJECT_DIR$/Aed1/exercicios/exercicios.iml" />
+      <module fileurl="file://$PROJECT_DIR$/aed1/Aed1.iml" filepath="$PROJECT_DIR$/aed1/Aed1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/aed1/Conteúdo 10/Conteúdo 10.iml" filepath="$PROJECT_DIR$/aed1/Conteúdo 10/Conteúdo 10.iml" />
+      <module fileurl="file://$PROJECT_DIR$/aed1/Conteúdo 11/Conteúdo 11.iml" filepath="$PROJECT_DIR$/aed1/Conteúdo 11/Conteúdo 11.iml" />
+      <module fileurl="file://$PROJECT_DIR$/aed1/Conteúdo 12/Conteúdo 12.iml" filepath="$PROJECT_DIR$/aed1/Conteúdo 12/Conteúdo 12.iml" />
+      <module fileurl="file://$PROJECT_DIR$/aed1/Conteúdo 13/Conteúdo 13.iml" filepath="$PROJECT_DIR$/aed1/Conteúdo 13/Conteúdo 13.iml" />
+      <module fileurl="file://$PROJECT_DIR$/aed1/Conteúdo 14/Conteúdo 14.iml" filepath="$PROJECT_DIR$/aed1/Conteúdo 14/Conteúdo 14.iml" />
+      <module fileurl="file://$PROJECT_DIR$/aed1/Conteúdo 4/Conteúdo 4.iml" filepath="$PROJECT_DIR$/aed1/Conteúdo 4/Conteúdo 4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/aed1/Conteúdo 5/Conteúdo 5.iml" filepath="$PROJECT_DIR$/aed1/Conteúdo 5/Conteúdo 5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/aed1/Conteúdo 6/Conteúdo 6.iml" filepath="$PROJECT_DIR$/aed1/Conteúdo 6/Conteúdo 6.iml" />
+      <module fileurl="file://$PROJECT_DIR$/aed1/Conteúdo 7/Conteúdo 7.iml" filepath="$PROJECT_DIR$/aed1/Conteúdo 7/Conteúdo 7.iml" />
+      <module fileurl="file://$PROJECT_DIR$/aed1/Conteúdo 8/Conteúdo 8.iml" filepath="$PROJECT_DIR$/aed1/Conteúdo 8/Conteúdo 8.iml" />
+      <module fileurl="file://$PROJECT_DIR$/aed1/Conteúdo 9/Conteúdo 9.iml" filepath="$PROJECT_DIR$/aed1/Conteúdo 9/Conteúdo 9.iml" />
+      <module fileurl="file://$PROJECT_DIR$/aed2/aed2.iml" filepath="$PROJECT_DIR$/aed2/aed2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/aiml/aiml.iml" filepath="$PROJECT_DIR$/aiml/aiml.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bootcamp-poo/bootcamp-poo.iml" filepath="$PROJECT_DIR$/bootcamp-poo/bootcamp-poo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/curso-em-video/curso-em-video.iml" filepath="$PROJECT_DIR$/curso-em-video/curso-em-video.iml" />
+      <module fileurl="file://$PROJECT_DIR$/aed1/exercicios/exercicios.iml" filepath="$PROJECT_DIR$/aed1/exercicios/exercicios.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gui/gui.iml" filepath="$PROJECT_DIR$/gui/gui.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/java-faculdade.iml" filepath="$PROJECT_DIR$/.idea/java-faculdade.iml" />
+      <module fileurl="file://$PROJECT_DIR$/meusprojetos/meusprojetos.iml" filepath="$PROJECT_DIR$/meusprojetos/meusprojetos.iml" />
+      <module fileurl="file://$PROJECT_DIR$/provas/provas.iml" filepath="$PROJECT_DIR$/provas/provas.iml" />
       <module fileurl="file://$PROJECT_DIR$/trybe/trybe.iml" filepath="$PROJECT_DIR$/trybe/trybe.iml" />
     </modules>
   </component>

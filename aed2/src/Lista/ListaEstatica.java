@@ -155,7 +155,7 @@ public class ListaEstatica {
                 i = (i + 1) % capacidade;
             }
             x = itemArray[i];
-            mover(posicao + 1, fim, -1);
+            mover(posicao, fim, -1);
             contador--;
         }
         return (x);
