@@ -94,4 +94,73 @@ public class ListaDinamica {
     public void inserirFim(Object novoItem){
         inserir(novoItem, this.contador+1);
     }
+
+    public Object retirar(int posicao){
+        Object x = null;
+        Celula tempCelula;
+        int i;
+        if(vazia()){
+            System.out.println("Erro: Lista vazia!");
+        } else if (posicao == 1){
+            x = inicio.item;
+            inicio = inicio.link;
+            if(inicio == null){
+                fim = null;
+            }
+            contador--;
+        } else if (posicao == contador){
+            tempCelula = inicio;
+            for(i =1; i < contador -1; i++) {
+                tempCelula = tempCelula.link;
+            }
+            x = fim.item;
+            fim = tempCelula;
+            if(fim == null){
+                inicio = fim;
+            } else {
+                fim.link = null;
+            }
+            contador--;
+        } else {
+            if(!chaveValida(posicao)){
+                System.out.println("Erro: Indice invalido!");
+            } else {
+                tempCelula = inicio;
+                for(i = 1; i < posicao-1; i++){
+                    tempCelula = tempCelula.link;
+                }
+                x = tempCelula.link.item;
+                tempCelula.link = tempCelula.link.link;
+                contador--;
+            }
+        }
+        return (x);
+    }
+
+    public Object retirar(){
+        return(retirar(1));
+    }
+
+    public Object retirarInicio(){
+        return(retirar(1));
+    }
+
+    public Object retirarFim(){
+        return(retirar(contador));
+    }
+
+    public String toString() {
+        String listaCompleta = "[";
+        if(vazia()){
+            listaCompleta = listaCompleta + null;
+        } else {
+            Celula listCelula = inicio;
+            while(listCelula != null){
+                listaCompleta = listaCompleta + " " + listCelula.link;
+                listCelula = listCelula.link;
+            }
+            listaCompleta = listaCompleta + "]";
+        }
+        return(listaCompleta);
+    }
 }
