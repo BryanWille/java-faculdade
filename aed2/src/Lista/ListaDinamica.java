@@ -43,6 +43,25 @@ public class ListaDinamica {
         return(1 <= x && x <= contador);
     }
 
+    public void limpar(){
+        if(vazia()){
+            System.out.println("Erro: Pilha Vazia!");
+        } else {
+            while (!vazia()){
+                this.retirarInicio();
+            }
+        }
+    }
+
+    public ListaDinamica copiar(){
+        ListaDinamica copia = new ListaDinamica();
+
+        while (!vazia()){
+            copia.inserir(this.retirarInicio());
+        }
+        return copia;
+    }
+
     public void inserir(Object novoItem, int posicao){
         Celula novaCelula, tempCelula;
         int i;

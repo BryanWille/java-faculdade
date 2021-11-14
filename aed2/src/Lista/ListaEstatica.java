@@ -65,6 +65,27 @@ public class ListaEstatica {
         }
     }
 
+    public Object consultarInicio(){
+        return(consultar(inicio));
+    }
+
+    public Object consultarFim(){
+        return(consultar((fim+capacidade-1)%capacidade));
+    }
+
+    public Object consultar(int posicao) {
+        Object x = null;
+        if (vazia()) {
+            System.out.println("Erro: Lista está Vazia!");
+        } else if (posicao > capacidade) {
+            System.out.println("Erro: a posição informada é maior que a capacidade");
+        } else if (posicao > contador){
+            System.out.println("Erro: a posição: " +posicao +" não está ocupada!");
+        } else {
+            x = this.itemArray[posicao];
+        }
+        return x;
+    }
 
     private void mover(int begin, int end, int shift) {
         int i, j;
@@ -159,6 +180,18 @@ public class ListaEstatica {
             contador--;
         }
         return (x);
+    }
+
+    public void limpar(){
+        if(vazia()){
+            System.out.println("Erro: Sua lista esta vazia!");
+        } else {
+            while(!vazia()){
+                this.retirarFim();
+            }
+            contador = 0;
+            fim = 0;
+        }
     }
 
     public String toString() {
