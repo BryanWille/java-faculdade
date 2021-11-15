@@ -170,16 +170,16 @@ public class ListaDinamica {
 
     public String toString() {
         String listaCompleta = "[";
-        if(vazia()){
+        if (vazia()) {
             listaCompleta = listaCompleta + null;
         } else {
             Celula listCelula = inicio;
-            while(listCelula != null){
-                listaCompleta = listaCompleta + " " + listCelula.link;
+            while (listCelula != null) {
+                listaCompleta = listaCompleta + " " + listCelula.item;
                 listCelula = listCelula.link;
             }
-            listaCompleta = listaCompleta + "]";
+            listaCompleta = listaCompleta + " ]";
         }
-        return(listaCompleta);
+        return (listaCompleta);
     }
 }
