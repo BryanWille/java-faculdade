@@ -47,18 +47,19 @@ public class LBSTree {
     }
 
     public int altura(){
-        int tamanho = 0, maiorContador = 0;
-        if(vazia()){
-            System.out.println("Erro: Arvore vazia!");
-        } else {
-            LBSTreeNode treeRef = raiz;
-            while(treeRef != null){
-                treeRef = treeRef.linkDireito;
-                contador++;
-            }
+        return altura(raiz);
+    }
 
+    public int altura(LBSTreeNode raiz){
+        int cont = 0, aux;
+        if (raiz == null){
+            return cont++;
+        } else {
+            aux = altura(raiz.linkEsquerdo);
+            cont = aux;
+            aux += altura(raiz.linkDireito);
         }
-        return tamanho;
+        return aux;
     }
 
     public void inserir(Object novoItem) {

@@ -21,7 +21,7 @@ public class LBSTree_Main {
         System.out.println("Item '4' está na ávore? " +lbs.buscar("4"));
         System.out.println("Raiz da ávore: " +lbs.raiz);
 
-        System.out.println();
+        System.out.println("Altura " +lbs.altura());
 
     }
 }
