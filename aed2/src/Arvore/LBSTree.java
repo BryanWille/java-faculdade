@@ -1,7 +1,5 @@
 package Arvore;
 
-import java.util.TreeMap;
-
 class LBSTreeNode {
     Object item;
     LBSTreeNode linkEsquerdo;
@@ -46,6 +44,21 @@ public class LBSTree {
 
     public boolean vazia() {
         return (raiz == null);
+    }
+
+    public int altura(){
+        int tamanho = 0, maiorContador = 0;
+        if(vazia()){
+            System.out.println("Erro: Arvore vazia!");
+        } else {
+            LBSTreeNode treeRef = raiz;
+            while(treeRef != null){
+                treeRef = treeRef.linkDireito;
+                contador++;
+            }
+
+        }
+        return tamanho;
     }
 
     public void inserir(Object novoItem) {
@@ -131,7 +144,7 @@ public class LBSTree {
         LBSTreeNode treeRef = raiz;
         int resultado = 1;
         while (treeRef != null && resultado != 0){
-            resultado = treeRef.compararCom(valorItem);
+            resultado = treeRef.compararCom((String) valorItem);
             if(resultado > 0){
                 treeRef = treeRef.linkEsquerdo;
             } else {
@@ -180,10 +193,18 @@ public class LBSTree {
     public String caminhar(int modo){
         treeString = "\n";
         switch(modo){
-            case PREORDER -> preOrder(raiz);
-            case INORDER -> inOrder(raiz);
-            case POSTORDER -> postOrder(raiz);
-            default -> System.out.println("Erro: Modo de caminhamento desconhecido!");
+            case PREORDER:
+                 preOrder(raiz);
+                 break;
+            case INORDER:
+                inOrder(raiz);
+                break;
+            case POSTORDER:
+                postOrder(raiz);
+                break;
+            default:
+                System.out.println("Erro: Modo de caminhamento desconhecido!");
+                break;
         }
         return(treeString);
     }
