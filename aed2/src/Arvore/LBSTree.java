@@ -62,6 +62,14 @@ public class LBSTree {
         return aux;
     }
 
+    public Object consultarRaiz(){
+        Object x = null;
+        if(!vazia()) {
+            x = String.valueOf(this.raiz);
+        }
+        return x;
+    }
+
     public void inserir(Object novoItem) {
         raiz = inserir(novoItem, raiz);
     }

@@ -6,6 +6,16 @@ public class PilhaTeste {
     private static PilhaDinamica pd;
 
     public static void main(String[] args){
+        pe = new PilhaEstatica(4);
+        pe.empilhar(1);
+        pe.empilhar(2);
+        pe.empilhar(3);
+        pe.empilhar(4);
+        System.out.println(pe.toString());
+        pe.aumentarPilha(5);
+        pe.empilhar(5);
+        System.out.println(pe.toString());
+
         /*pe = new PilhaEstatica();
         pe.empilhar(22);
         pe.empilhar("estre");
@@ -19,6 +29,7 @@ public class PilhaTeste {
         PilhaEstatica clonar = clone.clonarPilha();
         System.out.println("\n teste: " +clonar.toString()); */
 
+        /*
         PilhaEstatica pilhaE = new PilhaEstatica( 3 );
         pilhaE.empilhar("D");
         pilhaE.empilhar("A");
@@ -30,6 +41,7 @@ public class PilhaTeste {
         System.out.println("depois linha 9");
         pilhaE.empilhar("C");
         System.out.println(pilhaE.toString());
-    }
+        */
 
+    }
 }
