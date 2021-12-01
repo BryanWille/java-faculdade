@@ -31,6 +31,17 @@ public class ListaDinamica {
         contador = 0;
     }
 
+    public void inverterLista(){
+        ListaDinamica clone = new ListaDinamica();
+        int listaTamanho = this.contador;
+        for(int i = 0; i < listaTamanho; i++){
+            clone.inserir(this.retirarFim());
+        }
+        for(int i = 0; i < listaTamanho; i++){
+            this.inserir(clone.retirarInicio());
+        }
+    }
+
     public boolean vazia(){
         return (contador == 0);
     }
@@ -45,7 +56,7 @@ public class ListaDinamica {
 
     public void limpar(){
         if(vazia()){
-            System.out.println("Erro: Pilha Vazia!");
+            System.out.println("Erro: Lista Vazia!");
         } else {
             while (!vazia()){
                 this.retirarInicio();

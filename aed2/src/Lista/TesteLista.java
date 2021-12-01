@@ -5,6 +5,15 @@ public class TesteLista {
     private static ListaDinamica ld;
     public static void main(String[] args){
 
+      ld = new ListaDinamica();
+      ld.inserir(1);
+      ld.inserir(2);
+      ld.inserir(3);
+      System.out.println(ld.toString());
+      ld.inverterLista();
+      System.out.println(ld.toString());
+
+      /*
       // ----------------------- LISTA ESTÁTICA ----------------------- //
 
       le = new ListaEstatica(4);
@@ -86,6 +95,6 @@ public class TesteLista {
       System.out.println("Conteúdo: " +lisdin.toString() +"Tamanho: " +lisdin.tamanho()); // "B, A, C, D, E" 5
 
 
-
+      */
     }
 }

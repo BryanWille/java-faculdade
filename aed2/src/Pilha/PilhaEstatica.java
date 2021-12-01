@@ -21,6 +21,23 @@ public class PilhaEstatica {
         return (this.topo == 0);
     }
 
+    public void aumentarPilha(int novaCapacidade) {
+        if (novaCapacidade < this.contador) {
+            System.out.println("Erro: A Nova Capacidade é Menor que o Número de Elementos");
+        } else {
+            PilhaEstatica clone = new PilhaEstatica(this.contador);
+            while (!vazia()) {
+                clone.empilhar(this.desempilhar());
+            }
+
+            this.capacidade = novaCapacidade;
+            this.itemArray = new Object[novaCapacidade];
+            while(!clone.vazia()){
+                this.empilhar(clone.desempilhar());
+            }
+        }
+    }
+
     public int tamanho() {
         return (this.contador);
     }

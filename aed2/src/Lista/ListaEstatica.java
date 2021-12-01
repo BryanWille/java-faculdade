@@ -32,6 +32,27 @@ public class ListaEstatica {
         return (1 <= posicao && posicao <= this.contador);
     }
 
+    public void ordenar(){
+        int[] itens = new int[contador];
+        for(int i = 0; i < contador; i++){
+            itens[i] = (int) this.itemArray[i];
+        }
+        this.limpar();
+        for(int i = 0; i < itens.length; i++) {
+            for (int j = 0; j < itens.length - 1 - i; j++) {
+                if (itens[j] > itens[j + 1]) {
+                    System.out.println(itens[j] +" > " + itens[j+1] );
+                    int bolha = itens[j];
+                    itens[j] = itens[j+1];
+                    itens[j + 1] = bolha;
+                }
+            }
+        }
+        for(int i = 0; i < itens.length; i++){
+            this.inserir(itens[i]);
+        }
+    }
+
     public void inserir(Object newItem) {
         this.inserir(newItem, this.contador + 1);
     }
