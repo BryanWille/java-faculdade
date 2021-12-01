@@ -46,20 +46,17 @@ public class LBSTree {
         return (raiz == null);
     }
 
-    public int altura(){
-        return altura(raiz);
-    }
-
-    public int altura(LBSTreeNode raiz){
-        int cont = 0, aux;
-        if (raiz == null){
-            return cont++;
+    public Object obterValorMinimo(){
+        if(raiz.linkEsquerdo == null){
+            return raiz.item;
         } else {
-            aux = altura(raiz.linkEsquerdo);
-            cont = aux;
-            aux += altura(raiz.linkDireito);
+            LBSTreeNode treeRef = raiz;
+            do{
+                treeRef = treeRef.linkEsquerdo;
+            } while (treeRef.linkEsquerdo != null);
+
+            return (treeRef.item);
         }
-        return aux;
     }
 
     public void inserir(Object novoItem) {

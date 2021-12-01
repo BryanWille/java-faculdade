@@ -2,6 +2,16 @@ package Fila;
 
 public class Fila_Main {
     public static void main(String[] args){
+        FilaDinamica fila = new FilaDinamica();
+
+        fila.enfileirar(22);
+        fila.enfileirar("23ji1");
+        fila.enfileirar("29391");
+        System.out.println(fila.toString());
+        fila.enfileirarComPrioridade("first");
+        System.out.println("------------------");
+        System.out.println(fila.toString());
+
         /*FilaEstatica filaE = new FilaEstatica( 4 );
         int[] teste = {2, 4, 2, 4};
         String[] k = {"Antonieta", "Jubileu", "Romeu"};
