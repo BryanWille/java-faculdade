@@ -32,8 +32,8 @@ public class FilaDinamica {
         this.contador = 0;
     }
 
-    public void limparFila(){
-        if(vazia()){
+    public void limparFila() {
+        if (vazia()) {
             System.out.println("Fila já está vazia");
         } else {
             while (!vazia()) {
@@ -62,20 +62,17 @@ public class FilaDinamica {
         contador++;
     }
 
-    public void enfileirarComPrioridade(Object novoObjeto){
+    public void enfileirarComPrioridade(Object novoObjeto) {
         FilaDinamica clone = new FilaDinamica();
-        if(this.vazia()) {
-            System.out.println("ERRO: Fila Vazia!");
-        } else {
-            clone.enfileirar(novoObjeto);
-            while (!this.vazia()) {
-                clone.enfileirar(this.desenfileirar());
-            }
-            while (!clone.vazia()) {
-                this.enfileirar(clone.desenfileirar());
-            }
+        clone.enfileirar(novoObjeto);
+        while (!this.vazia()) {
+            clone.enfileirar(this.desenfileirar());
+        }
+        while (!clone.vazia()) {
+            this.enfileirar(clone.desenfileirar());
         }
     }
+
 
     public Object desenfileirar() {
         Object x = null;
@@ -112,12 +109,12 @@ public class FilaDinamica {
         return x;
     }
 
-    public String toString(){
+    public String toString() {
         String filaCompleta = "";
-        if(vazia()){
+        if (vazia()) {
             filaCompleta = null;
         } else {
-            for(int i = 0; i < contador; i++){
+            for (int i = 0; i < contador; i++) {
                 Object tempObject = desenfileirar();
                 filaCompleta = filaCompleta + "\n" + tempObject;
                 enfileirar(tempObject);

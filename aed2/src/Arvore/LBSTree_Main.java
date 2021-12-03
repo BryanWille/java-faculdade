@@ -12,9 +12,6 @@ public class LBSTree_Main {
             lbs.inserir(numeros);
         }
 
-        System.out.println((String) lbs.obterValorMinimo());
-
-        /* Exercicio
         System.out.println("Tamanho da Árvore: " +lbs.contador);
         System.out.println("Conteúdo: " +lbs.toString());
         System.out.println("PRE-ORDER: " +lbs.caminhar(lbs.PREORDER));
@@ -22,9 +19,9 @@ public class LBSTree_Main {
         System.out.println("POST-ORDER: " +lbs.caminhar(lbs.POSTORDER));
 
         System.out.println("Item '4' está na ávore? " +lbs.buscar("4"));
-        System.out.println("Raiz da ávore: " +lbs.raiz);
+        System.out.println("Raiz da ávore: " +lbs.consultarRaiz());
 
-        System.out.println("Altura " +lbs.altura()); */
+        System.out.println("Valor mínimo: " +lbs.valorMinimo());
 
     }
 }

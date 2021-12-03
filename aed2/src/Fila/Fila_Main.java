@@ -24,15 +24,15 @@ public class Fila_Main {
         filaE.limparFila();
         System.out.println(filaE.toString());*/
 
-        /*FilaDinamica FilaD = new FilaDinamica();
+        FilaDinamica FilaD = new FilaDinamica();
         FilaD.enfileirar(232);
         FilaD.enfileirar("sda");
         FilaD.enfileirar(3.14159);
         System.out.println(FilaD.toString() +"\n");
         FilaD.enfileirarComPrioridade("Phi");
-        System.out.println(FilaD.toString());*/
-
-
+        FilaD.enfileirar("290");
+        FilaD.enfileirarComPrioridade("Braia");
+        System.out.println(FilaD.toString());
 
     }
 }

@@ -46,19 +46,6 @@ public class LBSTree {
         return (raiz == null);
     }
 
-    public Object obterValorMinimo(){
-        if(raiz.linkEsquerdo == null){
-            return raiz.item;
-        } else {
-            LBSTreeNode treeRef = raiz;
-            do{
-                treeRef = treeRef.linkEsquerdo;
-            } while (treeRef.linkEsquerdo != null);
-
-            return (treeRef.item);
-        }
-    }
-
     public Object consultarRaiz(){
         Object x = null;
         if(!vazia()) {
@@ -144,6 +131,21 @@ public class LBSTree {
             treeNode = treeNode.linkDireito;
         }
         return(treeNode);
+    }
+
+    public Object valorMinimo(){
+        if(vazia()){
+            System.out.println("Erro: Arvore Vazia");
+            return null;
+        } else if(raiz.linkEsquerdo == null){
+            return raiz;
+        } else {
+            LBSTreeNode treeRef = raiz;
+            do{
+                treeRef = treeRef.linkEsquerdo;
+            } while (treeRef.linkEsquerdo != null);
+            return treeRef;
+        }
     }
 
     LBSTreeNode buscar(Object valorItem){
