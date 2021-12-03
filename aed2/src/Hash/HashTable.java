@@ -84,6 +84,7 @@ public class HashTable {
         return (0 <= k && k < capacidade);
     }
 
+
     public int proximo(int valor) {
         int x;
         if (useRehash) {
@@ -94,29 +95,36 @@ public class HashTable {
         return x;
     }
 
+    public void inserir(String valor){
+        int k = this.funcaoHash(valor, this.capacidade);
+        inserir(valor, k);
+    }
+
     public void inserir(String valor, int k) {
         if (!chaveValida(k)) {
             System.out.println("Erro: Indice Invalido");
-        } else if (hashArray[k] == null) {
-            hashArray[k] = new HashCelula(valor);
-            contador++;
         } else {
-            if (enderecoAberto) {
-                inserirAberto(valor, k);
+            if (hashArray[k] == null) {
+                hashArray[k] = new HashCelula(valor);
+                contador++;
             } else {
-                inserirLink(valor, k);
+                if (enderecoAberto) {
+                    inserirAberto(valor, k);
+                } else {
+                    inserirLink(valor, k);
+                }
             }
         }
     }
 
     public void inserirAberto(String valor, int k) {
         int n = proximo(k);
-        while (n != k && (hashArray[k] != null))
+        while (n != k && (hashArray[n] != null))
             n = proximo(n);
         if (n == k)
             System.out.println("Erro: Capacidade de Hash foi Excedida!");
         else {
-            hashArray[k] = new HashCelula(valor);
+            hashArray[n] = new HashCelula(valor);
             contador++;
         }
     }
@@ -126,6 +134,11 @@ public class HashTable {
         x = new HashCelula(valor);
         x.link = hashArray[k].link;
         hashArray[k].link = x;
+    }
+
+    public void retirar(String valor){
+        int k = this.funcaoHash(valor, this.capacidade);
+        retirar(valor, k);
     }
 
     public void retirar(String valor, int k) {

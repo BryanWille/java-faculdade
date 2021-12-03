@@ -9,6 +9,7 @@ public class TesteLista {
       ld.inserir(1);
       ld.inserir(2);
       ld.inserir(3);
+      ld.inserir(4);
       System.out.println(ld.toString());
       ld.inverterLista();
       System.out.println(ld.toString());

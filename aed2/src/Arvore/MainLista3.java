@@ -5,9 +5,10 @@ public class MainLista3 {
         LBSTree arvore = new LBSTree();
         arvore.inserir("29");
         arvore.inserir("22");
+        arvore.inserir("2");
         arvore.inserir("43");
         System.out.println(arvore.consultarRaiz());
-
+        System.out.println(arvore.valorMinimo());
 
 
         /* Exercicio 11
