@@ -30,6 +30,7 @@ class HashCelula {
 
 public class HashTable {
 
+    protected int colisoes;
     protected int capacidade;
     protected int contador;
     protected HashCelula[] hashArray;
@@ -41,6 +42,7 @@ public class HashTable {
     }
 
     public HashTable(int maxCapacidade) {
+        colisoes = 0;
         contador = 0;
         enderecoAberto = false;
         useRehash = false;
@@ -84,6 +86,15 @@ public class HashTable {
         return (0 <= k && k < capacidade);
     }
 
+    public int numeroColisoes(){
+        int x = 0;
+        if(enderecoAberto){
+            x = this.colisoes;
+        } else {
+            System.out.println("Erro: Não Existe Colisões no Hash Encadeado");
+        }
+        return this.colisoes;
+    }
 
     public int proximo(int valor) {
         int x;
@@ -119,6 +130,9 @@ public class HashTable {
 
     public void inserirAberto(String valor, int k) {
         int n = proximo(k);
+        if(hashArray[n] != null){
+            colisoes++;
+        }
         while (n != k && (hashArray[n] != null))
             n = proximo(n);
         if (n == k)
@@ -176,8 +190,8 @@ public class HashTable {
                             System.out.println("Erro: Item Inexistente!");
                         } else {
                             hashArray[n] = null;
+                            contador--;
                         }
-                        contador--;
                     } else {
                         while (x != null && !result) {
                             anterior = x;

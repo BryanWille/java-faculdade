@@ -33,22 +33,24 @@ public class ListaEstatica {
     }
 
     public void ordenar(){
-        int[] itens = new int[contador];
-        for(int i = 0; i < contador; i++){
+        int tamanho = contador;
+        int[] itens = new int[tamanho];
+        for(int i = 0; i < tamanho; i++){
             itens[i] = (int) this.itemArray[i];
+            retirar();
         }
-        this.limpar();
-        for(int i = 0; i < itens.length; i++) {
-            for (int j = 0; j < itens.length - 1 - i; j++) {
+
+        for(int i = 0; i < tamanho; i++) {
+            for (int j = 0; j < tamanho - 1 - i; j++) {
                 if (itens[j] > itens[j + 1]) {
-                    System.out.println(itens[j] +" > " + itens[j+1] );
                     int bolha = itens[j];
                     itens[j] = itens[j+1];
                     itens[j + 1] = bolha;
                 }
             }
         }
-        for(int i = 0; i < itens.length; i++){
+
+        for(int i = 0; i < tamanho; i++){
             this.inserir(itens[i]);
         }
     }

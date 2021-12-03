@@ -3,9 +3,34 @@ package Lista;
 public class TesteLista {
     private static ListaEstatica le;
     private static ListaDinamica ld;
-    public static void main(String[] args){
 
-      ld = new ListaDinamica();
+    public static void main(String[] args) {
+
+        le = new ListaEstatica(4);
+        le.inserir(4);
+        le.inserir(3);
+        le.inserir(52);
+        le.inserir(-1);
+        System.out.println(le.toString() + "\n");
+        le.ordenar();
+        System.out.println(le.toString());
+
+        /*
+        System.out.println("A Lista esta vazia?" +le.vazia());
+        System.out.println("Inicio da Lista: " + le.consultarInicio());
+
+        le.inserirInicio("A");
+        le.inserirFim("B");
+        le.inserirInicio("C");
+        le.inserirFim("D");
+        le.inserir("E", 2);
+        System.out.println(le.consultarFim());
+        System.out.println(le.consultarInicio());
+        le.limpar();
+        System.out.println(le.toString());
+
+
+      // ----------------------- LISTA ESTÁTICA ----------------------- //
       ld.inserir(1);
       ld.inserir(2);
       ld.inserir(3);
@@ -14,8 +39,6 @@ public class TesteLista {
       ld.inverterLista();
       System.out.println(ld.toString());
 
-      /*
-      // ----------------------- LISTA ESTÁTICA ----------------------- //
 
       le = new ListaEstatica(4);
       System.out.println(le.vazia()); // True

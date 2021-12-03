@@ -2,16 +2,17 @@ package Arvore;
 
 public class MainLista3 {
     public static void main(String[] args){
-        LBSTree arvore = new LBSTree();
+        /*LBSTree arvore = new LBSTree();
         arvore.inserir("29");
         arvore.inserir("22");
         arvore.inserir("2");
         arvore.inserir("43");
         System.out.println(arvore.consultarRaiz());
-        System.out.println(arvore.valorMinimo());
+        System.out.println(arvore.valorMinimo());*/
 
 
-        /* Exercicio 11
+        LBSTree arvore = new LBSTree();
+        System.out.println(arvore.consultarRaiz());
         String[] v = {"41", "47", "38", "49", "34", "40", "43", "35", "48"};
         for (String elementos : v){
             arvore.inserir(elementos);
@@ -19,7 +20,8 @@ public class MainLista3 {
         System.out.println(arvore.caminhar(arvore.INORDER));
         System.out.println(arvore.caminhar(arvore.PREORDER));
         System.out.println(arvore.caminhar(arvore.POSTORDER));
-         */
+
+        System.out.println(arvore.consultarRaiz());
 
 
 
