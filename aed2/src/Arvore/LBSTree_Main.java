@@ -19,9 +19,9 @@ public class LBSTree_Main {
         System.out.println("POST-ORDER: " +lbs.caminhar(lbs.POSTORDER));
 
         System.out.println("Item '4' está na ávore? " +lbs.buscar("4"));
-        System.out.println("Raiz da ávore: " +lbs.raiz);
+        System.out.println("Raiz da ávore: " +lbs.consultarRaiz());
 
-        System.out.println("Altura " +lbs.altura());
+        System.out.println("Valor mínimo: " +lbs.valorMinimo());
 
     }
 }
