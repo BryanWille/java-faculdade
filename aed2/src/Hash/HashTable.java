@@ -152,7 +152,7 @@ public class HashTable {
 
     public void retirar(String valor){
         int k = this.funcaoHash(valor, this.capacidade);
-        retirar(valor, k);
+        this.retirar(valor, k);
     }
 
     public void retirar(String valor, int k) {

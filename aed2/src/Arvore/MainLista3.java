@@ -13,7 +13,7 @@ public class MainLista3 {
 
         LBSTree arvore = new LBSTree();
         System.out.println(arvore.consultarRaiz());
-        String[] v = {"41", "47", "38", "49", "34", "40", "43", "35", "48"};
+        String[] v = {"5", "8", "3", "6", "9", "1", "4", "7", "2", "0"};
         for (String elementos : v){
             arvore.inserir(elementos);
         }
