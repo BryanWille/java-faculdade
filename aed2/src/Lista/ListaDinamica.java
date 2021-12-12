@@ -1,20 +1,22 @@
 package Lista;
 
+import java.util.Objects;
+
 class Celula {
     Object item;
     Celula link;
 
-    public Celula(){
+    public Celula() {
         item = null;
         link = null;
     }
 
-    public Celula(Object valorItem){
+    public Celula(Object valorItem) {
         item = valorItem;
         link = null;
     }
 
-    public Celula(Object valorItem, Celula linkCelula){
+    public Celula(Object valorItem, Celula linkCelula) {
         item = valorItem;
         link = linkCelula;
     }
@@ -26,59 +28,91 @@ public class ListaDinamica {
     private Celula fim;
     private int contador;
 
-    public ListaDinamica(){
+    public ListaDinamica() {
         inicio = fim = null;
         contador = 0;
     }
 
-    public void inverterLista(){
+    public void inverterLista() {
         ListaDinamica clone = new ListaDinamica();
         int listaTamanho = this.contador;
-        for(int i = 0; i < listaTamanho; i++){
+        for (int i = 0; i < listaTamanho; i++) {
             clone.inserir(this.retirarFim());
         }
-        for(int i = 0; i < listaTamanho; i++){
+        for (int i = 0; i < listaTamanho; i++) {
             this.inserir(clone.retirarInicio());
         }
     }
 
-    public boolean vazia(){
+    public boolean vazia() {
         return (contador == 0);
     }
 
-    public int tamanho(){
+    public int tamanho() {
         return (contador);
     }
 
-    private boolean chaveValida(int x){
-        return(1 <= x && x <= contador);
+    private boolean chaveValida(int x) {
+        return (1 <= x && x <= contador);
     }
 
-    public void limpar(){
-        if(vazia()){
+    public void limpar() {
+        if (vazia()) {
             System.out.println("Erro: Lista Vazia!");
         } else {
-            while (!vazia()){
+            while (!vazia()) {
                 this.retirarInicio();
             }
         }
     }
 
-    public ListaDinamica copiar(){
+    public ListaDinamica copiar() {
         ListaDinamica copia = new ListaDinamica();
 
-        while (!vazia()){
+        while (!vazia()) {
             copia.inserir(this.retirarInicio());
         }
         return copia;
     }
 
-    public void inserir(Object novoItem, int posicao){
+    public boolean existeItem(Object valorItem) {
+        boolean encontrado = false;
+        Celula Lista = this.inicio;
+        do{
+            String item = String.valueOf(Lista.item);
+            if (item.equals(String.valueOf(valorItem))) {
+                encontrado = true;
+                break;
+            }
+            Lista = Lista.link;
+        } while (Lista.link != null);
+        return encontrado;
+    }
+
+    public ListaDinamica intersecao(ListaDinamica lista){
+        Celula clone = inicio;
+        ListaDinamica listaIntersecao = new ListaDinamica();
+        do{
+            String dadoOriginal = String.valueOf(clone.item);
+            Celula cloneLista = lista.inicio;
+            do{
+                String dadoComparacao = String.valueOf(cloneLista.item);
+                if(dadoComparacao.equals(dadoOriginal)){
+                    listaIntersecao.inserir(dadoComparacao);
+                }
+                cloneLista = cloneLista.link;
+            } while(cloneLista.link != null);
+            clone = clone.link;
+        }while(clone.link != null);
+        return listaIntersecao;
+    }
+
+    public void inserir(Object novoItem, int posicao) {
         Celula novaCelula, tempCelula;
         int i;
-        if(posicao == contador+1){
+        if (posicao == contador + 1) {
             novaCelula = new Celula(novoItem);
-            if(inicio == null){
+            if (inicio == null) {
                 inicio = novaCelula;
             } else {
                 fim.link = novaCelula;
@@ -86,24 +120,24 @@ public class ListaDinamica {
             fim = novaCelula;
             contador++;
         } else {
-            if(posicao == 1){
+            if (posicao == 1) {
                 novaCelula = new Celula(novoItem, inicio);
-                if(fim == null){
+                if (fim == null) {
                     fim = novaCelula;
                 }
                 inicio = novaCelula;
                 contador++;
             } else {
-                if(!chaveValida(posicao)){
+                if (!chaveValida(posicao)) {
                     System.out.println("Erro: Indice inválido!");
                 } else {
                     tempCelula = inicio;
-                    for(i = 1; i < posicao; i++){
+                    for (i = 1; i < posicao; i++) {
                         tempCelula = tempCelula.link;
                     }
                     novaCelula = new Celula(tempCelula.item, tempCelula.link);
                     tempCelula.link = novaCelula;
-                    if(tempCelula == fim){
+                    if (tempCelula == fim) {
                         fim = novaCelula;
                     }
                     tempCelula.item = novoItem;
@@ -113,50 +147,50 @@ public class ListaDinamica {
         }
     }
 
-    public void inserir(Object novoItem){
-        inserir(novoItem, this.contador+1);
+    public void inserir(Object novoItem) {
+        inserir(novoItem, this.contador + 1);
     }
 
-    public void inserirInicio(Object novoItem){
+    public void inserirInicio(Object novoItem) {
         inserir(novoItem, 1);
     }
 
-    public void inserirFim(Object novoItem){
-        inserir(novoItem, this.contador+1);
+    public void inserirFim(Object novoItem) {
+        inserir(novoItem, this.contador + 1);
     }
 
-    public Object retirar(int posicao){
+    public Object retirar(int posicao) {
         Object x = null;
         Celula tempCelula;
         int i;
-        if(vazia()){
+        if (vazia()) {
             System.out.println("Erro: Lista vazia!");
-        } else if (posicao == 1){
+        } else if (posicao == 1) {
             x = inicio.item;
             inicio = inicio.link;
-            if(inicio == null){
+            if (inicio == null) {
                 fim = null;
             }
             contador--;
-        } else if (posicao == contador){
+        } else if (posicao == contador) {
             tempCelula = inicio;
-            for(i =1; i < contador -1; i++) {
+            for (i = 1; i < contador - 1; i++) {
                 tempCelula = tempCelula.link;
             }
             x = fim.item;
             fim = tempCelula;
-            if(fim == null){
+            if (fim == null) {
                 inicio = fim;
             } else {
                 fim.link = null;
             }
             contador--;
         } else {
-            if(!chaveValida(posicao)){
+            if (!chaveValida(posicao)) {
                 System.out.println("Erro: Indice invalido!");
             } else {
                 tempCelula = inicio;
-                for(i = 1; i < posicao-1; i++){
+                for (i = 1; i < posicao - 1; i++) {
                     tempCelula = tempCelula.link;
                 }
                 x = tempCelula.link.item;
@@ -167,16 +201,16 @@ public class ListaDinamica {
         return (x);
     }
 
-    public Object retirar(){
-        return(retirar(1));
+    public Object retirar() {
+        return (retirar(1));
     }
 
-    public Object retirarInicio(){
-        return(retirar(1));
+    public Object retirarInicio() {
+        return (retirar(1));
     }
 
-    public Object retirarFim(){
-        return(retirar(contador));
+    public Object retirarFim() {
+        return (retirar(contador));
     }
 
     public String toString() {

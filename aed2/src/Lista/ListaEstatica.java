@@ -55,6 +55,15 @@ public class ListaEstatica {
         }
     }
 
+    public Object consultarPosicao(int posicao){
+        if(!chaveValida(posicao)){
+            return null;
+        } else {
+            return itemArray[posicao];
+        }
+    }
+
+
     public void inserir(Object newItem) {
         this.inserir(newItem, this.contador + 1);
     }
