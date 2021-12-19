@@ -15,6 +15,9 @@ public class prova1Periodo {
         for(int i = 0; i < notas.length; i++){
             int notaAluno = 0;
             for(int j = 0; j < gabarito.length; j++){
+                System.out.println("Digite a resposta [" + j+ "] do aluno [" +i +"]: ");
+                notas[i][j] = tecl.nextLine();
+                
                 if(notas[i][j].equals(gabarito[j])){
                     notaAluno++;
                 }
