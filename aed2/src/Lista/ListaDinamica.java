@@ -78,7 +78,7 @@ public class ListaDinamica {
     public boolean existeItem(Object valorItem) {
         boolean encontrado = false;
         Celula Lista = this.inicio;
-        do{
+        do {
             String item = String.valueOf(Lista.item);
             if (item.equals(String.valueOf(valorItem))) {
                 encontrado = true;
@@ -89,21 +89,21 @@ public class ListaDinamica {
         return encontrado;
     }
 
-    public ListaDinamica intersecao(ListaDinamica lista){
+    public ListaDinamica intersecao(ListaDinamica lista) {
         Celula clone = inicio;
         ListaDinamica listaIntersecao = new ListaDinamica();
-        do{
+        do {
             String dadoOriginal = String.valueOf(clone.item);
             Celula cloneLista = lista.inicio;
-            do{
+            do {
                 String dadoComparacao = String.valueOf(cloneLista.item);
-                if(dadoComparacao.equals(dadoOriginal)){
+                if (dadoComparacao.equals(dadoOriginal)) {
                     listaIntersecao.inserir(dadoComparacao);
                 }
                 cloneLista = cloneLista.link;
-            } while(cloneLista.link != null);
+            } while (cloneLista.link != null);
             clone = clone.link;
-        }while(clone.link != null);
+        } while (clone.link != null);
         return listaIntersecao;
     }
 
@@ -157,6 +157,23 @@ public class ListaDinamica {
 
     public void inserirFim(Object novoItem) {
         inserir(novoItem, this.contador + 1);
+    }
+
+    public Celula buscar(Object valorItem) {
+        Celula item = null;
+        if (vazia()) {
+            System.out.println("Erro: Lista Vazia!");
+        } else {
+            Celula clone = this.inicio;
+            do {
+                if (String.valueOf(valorItem).equals(String.valueOf(clone.item))) {
+                    item = clone;
+                }
+                clone = clone.link;
+            } while (clone.link != null);
+
+        }
+        return item;
     }
 
     public Object retirar(int posicao) {

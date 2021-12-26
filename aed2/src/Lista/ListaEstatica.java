@@ -63,6 +63,20 @@ public class ListaEstatica {
         }
     }
 
+    public Object buscar(Object valorItem){
+        Object item = null;
+        if(vazia()){
+            System.out.println("Erro: Lista Vazia!");
+        } else {
+            for(int i = 0; i < this.contador; i++){
+                if(String.valueOf(valorItem).equals(String.valueOf(itemArray[i]))){
+                    item = itemArray[i];
+                }
+            }
+        }
+        return item;
+    }
+
 
     public void inserir(Object newItem) {
         this.inserir(newItem, this.contador + 1);
