@@ -32,6 +32,7 @@ public class LBSTree {
     protected LBSTreeNode raiz;
     protected int contador;
     protected String treeString;
+    private int tamanho;
 
     public final int PREORDER = 1;
     public final int INORDER = 2;
@@ -52,6 +53,25 @@ public class LBSTree {
             x = String.valueOf(this.raiz);
         }
         return x;
+    }
+
+   public int quantNiveis(){
+        int maiorFolha = quantNiveis(raiz);
+        if(tamanho >= maiorFolha){
+            this.tamanho = maiorFolha;
+        }
+        return this.tamanho;
+    }
+
+    public int quantNiveis(LBSTreeNode treeRef){
+        if(treeRef != null){
+            int valorAtual = Integer.valueOf(treeRef.item);
+            this.tamanho = (this.tamanho <= Integer.valueOf(treeRef.item) ?
+            inOrder(treeRef.linkEsquerdo);
+            treeString = treeString + " " + treeRef.item+ " ";
+            inOrder(treeRef.linkDireito);
+            treeString = treeString + ")";
+        }
     }
 
     public void inserir(Object novoItem) {
