@@ -10,32 +10,6 @@ public class Funcionario {
         this.setSalario(salario);
     }
 
-    public void adicionar(Funcionario func){
-
-    }
-
-    public Funcionario buscar(int posicao){
-
-    }
-
-    public void remover(int posicao){
-
-    }
-
-    public boolean contem(Funcionario func){
-
-    }
-
-    public int tamanho(){
-
-    }
-
-    public void imprimeLista(){
-
-    }
-
-
-
     public String getNome() {
         return nome;
     }
