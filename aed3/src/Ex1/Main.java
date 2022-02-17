@@ -16,7 +16,7 @@ public class Main {
         listaFuncionario.adicionar(Ash);
         listaFuncionario.adicionar(Quinn);
 
-        listaFuncionario.imprimirLista();
+        //listaFuncionario.imprimirLista();
 
         listaFuncionario.remover(2);
 
@@ -24,6 +24,9 @@ public class Main {
         System.out.println(listaFuncionario.buscar(22));
         System.out.println(listaFuncionario.contem("Bryan Wille"));
         System.out.println(listaFuncionario.contem("Trundle"));
+        //listaFuncionario.imprimirLista();
+
+        Funcionario[] ordenado = listaFuncionario.ordemAlfabetica(listaFuncionario.getFuncionarios());
 
 
     }
