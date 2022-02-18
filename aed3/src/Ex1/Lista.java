@@ -72,9 +72,8 @@ public class Lista {
         for (int i = 0; i < this.tamanho; i++) { // Primeiro for -- Percorrer todos os nomes
             for (int j = 0; j < this.tamanho - 1; j++) { // Segundo for -- Percorrer todos os nomes
                 int x = 0;
-                boolean igual = funcionarios[j].getNome().substring(x, x + 1).equalsIgnoreCase(funcionarios[j + 1].getNome().substring(x, x + 1)); //Letra X de A é igual a Letra X de B?
                 do {
-                    if (!igual) {
+                    if (!(funcionarios[j].getNome().substring(x, x + 1).equalsIgnoreCase(funcionarios[j + 1].getNome().substring(x, x + 1)))) {
                         int primeiroIndex = 0, segundoIndex = 0;
                         for (int y = 0; y < key.length; y++) { // Quarto for -- Procurar qual letra é menor
                             if (key[y].equalsIgnoreCase(funcionarios[j].getNome().substring(x, x + 1))) {   // Procura qual o index da letra no nome 1
@@ -90,7 +89,7 @@ public class Lista {
                         }
                     }
                     x++;
-                } while (igual);
+                } while (funcionarios[j].getNome().substring(x, x + 1).equalsIgnoreCase(funcionarios[j + 1].getNome().substring(x, x + 1)));
             }
         }
         return funcionarioOrdenados;
