@@ -67,7 +67,7 @@ public class Lista {
 
     public Funcionario[] ordemAlfabetica(Funcionario[] funcionarios) {
         String[] key = {"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L",
-                "M", "N", "O", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"};
+                "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"};
         Funcionario[] funcionarioOrdenados = funcionarios;
         for (int i = 0; i < this.tamanho; i++) { // Primeiro for -- Percorrer todos os nomes
             for (int j = 0; j < this.tamanho - 1; j++) { // Segundo for -- Percorrer todos os nomes
