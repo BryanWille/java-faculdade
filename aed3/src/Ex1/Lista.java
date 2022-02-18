@@ -42,7 +42,7 @@ public class Lista {
 
     public boolean contem(String nome) {
         boolean contem = false;
-        for (int i = 0; i <= this.tamanho; i++) {
+        for (int i = 0; i < this.tamanho; i++) {
             if (funcionarios[i].getNome().equalsIgnoreCase(nome)) {
                 contem = true;
                 break;
@@ -60,7 +60,7 @@ public class Lista {
     }
 
     public void imprimirLista(Funcionario[] funcionarios) {
-        for (int i = 0; i < funcionarios.length; i++) {
+        for (int i = 0; i < this.tamanho; i++) {
             System.out.println("Nome: " + funcionarios[i].getNome() + "\nSalário: R$" + funcionarios[i].getSalario() + "\n-----------");
         }
     }
@@ -69,12 +69,12 @@ public class Lista {
         String[] key = {"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L",
                 "M", "N", "O", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"};
         Funcionario[] funcionarioOrdenados = funcionarios;
-        for (int i = 0; i < funcionarios.length; i++) { // Primeiro for -- Percorrer todos os nomes
-            for (int j = 0; j < funcionarios.length-1; j++) { // Segundo for -- Percorrer todos os nomes
+        for (int i = 0; i < this.tamanho; i++) { // Primeiro for -- Percorrer todos os nomes
+            for (int j = 0; j < this.tamanho - 1; j++) { // Segundo for -- Percorrer todos os nomes
                 for (int x = 0; x < funcionarios[j].getNome().length() - 1; x++) { // Terceiro for -- Percorrer todas as letras para comparar
-                    if (!(funcionarios[j].getNome().substring(x, x + 1).equals(funcionarios[j + 1].getNome().substring(x, x + 1)))) { //Se a letra x de j for DIFERENTE da letra x de j+1
+                    if (!(funcionarios[j].getNome().substring(x, x + 1).equalsIgnoreCase(funcionarios[j + 1].getNome().substring(x, x + 1)))) { //Se a letra x de j for DIFERENTE da letra x de j+1
                         int primeiroIndex = 0, segundoIndex = 0;
-                        for (int y = 0; y < key.length; y++) {                                              // Quarto for -- Procurar qual letra é menor
+                        for (int y = 0; y < key.length; y++) { // Quarto for -- Procurar qual letra é menor
                             if (key[y].equalsIgnoreCase(funcionarios[j].getNome().substring(x, x + 1))) {   // Procura qual o index da letra no nome 1
                                 primeiroIndex = y;
                             } else if (key[y].equalsIgnoreCase(funcionarios[j + 1].getNome().substring(x, x + 1))) { // Procura qual o index da letra no nome 2
