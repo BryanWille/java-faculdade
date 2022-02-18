@@ -71,8 +71,10 @@ public class Lista {
         Funcionario[] funcionarioOrdenados = funcionarios;
         for (int i = 0; i < this.tamanho; i++) { // Primeiro for -- Percorrer todos os nomes
             for (int j = 0; j < this.tamanho - 1; j++) { // Segundo for -- Percorrer todos os nomes
-                for (int x = 0; x < funcionarios[j].getNome().length() - 1; x++) { // Terceiro for -- Percorrer todas as letras para comparar
-                    if (!(funcionarios[j].getNome().substring(x, x + 1).equalsIgnoreCase(funcionarios[j + 1].getNome().substring(x, x + 1)))) { //Se a letra x de j for DIFERENTE da letra x de j+1
+                int x = 0;
+                boolean igual = funcionarios[j].getNome().substring(x, x + 1).equalsIgnoreCase(funcionarios[j + 1].getNome().substring(x, x + 1)); //Letra X de A é igual a Letra X de B?
+                do {
+                    if (!igual) {
                         int primeiroIndex = 0, segundoIndex = 0;
                         for (int y = 0; y < key.length; y++) { // Quarto for -- Procurar qual letra é menor
                             if (key[y].equalsIgnoreCase(funcionarios[j].getNome().substring(x, x + 1))) {   // Procura qual o index da letra no nome 1
@@ -86,9 +88,9 @@ public class Lista {
                             funcionarioOrdenados[j + 1] = funcionarios[j];
                             funcionarioOrdenados[j] = bolha;
                         }
-                        break;
                     }
-                }
+                    x++;
+                } while (igual);
             }
         }
         return funcionarioOrdenados;
