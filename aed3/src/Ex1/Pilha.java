@@ -5,7 +5,7 @@ public class Pilha {
     private int tamanho = 0;
 
     public boolean isEmpty( ) {
-        return  this.tamanho == 0;
+        return this.tamanho == 0;
     }
 
     public void push(Funcionario f) {
@@ -26,12 +26,19 @@ public class Pilha {
     }
 
     public Funcionario pop(Funcionario f){
-        Funcionario[] clone = this.funcionarios;
-        for(Funcionario func : this.funcionarios){
-            if(func == f){
-
+        Funcionario ret = null;
+        Pilha clone = new Pilha();
+        while (this.size() != 0){
+            Funcionario aux = this.pop();
+            if(aux == f){
+                funcionarios[this.tamanho-1] = null;
+                ret = f;
+            }
+            if(aux != null){
+                clone.push(aux);
             }
         }
+        return ret;
     }
 
     public boolean contain(String nome) {

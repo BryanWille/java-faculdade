@@ -17,5 +17,9 @@ public class TestePilha {
 
         pilhaFuncionarios.print();
 
+        //System.out.println(pilhaFuncionarios.pop(Bryan));
+
+        //pilhaFuncionarios.print();
+
     }
 }
