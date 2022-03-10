@@ -1,4 +1,4 @@
-package Ex1;
+package Revisao;
 
 public class PessoaMain {
     public static void main(String[] args) {

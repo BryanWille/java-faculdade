@@ -1,4 +1,4 @@
-package Ex1;
+package Revisao;
 
 public class Funcionario {
     private String nome;

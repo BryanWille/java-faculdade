@@ -1,4 +1,4 @@
-package Ex1;
+package Revisao;
 
 public class Pilha {
     private Funcionario[] funcionarios = new Funcionario[100];
