@@ -3,6 +3,7 @@ import java.io.*;
 
 public class Ex2 {
     public static void main(String[] args) throws IOException {
+        //File Reader é UTF-8
         FileReader file = new FileReader("C:/Users/ynosp/IdeaProjects/java-faculdade/aed3/src/teste.txt");
         int tot = 0, whiteSpace = 0, cont;
 

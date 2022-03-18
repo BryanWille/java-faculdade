@@ -3,6 +3,7 @@ import java.io.*;
 
 public class Ex1 {
     public static void main(String[] args) throws IOException {
+        //FileInputStream é tabelas ASCII
         //FileInputStream txt = new FileInputStream(args[0]); //Colocar argumentos via IDE > Ex1 do lado do martelo > Edit Configurations > Arguments > Expandir > Entre aspas e com espaço de ponto vírgula.
         FileInputStream txt = new FileInputStream("C:/Users/ynosp/IdeaProjects/java-faculdade/aed3/src/teste.txt");
 
