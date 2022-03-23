@@ -1,10 +1,12 @@
 package Jogo;
 
+import java.io.*;
 import java.util.Random;
 
 public class Jokenpo {
-    private long pontoJogador, pontoPc, empate, resultado;
+    private long pontoJogador, pontoPc, empate, resultado, jogos;
     private String[] opcoes = {"Pedra", "Papel", "Tesoura"};
+    private long[] resultados = new long[100];
 
     private long sorteador(){
         return (new Random().nextLong(opcoes.length));
@@ -28,24 +30,44 @@ public class Jokenpo {
         return escolha;
     }
 
-    private void gravarResultado(boolean jogadorGanhou){
+    private void lerResultado(){
 
     }
 
+    private void salvarResultado(long numGanhador) throws IOException {
+        this.resultados[(int) jogos] = numGanhador;
+    }
 
-    public void ganhador(long numPc, long numUser ){
+    private void gravarResultado(long[] todosResultados){
+        try{
+            ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("ganhador.dat"));
+            out.writeLong(todosResultados.length);
+            for(Long resultados : todosResultados){
+                out.writeLong(resultados);
+            }
+        } catch (IOException e) {
+            System.out.println("Erro de E/S");
+        }
+    }
+
+
+    public void ganhador(long numPc, long numUser ) throws IOException {
         //Pedra = 0, Papel = 1, Tesoura = 2;
         //Empate = 0, PC = 1, Usuario = 2;
+        long numGanhador;
         if (numPc == numUser){
             this.empate ++;
-            this.setResultado(0);
+            numGanhador = 0;
         } else if(numPc == 0 && numUser == 2 || numPc == 1 && numUser == 0 || numPc == 2 && numUser == 1){
             this.pontoPc++;
-            this.setResultado(1);
+            numGanhador = 1;
         } else {
             this.pontoJogador++;
-            this.setResultado(2);
+            numGanhador = 2;
         }
+        this.setResultado(numGanhador);
+        this.salvarResultado(numGanhador);
+        jogos ++;
     }
 
     public String resultado(long resultado){
