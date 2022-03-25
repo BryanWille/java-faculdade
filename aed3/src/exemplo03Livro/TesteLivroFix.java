@@ -1,13 +1,13 @@
-package organizaçãoDeArquivos;
+package exemplo03Livro;
 
 import java.io.*;
 
-class TestLivroFix {
+public class TesteLivroFix {
 
     public static void main(String[] args) throws IOException {
 
         Livro[] livros = createDummyData();
-        String FILE_NAME = "livrofix.dat";
+        String FILE_NAME = "livrolen.dat";
         writeLivros(livros, FILE_NAME);
         readLivros(FILE_NAME);
     }
@@ -18,7 +18,7 @@ class TestLivroFix {
 
         out.write(livros.length);
         for (int i = 0; i < livros.length; i++)
-            livros[i].writeFix(out);
+            livros[i].writeLen(out);
 
         out.close();
     }
@@ -30,13 +30,13 @@ class TestLivroFix {
         int totalLivros = in.read();
         for (int i = 0; i < totalLivros; i++) {
             Livro liv = new Livro();
-            liv.readFix(in);
+            liv.readLen(in);
             System.out.println(liv);
         }
         in.close();
     }
 
-    public static Livro[] createDummyData(){
+    public static Livro[] createDummyData() {
 
         Livro[] livros = new Livro[3];
 
@@ -46,5 +46,6 @@ class TestLivroFix {
 
         return livros;
     }
+
 
 }

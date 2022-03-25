@@ -1,4 +1,4 @@
-package organizaçãoDeArquivos;
+package exemplo02Livro;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;
@@ -7,7 +7,7 @@ import java.nio.charset.StandardCharsets;
  * classe com métodos de escrita e leitura de campos de tamanho fixo
  */
 
-class Livro {
+public class Livro {
 
     private String titulo; // 40 bytes serao usado para título
     private String autor;  // 40 bytes serao usado para autor
@@ -31,11 +31,11 @@ class Livro {
         String s;
 
         byte[] campo1 = titulo.trim().getBytes();
-       // for (int i = 0; i < campo1.length; i++) buffer[i] = campo1[i];
+        // for (int i = 0; i < campo1.length; i++) buffer[i] = campo1[i];
         System.arraycopy(campo1,0,buffer,0,campo1.length);
 
         byte[] campo2 = autor.trim().getBytes();
-       // for (int i = 0; i < campo2.length; i++) buffer[40 + i] = campo2[i];
+        // for (int i = 0; i < campo2.length; i++) buffer[40 + i] = campo2[i];
         System.arraycopy(campo2,0,buffer,40,campo2.length);
 
         out.write(buffer);
