@@ -17,8 +17,8 @@ public class Exerc4 {
         FileOutputStream arquivo = new FileOutputStream(nome_arq);
         DataOutputStream escrever = new DataOutputStream(arquivo);
         escrever.writeInt(data.length);
-        for(int i = 0;i < data.length; i++){
-            escrever.writeDouble(data[i]);
+        for (double datum : data) {
+            escrever.writeDouble(datum);
         }
     }
 
