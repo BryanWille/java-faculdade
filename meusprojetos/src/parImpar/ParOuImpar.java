@@ -11,30 +11,32 @@ public class ParOuImpar {
 
         int opcaoInt = JOptionPane.showOptionDialog(null, "Você já tem algum save? ", msg,
                 JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE, null, opcoesString, opcoesString[0]);
-
-
         ArrayList<Integer> jogo = new ArrayList<>();
-
         if (opcaoInt == 0) {
-            nomeArquivo = JOptionPane.showInputDialog(null, "Digite o nome do arquivo: ", msg, JOptionPane.QUESTION_MESSAGE);
+            nomeArquivo = JOptionPane.showInputDialog(null, "Digite o nome do arquivo: ",
+                    msg, JOptionPane.QUESTION_MESSAGE);
             jogo = lerArquivo(nomeArquivo);
             JOptionPane.showMessageDialog(null, resultados(jogo), msg, JOptionPane.QUESTION_MESSAGE);
         } else {
-            nomeArquivo = JOptionPane.showInputDialog(null, "Qual será o nome do seu arquivo: ", msg, JOptionPane.QUESTION_MESSAGE);
+            nomeArquivo = JOptionPane.showInputDialog(null, "Qual será o nome do seu arquivo: ",
+                    msg, JOptionPane.QUESTION_MESSAGE);
         }
         String[] opcoesJogo = {"Par", "Ímpar", "Sair do Jogo"};
         int opcaoJogador;
         do {
             int opcaoPc = (int) (Math.random() * 10);
-            opcaoJogador = JOptionPane.showOptionDialog(null, "Você quer Par ou Ímpar? ", msg, JOptionPane.DEFAULT_OPTION,
+            opcaoJogador = JOptionPane.showOptionDialog(null, "Você quer Par ou Ímpar? ",
+                    msg, JOptionPane.DEFAULT_OPTION,
                     JOptionPane.QUESTION_MESSAGE, null, opcoesJogo, opcoesJogo[0]);
             String nomeOpcaoPc = (opcaoPc % 2 == 0) ? "Par" : "Ímpar";
             if (opcaoJogador != 2) {
                 if ((opcaoJogador == 0 && opcaoPc % 2 == 1) || (opcaoJogador == 1 && opcaoPc % 2 == 1)) {
-                    JOptionPane.showMessageDialog(null, "O Computador Selecionou " +nomeOpcaoPc +", então você Perdeu!", msg, JOptionPane.INFORMATION_MESSAGE);
+                    JOptionPane.showMessageDialog(null, "O Computador Selecionou " + nomeOpcaoPc +
+                            ", então você Perdeu!", msg, JOptionPane.INFORMATION_MESSAGE);
                     jogo.add(0);
                 } else {
-                    JOptionPane.showMessageDialog(null, "O Computador Selecionou " +nomeOpcaoPc +", então você Ganhou!", msg, JOptionPane.INFORMATION_MESSAGE);
+                    JOptionPane.showMessageDialog(null, "O Computador Selecionou " + nomeOpcaoPc +
+                            ", então você Ganhou!", msg, JOptionPane.INFORMATION_MESSAGE);
                     jogo.add(1);
                 }
             }
@@ -47,9 +49,9 @@ public class ParOuImpar {
         nome += ".dat";
         FileInputStream arquivo = new FileInputStream(nome);
         DataInputStream ler = new DataInputStream(arquivo);
-        //int[] result = new int[ler.readInt()];
+        int primeiroResult = ler.readInt();
         ArrayList<Integer> result = new ArrayList<>();
-        for (int i = 0; i < ler.readInt(); i++) {
+        for (int i = 0; i < primeiroResult; i++) {
             result.add(ler.readInt());
         }
         return result;
@@ -65,15 +67,15 @@ public class ParOuImpar {
         }
     }
 
-    public static String resultados(ArrayList<Integer> resultados){
+    public static String resultados(ArrayList<Integer> resultados) {
         int pc = 0, usuario = 0;
-        for(int i = 0; i < resultados.size(); i++){
-            if(resultados.get(i) == 0){
-                pc ++;
+        for (int i = 1; i < resultados.size(); i++) {
+            if (resultados.get(i) == 0) {
+                pc++;
             } else {
-                usuario ++;
+                usuario++;
             }
         }
-        return ("O Computador ganhou: " +pc +" vezes\n" +"Você ganhou: " +usuario +" vezes!");
+        return ("O Computador ganhou: " + pc + " vezes\n" + "Você ganhou: " + usuario + " vezes!");
     }
 }
