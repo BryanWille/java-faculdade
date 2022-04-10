@@ -8,9 +8,9 @@ public class Jokenpo {
     private String[] opcoes = {"Pedra", "Papel", "Tesoura"};
     private long[] resultados = new long[100];
 
-    private long sorteador(){
-        return (new Random().nextLong(opcoes.length));
-    }
+//    private long sorteador(){
+//        return (new Random().nextLong(String.valueOf(opcoes.length)));
+//    }
 
     public String retornarEscolha(long num){
         String escolha;
