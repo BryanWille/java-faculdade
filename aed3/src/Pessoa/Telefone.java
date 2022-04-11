@@ -11,7 +11,7 @@ public class Telefone implements Serializable {
 
     @Override
     public String toString() {
-        return this.numero;
+        return numero;
     }
 
     public String getNumero() {
