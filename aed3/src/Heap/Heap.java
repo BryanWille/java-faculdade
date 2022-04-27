@@ -2,12 +2,13 @@ package Heap;
 
 public class Heap {
     private int[] vet;
-    private int tam = 0, ind;
+    private int tam, ind;
 
     public Heap(int[] vet){
         this.setVet(vet);
         this.setTam(vet.length);
-        for(int i =0 ; i < vet.length; i++){
+        this.setTam(0);
+        for(int i = 1 ; i < vet.length; i++){
             this.insere(vet[i]);
         }
 
@@ -45,7 +46,7 @@ public class Heap {
     public void insere(int num){
         if (tam < vet.length - 1) {
             tam++;
-            System.out.print("Digite um número: ");
+            System.out.println("Valor: " +num +" inserido");
             ind = tam;
             while (ind > 1 && vet[Pai(ind)] > num) {
                 vet[ind] = vet[Pai(ind)];
