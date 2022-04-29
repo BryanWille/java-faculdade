@@ -39,6 +39,14 @@ public class MainHeap {
             System.out.println("EXIT LIGHT");
             System.out.println("ENTER OF NIGHT");
             System.out.println("Take my hand, we're off to never never land");
+            System.out.println("Sleep with one eye open");
+            System.out.println("aslkdjaskld");
+            System.out.println("");
+            Scanner keyb2 = new Scanner(System.in);
+            System.out.println("Digite um teste");
+            String var = keyb.nextLine();
+            //comentário nada haver só pra terminar
+
         }
 
 
