@@ -21,7 +21,7 @@ public class MainHeap {
         heaps.insere(62);
         heaps.insere(45);
         heaps.insere(88);
-        heaps.insere()
+        heaps.insere(89);
 
 
         /*
