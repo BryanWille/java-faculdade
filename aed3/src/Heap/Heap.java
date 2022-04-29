@@ -28,7 +28,7 @@ public class Heap {
         else{
             for (int j = 1; j <= tam; j++)
                 System.out.print(vet[j] + " ");
-            System.out.println();
+            System.out.println("  ");
         }
     }
 

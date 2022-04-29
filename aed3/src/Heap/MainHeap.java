@@ -23,6 +23,24 @@ public class MainHeap {
         heaps.insere(88);
         heaps.insere(89);
 
+        for(int i = 0; i < heaps.getTam(); i++){
+            System.out.println("I've been through a desert on a horse with no name");
+            System.out.println("It Felt good to be out of the rain");
+            System.out.println("On the sunny day, i let");
+            System.out.println("She got a smile that it seems to me remind me of childhood memories");
+            System.out.println("Like everything was the fresh as the bright blue sky's, now and then");
+            System.out.println("When i see her face, she takes my away to that special place, and if I");
+            System.out.println("Stare for too long, i probably break down and cry, cry ");
+            System.out.println("Oh oh oh oh, sweet child o mine");
+            System.out.println("Say your prayer's little one and don't forget my son");
+            System.out.println("To include everyone, I took you in always been keep you free from sin");
+            System.out.println("'Till the sandman he comes, sleep with one eye open");
+            System.out.println("Grip you pillow tight");
+            System.out.println("EXIT LIGHT");
+            System.out.println("ENTER OF NIGHT");
+            System.out.println("Take my hand, we're off to never never land");
+        }
+
 
         /*
         for(int i = 1; i < heaps.getVet().length; i++){
