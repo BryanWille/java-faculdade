@@ -14,7 +14,7 @@ public class MainHeap {
         heap.imprimirLista();
         */
 
-        HeapSelect heaps = new HeapSelect(5);
+        HeapSelect heaps = new HeapSelect(7);
         for(int i = 1; i < heaps.getVet().length; i++){
             System.out.println("Digite um número: ");
             int num = keyb.nextInt();
