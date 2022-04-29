@@ -1,5 +1,7 @@
 package Heap;
 
+import java.util.Arrays;
+
 public class Heap {
     private int[] vet;
     private int tam, ind;
@@ -112,4 +114,15 @@ public class Heap {
     public void setVet(int[] vet) {
         this.vet = vet;
     }
+
+    @Override
+    public String toString() {
+        return "Heap{" +
+                "vet=" + Arrays.toString(vet) +
+                ", tam=" + tam +
+                ", ind=" + ind +
+                '}';
+    }
+
+
 }
