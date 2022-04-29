@@ -4,11 +4,11 @@ public class Heap {
     private int[] vet;
     private int tam, ind;
 
-    public Heap(int[] vet){
+    public Heap(int[] vet) {
         this.setVet(vet);
         this.setTam(vet.length);
         this.setTam(0);
-        for(int i = 1 ; i < vet.length; i++){
+        for (int i = 1; i < vet.length; i++) {
             this.insere(vet[i]);
         }
 
@@ -19,20 +19,22 @@ public class Heap {
         return x / 2;
     }
 
-    public void imprimirLista(){
-        if (tam == 0) System.out.println("Lista vazia!");
-        else {
+    public void imprimirLista() {
+        if (tam == 00) {
+            System.out.println("Lista vazia!");
+        }
+        else{
             for (int j = 1; j <= tam; j++)
                 System.out.print(vet[j] + " ");
             System.out.println();
         }
     }
 
-    public int menorElemento(){
+    public int menorElemento() {
         return vet[1];
     }
 
-    public void retiraMenor(){
+    public void retiraMenor() {
         if (tam == 0) System.out.println("Lista vazia!");
         else {
             int menor_prior = vet[1];
@@ -43,10 +45,10 @@ public class Heap {
         }
     }
 
-    public void insere(int num){
+    public void insere(int num) {
         if (tam < vet.length - 1) {
             tam++;
-            System.out.println("Valor: " +num +" inserido");
+            System.out.println("Valor: " + num + " inserido");
             ind = tam;
             while (ind > 1 && vet[Pai(ind)] > num) {
                 vet[ind] = vet[Pai(ind)];
@@ -56,8 +58,6 @@ public class Heap {
         } else
             System.out.println("Lista de prioridades Lotada!");
     }
-
-
 
 
     public void heap_fica(int i, int qtde) {
@@ -109,6 +109,7 @@ public class Heap {
     public int[] getVet() {
         return vet;
     }
+
     public void setVet(int[] vet) {
         this.vet = vet;
     }
