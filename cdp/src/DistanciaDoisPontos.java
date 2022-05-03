@@ -1,12 +1,19 @@
+import java.util.Scanner;
+
 public class DistanciaDoisPontos {
     public static void main(String[] args) {
-        System.out.println(distanciaDoisPontos(1.0,7.0,5.0, 9.0));
-        System.out.println(distanciaDoisPontos(-2.5,0.4,12.1,7.3));
-        System.out.println(distanciaDoisPontos(2.5,-0.4,-12.2,7.0));
+        Scanner keyb = new Scanner(System.in);
+        double x1 = keyb.nextDouble();
+        double y1 = keyb.nextDouble();
+
+        double x2 = keyb.nextDouble();
+        double y2 = keyb.nextDouble();
+
+
+        double distancia = Math.pow(Math.pow((x2 - x1), 2) + Math.pow((y2 - y1), 2), 1 / 2f);
+        distancia =(double) Math.round(distancia * 10000) / 10000;
+        System.out.println(distancia);
     }
 
-    public static double distanciaDoisPontos(double x1, double y1, double x2, double y2) {
-        double distancia = Math.pow(Math.pow((x2 - x1), 2) + Math.pow((y2 - y1), 2), 1 / 2f);
-        return (double) Math.round(distancia * 10000) / 10000;
-    }
+
 }
