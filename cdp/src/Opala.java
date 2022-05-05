@@ -7,6 +7,5 @@ public class Opala {
         float distancia = (float) velocidadeMedia * tempo;
         float litros = distancia / 12;
         System.out.printf("%.3f", litros);
-        keyb.close();
     }
 }
