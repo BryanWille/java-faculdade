@@ -3,15 +3,11 @@ import java.util.Scanner;
 public class QuantasHoras {
     public static void main(String[] args) {
         int dif, totMin1, totMin2;
-        String horas = "", result;
-
+        String horas;
         Scanner keyb = new Scanner(System.in);
-
-
         do {
             horas = keyb.nextLine();
             if(!(horas.equals("0 0 0 0"))) {
-
                 String[] numStr = horas.split(" ");
                 int[] num = new int[numStr.length];
                 for (int i = 0; i < numStr.length; i++) {
@@ -28,9 +24,7 @@ public class QuantasHoras {
                     dif = totMin2 - totMin1;
                 }
 
-                result = dif == 0 ? "" : String.valueOf(dif);
-
-                System.out.print(result);
+                System.out.print(dif +"\n");
             }
         }while (!(horas.equals("0 0 0 0")));
 

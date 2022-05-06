@@ -8,6 +8,5 @@ public class ConversorDias {
         double meses = ((ano - Math.floor(ano)) * 365) / 30f;
         double dias = (meses - Math.floor(meses)) * 30;
         System.out.printf("%.0f ano(s)\n%.0f mes(es)\n%.0f dia(s)", ano, meses, dias);
-        keyb.close();
     }
 }
