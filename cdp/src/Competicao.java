@@ -11,8 +11,8 @@ public class Competicao {
                 boolean zerou = false, fechou = false, nenhumAcertou = false;
                 int menor = 0, maior = 0, cont, checklist = 0, todoProb = 0;
 
-                int quantQuest = Integer.parseInt(quantidadeGeral.substring(0, quantidadeGeral.indexOf(" ")));
-                int quantPlayer = Integer.parseInt(quantidadeGeral.substring(quantidadeGeral.indexOf(" ")+1));
+                int quantPlayer = Integer.parseInt(quantidadeGeral.substring(0, quantidadeGeral.indexOf(" ")));
+                int quantQuest = Integer.parseInt(quantidadeGeral.substring(quantidadeGeral.indexOf(" ")+1));
                 int[][] jogador = new int[quantPlayer][quantQuest];
                 for(int i = 0; i < quantPlayer; i++){
                     cont = 0;
