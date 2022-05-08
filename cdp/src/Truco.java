@@ -6,8 +6,6 @@ public class Truco {
     public static int[][] cartas = criarVetorCartas();
 
     public static void main(String[] args) {
-        int cont = 0, fileiraForte = 0;
-
         Scanner keyb = new Scanner(System.in);
         String partida = keyb.nextLine().toUpperCase();
         int rodada = Integer.parseInt(partida.substring(0, partida.indexOf(" ")));
@@ -28,17 +26,17 @@ public class Truco {
             chute[ganhadorRodada(cartasJogadas)][1] += 1;
         }
 
-        String ganhador = "*";
-        int contGanha = 0;
+        String ganhador = "";
+        int contGanhadores = 0;
 
         for(int i = 0; i < chute.length; i++){
             if(chute[i][0] == chute[i][1]){
                 ganhador = jogadores[i];
-                contGanha++;
+                contGanhadores++;
             }
         }
 
-        if(contGanha == 1){
+        if(contGanhadores == 1){
             System.out.println(ganhador);
         } else {
             System.out.println("*");
@@ -58,10 +56,10 @@ public class Truco {
     }
 
     public static void setarMaiorManilha(String manilha) {
-        for (int i = 0; i < conversaoCar.length; i++) {
+                for (int i = 0; i < conversaoCar.length; i++) {
             if (conversaoCar[i].equalsIgnoreCase(manilha.substring(0, 1))) {
                 for (int j = 0; j < cartas[i].length; j++) {
-                    cartas[i + 1][j] = 40 + i;
+                    cartas[(i + 1) % conversaoCar.length][j] = 40 + j;
                 }
             }
         }
