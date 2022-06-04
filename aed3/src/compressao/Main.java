@@ -5,6 +5,6 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        Compressor balao = new Compressor("aed3/src/compressao/imgs/ballons.pgm");
+        Compressor balao = new Compressor("aed3/src/compressao/imgs/f14.pgm", "aed3/src/compressao/imgs/f14-compressed.pgm");
     }
 }
