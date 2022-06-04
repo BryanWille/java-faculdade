@@ -3,23 +3,23 @@ import java.util.Scanner;
 public class Paginas {
     public static void main(String[] args) {
         Scanner keyb = new Scanner(System.in);
-        while(keyb.hasNext()){
-
-
-        String entrada = keyb.nextLine();
-        if (Integer.parseInt(entrada.substring(0, 1)) != 0) {
-            int quantPagDia = Integer.parseInt(entrada.substring(0, entrada.indexOf(" ")));
-            int numeroDias = Integer.parseInt(entrada.substring(entrada.indexOf(" ") + 1, entrada.lastIndexOf(" ")));
-            int novaQuantPag = Integer.parseInt(entrada.substring(entrada.lastIndexOf(" ") + 1));
-            int mmc = mmc(quantPagDia, novaQuantPag);
-            quantPagDia = mmc / quantPagDia;
-            novaQuantPag = mmc / novaQuantPag;
-            //System.out.println(numeroDias +" * " +mmc(quantPagDia, novaQuantPag) + " = " +(numeroDias * mmc(quantPagDia, novaQuantPag)));
-            int pag = Math.abs((numeroDias * mmc) / (quantPagDia - novaQuantPag));
-            System.out.println(pag +" paginas");
-
+        while (keyb.hasNext()) {
+            String entrada = keyb.nextLine();
+            if (Integer.parseInt(entrada.substring(0, 1)) != 0) {
+                int quantPagDia = Integer.parseInt(entrada.substring(0, entrada.indexOf(" ")));
+                int numeroDias = Integer.parseInt(entrada.substring(entrada.indexOf(" ") + 1, entrada.lastIndexOf(" ")));
+                int novaQuantPag = Integer.parseInt(entrada.substring(entrada.lastIndexOf(" ") + 1));
+                int mmc = mmc(quantPagDia, novaQuantPag);
+                quantPagDia = mmc / quantPagDia;
+                novaQuantPag = mmc / novaQuantPag;
+                int pag = (numeroDias * mmc) / (quantPagDia - novaQuantPag);
+                if(pag == 1 ){
+                    System.out.println(pag + " pagina");
+                } else {
+                    System.out.println(pag + " paginas");
+                }
+            }
         }
-    }
     }
 
     public static int mdc(int a, int b) {
