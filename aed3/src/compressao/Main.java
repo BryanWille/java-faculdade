@@ -9,10 +9,12 @@ import java.util.concurrent.TimeUnit;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        String arquivoOriginal = "aed3/src/compressao/imgs/dragon.pgm";
-        String arquivoSaida = "aed3/src/compressao/imgs/dragon-compressed.pgm";
+        String arquivoOriginal = "aed3/src/compressao/imgs/lena.pgm";
+        String arquivoSaida = "aed3/src/compressao/imgs/lena-compressed.pgm";
         String arquivoDescomprimido = "aed3/src/compressao/imgs/dragon-descomprimido.pgm";
 
+        Compressor balao = new Compressor(arquivoOriginal, arquivoSaida);
+        /*
         BufferedWriter arquivocsv = new BufferedWriter(
                 new OutputStreamWriter(
                         new FileOutputStream("aed3/src/compressao/imgs/dragon-data.csv")));
@@ -39,10 +41,9 @@ public class Main {
 
         //Compressor balao = new Compressor(arquivoOriginal, arquivoSaida , 12000);
         Uncompressor unc = new Uncompressor(arquivoSaida, arquivoDescomprimido);
-
+        */
     }
 
-    /*
 
-         */
+
 }

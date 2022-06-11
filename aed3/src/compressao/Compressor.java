@@ -3,7 +3,7 @@ package compressao;
 import java.io.*;
 
 public class Compressor {
-	private BufferedReader imagemOriginal;
+    private BufferedReader imagemOriginal;
     private BufferedWriter imagemComprimida;
     private int quantidadeCaracteres;
 

@@ -7,8 +7,10 @@ public class Compressor {
 	private BufferedReader imagemOriginal;
     private BufferedWriter imagemComprimida;
     private int quantidadeCaracteres;
-    private Map<Integer, Integer> dicionario = new LinkedHashMap<>();
-    private int posicao = 1;
+    private Map<String, Integer> dicionario = new LinkedHashMap<>();
+    private int posicao = 0;
+    private ArrayList<String> todosCaracteres = new ArrayList<String>();
+    private String c, p = "";
 
     public Compressor(String localArquivoOriginal, String nomeArquivoComprimido) throws IOException {
         this.setQuantidadeCaracteres(quantidadeCaracteres);
@@ -22,10 +24,12 @@ public class Compressor {
 
         String tempTexto = "";
         while ((tempTexto = this.imagemOriginal.readLine()) != null){
-            dictionarie(tempTexto);
+            tempTexto = tempTexto.replaceAll("\\s+"," ");
+            String[] split = tempTexto.split(" ");
+            this.todosCaracteres.addAll(Arrays.asList(split));
         }
 
-        System.out.println(this.getDicionario().toString());
+        dictionarieBase();
 
         comprimir();
     }
@@ -35,26 +39,39 @@ public class Compressor {
         this.imagemComprimida.write(linhaComprimida);
     }
 
-    private void dictionarie(String texto){
-        texto = texto.replaceAll("  "," ");
-        String[] split = texto.split(" ");
-        dicionario.put(Integer.valueOf(split[0]), 1);
-        for(int i = 1; i < split.length; i++){
-            if (dicionario.get(Integer.valueOf(split[i])) != null)
-                dicionario.put(Integer.valueOf(split[i]), this.getPosicao());
+    private void dictionarieBase(){
+        for (int i = 0; i < todosCaracteres.size(); i++) {
+            if (dicionario.get(todosCaracteres.get(i)) == null) {
+                dicionario.put(todosCaracteres.get(i), this.getPosicao());
                 this.setPosicao(this.posicao += 1);
+            }
         }
+    }
 
+    private boolean existeDicionario(String texto){
+        return dicionario.get(texto) != null;
+    }
+
+    private void adicionarDict(String texto){
+        this.posicao += 1;
+        this.dicionario.put(texto, this.posicao);
     }
 
     private void comprimir() throws IOException {
-
-
+        int i = 0;
+        while ( i < this.todosCaracteres.size()){
+            this.c = this.todosCaracteres.get(i);
+            if (existeDicionario(this.p + this.c))
+                this.p += this.c;
+            else {
+                this.imagemComprimida.write(this.p);
+                adicionarDict(this.p + this.c);
+                this.p = this.c;
+            }
+            i++;
+        }
+        this.imagemComprimida.write(this.p);
         imagemComprimida.close();
-    }
-
-    private String comprimirLinhar(String linha) {
-       return "as";
     }
 
     public BufferedReader getImagemOriginal() {
@@ -80,11 +97,11 @@ public class Compressor {
     public void setQuantidadeCaracteres(int quantidadeCaracteres) {
         this.quantidadeCaracteres = quantidadeCaracteres;
     }
-    public Map<Integer, Integer> getDicionario() {
+    public Map<String, Integer> getDicionario() {
         return dicionario;
     }
 
-    public void setDicionario(Map<Integer, Integer> dicionario) {
+    public void setDicionario(Map<String, Integer> dicionario) {
         this.dicionario = dicionario;
     }
 
