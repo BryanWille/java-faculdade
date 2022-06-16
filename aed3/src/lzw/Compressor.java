@@ -6,14 +6,12 @@ import java.util.*;
 public class Compressor {
 	private BufferedReader imagemOriginal;
     private BufferedWriter imagemComprimida;
-    private int quantidadeCaracteres;
     private Map<String, Integer> dicionario = new LinkedHashMap<>();
     private int posicao = 0;
     private ArrayList<String> todosCaracteres = new ArrayList<String>();
     private String c, p = "";
 
     public Compressor(String localArquivoOriginal, String nomeArquivoComprimido) throws IOException {
-        this.setQuantidadeCaracteres(quantidadeCaracteres);
         this.setImagemComprimida(new BufferedWriter(new OutputStreamWriter(new FileOutputStream(nomeArquivoComprimido))));
         this.setImagemOriginal(new BufferedReader(new InputStreamReader(new FileInputStream(localArquivoOriginal))));
 
@@ -90,13 +88,6 @@ public class Compressor {
         this.imagemComprimida = imagemComprimida;
     }
 
-    public int getQuantidadeCaracteres() {
-        return quantidadeCaracteres;
-    }
-
-    public void setQuantidadeCaracteres(int quantidadeCaracteres) {
-        this.quantidadeCaracteres = quantidadeCaracteres;
-    }
     public Map<String, Integer> getDicionario() {
         return dicionario;
     }
