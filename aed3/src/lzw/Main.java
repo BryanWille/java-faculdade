@@ -1,17 +1,15 @@
 package lzw;
 
-import java.io.*;
-import java.util.*;
+import java.io.File;
+import java.io.IOException;
 
 public class Main {
     public static void main(String[] args) throws IOException {
+        File arquivoOriginal = new File("aed3/src/lzw/textos/testeTexto.pgm");
+        File arquivoCompactado = new File("aed3/src/lzw/textos/teste-compactado.pgm");
+        File arquivoDescompactado = new File("aed3/src/lzw/textos/teste-descompactado.pgm");
+        Compressor compressor = new Compressor(arquivoOriginal, arquivoCompactado);
 
-        String arquivoOriginal = "aed3/src/lzw/imgs/ballons.pgm";
-        String arquivoSaida = "aed3/src/lzw/imgs/ballons-compressed.pgm";
-        //String arquivoDescomprimido = "aed3/src/lzw/imgs/dragon-descomprimido.pgm";
-        Compressor comp = new Compressor(arquivoOriginal, arquivoSaida);
-        //Uncompressor unc = new Uncompressor(arquivoSaida, arquivoDescomprimido);
-
-
+        Descompressor descompressor = new Descompressor(arquivoCompactado, arquivoDescompactado);
     }
 }
