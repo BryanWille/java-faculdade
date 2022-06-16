@@ -64,7 +64,7 @@ public class Compressor {
             if (existeDicionario(this.p + this.c))
                 this.p += this.c;
             else {
-                this.imagemComprimida.write(this.p);
+                this.imagemComprimida.write(this.p + " ");
                 adicionarDict(this.p + this.c);
                 this.p = this.c;
             }
