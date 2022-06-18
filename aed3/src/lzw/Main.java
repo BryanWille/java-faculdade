@@ -12,4 +12,9 @@ public class Main {
 
         Descompressor descompressor = new Descompressor(arquivoCompactado, arquivoDescompactado);
     }
+
+    static void teste()
+    {
+        int num = 2;
+    }
 }
