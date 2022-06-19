@@ -8,12 +8,11 @@ public class Compressor {
     private LinkedHashMap<String, Integer> dicionario = new LinkedHashMap<>();
     private int tam = 0;
     private BufferedWriter escrever;
-
     private BufferedReader ler;
 
 
     public Compressor(File arquivoOriginal, File arquivoComprimido) throws IOException {
-        ler = new BufferedReader(new InputStreamReader(new FileInputStream( arquivoOriginal)));
+        ler = new BufferedReader(new InputStreamReader(new FileInputStream(arquivoOriginal)));
         escrever = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(arquivoComprimido)));
 
         fazerDicionario();
@@ -35,7 +34,6 @@ public class Compressor {
     }
 
     private void lzw(String texto) throws IOException {
-        ArrayList<Integer> sc = new ArrayList<>();
         String p = "";
         char c;
         char[] elementos = texto.toCharArray();
@@ -45,7 +43,7 @@ public class Compressor {
                 p = p + c;
             } else {
                 escreverComprimido(dicionario.get(p));
-                dicionario.put(p+c, tam++);
+                dicionario.put(p + c, tam++);
                 p = String.valueOf(c);
             }
         }
@@ -53,7 +51,7 @@ public class Compressor {
     }
 
     private void escreverComprimido(int num) throws IOException {
-        escrever.write(num +" ");
+        escrever.write(num + " ");
     }
 
 }

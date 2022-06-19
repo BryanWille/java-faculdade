@@ -37,23 +37,21 @@ public class Descompressor {
         escreverDescomprimido(dicionario.get(cw));
         String p;
         char c;
-        for(int i = 1; i < elementos.length; i++){
+        for (int i = 1; i < elementos.length; i++) {
             pw = cw;
             cw = Integer.parseInt(elementos[i]);
-            if(dicionario.get(cw) != null){
+            if (dicionario.get(cw) != null) {
                 escreverDescomprimido(dicionario.get(pw));
                 p = dicionario.get(pw);
                 c = dicionario.get(cw).charAt(0);
-                dicionario.put(tam++, p+c);
+                dicionario.put(tam++, p + c);
             } else {
                 p = dicionario.get(cw);
                 c = dicionario.get(pw).charAt(0);
-                escreverDescomprimido(p+c);
-                dicionario.put(tam++, p+c);
+                escreverDescomprimido(p + c);
+                dicionario.put(tam++, p + c);
             }
         }
-
-
     }
 
     private void escreverDescomprimido(String palavra) throws IOException {
