@@ -1,7 +1,6 @@
 package lzw;
 
 import java.io.*;
-import java.util.ArrayList;
 import java.util.LinkedHashMap;
 
 public class Descompressor {
@@ -10,9 +9,9 @@ public class Descompressor {
     private BufferedWriter escrever;
     private BufferedReader ler;
 
-    public Descompressor(File arquivoOriginal, File arquivoDescomprimido) throws IOException {
-        ler = new BufferedReader(new InputStreamReader(new FileInputStream(arquivoOriginal)));
-        escrever = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(arquivoDescomprimido)));
+    public Descompressor(File arquivoCompactado, File arquivoDescompactado) throws IOException {
+        ler = new BufferedReader(new InputStreamReader(new FileInputStream(arquivoCompactado)));
+        escrever = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(arquivoDescompactado)));
 
         fazerDicionario();
 
